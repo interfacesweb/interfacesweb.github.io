@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unidad 2.2 - Diseño de layouts</title>
+<!-- 08-11-2014 01:07 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Unidad 2.2 - Diseño de layouts"
+>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 2.2 - Diseño de layouts</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Santo Grial</a></li>
+<li><a href="#sec-3">3. Métodos antiguos</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Tablas</a></li>
+<li><a href="#sec-3-2">3.2. Posicionamiento absoluto</a></li>
+<li><a href="#sec-3-3">3.3. Anchura fija</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Métodos actuales</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Layout fluido (líquido)</a></li>
+<li><a href="#sec-4-2">4.2. Elástico</a></li>
+<li><a href="#sec-4-3">4.3. Adaptativo</a></li>
+<li><a href="#sec-4-4">4.4. Responsivo</a></li>
+<li><a href="#sec-4-5">4.5. Conclusiones</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Técnicas para crear layouts</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Float</a></li>
+<li><a href="#sec-5-2">5.2. Inline-block</a></li>
+<li><a href="#sec-5-3">5.3. Display table</a></li>
+<li><a href="#sec-5-4">5.4. Cajas Flexibles (FlexBox)</a></li>
+<li><a href="#sec-5-5">5.5. Grid layout (en borrador)</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Algunos consejos de diseño</a></li>
+<li><a href="#sec-7">7. Referencias</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+El <i>layout</i> o <b>estructura</b> de un interfaz web es la manera de organizar o disponer los elementos visuales en la página. El diseño del layout determina la posición de cada uno de los elementos que componen el interfaz web (cabecera, menús, banners, contenido, etc.).
+</p>
+
+<p>
+Además, el diseño del layout comprende también una serie de decisiones que afectan a las siguientes <b>características</b>:
+</p>
+
+<ul class="org-ul">
+<li>Tamaño de los márgenes.
+</li>
+<li>Tamaño y posición de imágenes y figuras.
+</li>
+<li>Número de columnas (o áreas) en que se divide la página.
+</li>
+<li>Áreas dejadas en blanco intencionadamente.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Santo Grial</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Uno de los patrones de diseño más utilizados es un diseño formado por varias (normalmente tres) columnas, con el contenido principal ocupando una de ellas (normalmente en el centro) y el resto de elementos (menús, banners,&#x2026;) en las otras columnas. Las columnas idealmente deben tener la misma altura independientemente de su contenido y opcionalmente pueden tener bordes o colores de fondo diferenciados.
+</p>
+
+
+<div class="figure">
+<p><a href="../../images/02_02_holy_grial.png" alt="Diseño de Santo Grial"><img src="../../images/02_02_holy_grial.png" alt="Diseño de Santo Grial"></a>
+</p>
+<p><span class="figure-number">Figura 1:</span> Diseño de Santo Grial</p>
+</div>
+
+
+<p>
+Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este diseño. Todas ellas tienen algún inconveniente:
+</p>
+
+<ul class="org-ul">
+<li>Visualización incorrecta en algún navegador.
+</li>
+<li>Utilización de muchas etiquetas HTML.
+</li>
+<li>Utilización de etiquetas HTML sin significado semántico (es decir, que se utilicen no para estructurar el contenido, sino para alterar la apariencia visual).
+</li>
+<li>Adaptación incorrecta en dispositivos móviles.
+</li>
+<li>Necesidad de utilizar lenguaje de script.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Métodos antiguos</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Tablas</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Problemas semánticos.
+</li>
+<li>Mezcla de estructura (HTML) con presentación visual.
+</li>
+<li>Difícil de mantener.
+</li>
+<li>Problemas con lectores de pantalla.
+</li>
+<li>Problemas de tiempo de respuesta de los navegadores.
+</li>
+</ul>
+
+
+<div class="figure">
+<p><a href="../../images/02_02_tables.png" alt="Diseño basado en tablas"><img src="../../images/02_02_tables.png" alt="Diseño basado en tablas"></a>
+</p>
+<p><span class="figure-number">Figura 2:</span> Diseño basado en tablas</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Posicionamiento absoluto</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Rígido e inflexible.
+</li>
+<li>Utilizado para versiones que deban ser impresas
+</li>
+<li>Unidades de medida absolutas (cm, mm,&#x2026;).
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Anchura fija</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Muy popular.
+</li>
+<li>Se crea una capa contenedora que alberga todo el contenido de la página.
+</li>
+<li>Se asigna una anchura fija al contenedor: típicamente un tamaño de 980px, 960px o 760px.
+</li>
+<li>El contenedor se centra automáticamente cuando se muestra en una pantalla grande.
+</li>
+<li>Aparece una barra de desplazamiento horizontal cuando se muestra en una pantalla pequeña.
+</li>
+<li>Utiliza el píxel como unidad de medida principal.
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Ajuste perfecto. Son sitios que hacen uso de gran cantidad de imágenes y estructuras muy complejas. Necesitan controlar exactamente el tamaño de las capas para que las imágenes acoplen perfectamente.
+</li>
+<li>Fácil de desarrollar y mantener.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Poco usabilidad en pantallas pequeñas.
+</li>
+<li>No se adaptan correctamente a dispositivos móviles.
+</li>
+<li>No se adaptan correctamente frente a un aumento de zoom o aumento del tamaño del texto.
+</li>
+</ul>
+
+<p>
+Ejemplos:
+</p>
+<ul class="org-ul">
+<li><a href="http://www.maxdesign.com.au/articles/css-layouts/two-fixed/">http://www.maxdesign.com.au/articles/css-layouts/two-fixed/</a>
+</li>
+<li><a href="http://www.maxdesign.com.au/articles/css-layouts/three-fixed/">http://www.maxdesign.com.au/articles/css-layouts/three-fixed/</a>
+</li>
+<li><a href="http://www.colourpixel.com/">http://www.colourpixel.com/</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Métodos actuales</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Los métodos actuales de diseño de layouts suelen tener las siguientes características:
+</p>
+
+<ul class="org-ul">
+<li>No utilizan anchuras fijas.
+</li>
+<li>Se adaptan correctamente a pantallas pequeñas y grandes.
+</li>
+<li>Utilizan unidades CSS relativas (ems, rems, porcentajes, valores mínimos y máximos,&#x2026;).
+</li>
+<li>Utilizan media queries CSS3 (profundizaremos en ello en futuros temas).
+</li>
+</ul>
+</div>
+
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Layout fluido (líquido)</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Utilizan unidades de medida basadas en porcentajes. El tamaño de los elementos está basado en el tamaño de los contenedores.
+</li>
+<li>Los elementos ocupan el mismo espacio independientemente del tamaño de la pantalla.
+</li>
+<li>Son la base para otros métodos modernos.
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Buen manejo de los espacios en blanco.
+</li>
+<li>Más sencillo de utilizar que otros métodos.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>La usabilidad en pantallas muy pequeñas o muy grandes no es demasiado buena.
+</li>
+<li>Utilizan anchura mínima o máxima para que no se desajuste demasiado el contenido.
+</li>
+<li>No hay un cambio real en la experiencia de usuario: sólo una adaptación de los tamaños. Por tanto, no hay una adaptación real a distintos tipos de dispositivos.
+</li>
+</ul>
+
+<p>
+Ejemplos:
+</p>
+<ul class="org-ul">
+<li><a href="http://www.maxdesign.com.au/articles/css-layouts/two-liquid/">http://www.maxdesign.com.au/articles/css-layouts/two-liquid/</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Elástico</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Utiliza la unidad de medida "em".
+</li>
+<li>El layout se ajusta al contenido.
+</li>
+<li>La anchura viene determinada por el tamaño de la fuente en el navegador del usuario.
+</li>
+<li>Se utilizan para páginas con gran contenido de texto.
+</li>
+<li>No se utiliza demasiado para el resto de sitios web.
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Muy buena accesibilidad para el contenido.
+</li>
+<li>Buen control tipográfico.
+</li>
+<li>Se adaptan muy bien a pantallas pequeñas y grandes.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>No tiene mucha utilidad aparte de sitios con gran contenido de texto.
+</li>
+<li>Difícil de desarrollar y mantener.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Adaptativo</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Optimizado para resoluciones de pantalla específicas (las más habituales: teléfonos, tablets, tablets apaisadas, pantallas y pantallas grandes).
+</li>
+<li>Utiliza layouts fijos o fluidos dependiendo del dispositivo.
+</li>
+<li>Utiliza media queries CSS3 para proporcionar versiones distintas a cada dispositivo.
+</li>
+<li>Cada dispositivo carga el layout que más se adapte a él.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Responsivo</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Va un paso más allá del layout adaptativo.
+</li>
+<li>No hay resoluciones de pantalla específicas.
+</li>
+<li>La página entera es libre de fluir y adaptarse al espacio.
+</li>
+<li>Utiliza sobre todo layouts fluidos.
+</li>
+<li>Utiliza imágenes de tamaño flexible.
+</li>
+<li>Utiliza media queries CSS3 para corregir los errores que se producen en los puntos de ruptura del layout.
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Muy buena experiencia de uso independientemente del dispositivo o tamaño de pantalla elegido.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Todos los dispositivos reciben todo el código independientemente de si lo van a utilizar o no.
+</li>
+<li>Difícil de desarrollar y testear.
+</li>
+<li>No hay un control perfecto a nivel de píxel: por tanto, puede ser difícil adaptar imágenes de tamaño fijo.
+</li>
+</ul>
+
+<p>
+Ejemplos:
+</p>
+<ul class="org-ul">
+<li><a href="http://designmodo.com/responsive-design-examples/">http://designmodo.com/responsive-design-examples/</a>
+</li>
+<li><a href="http://foodsense.is/">http://foodsense.is/</a>
+</li>
+<li><a href="http://seesparkbox.com/">http://seesparkbox.com/</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Conclusiones</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Independientemente del modelo de layout elegido, el objetivo que se persigue es:
+</p>
+
+<ul class="org-ul">
+<li>Proporcionar a los usuarios una buena <b>experiencia de uso</b>.
+</li>
+<li>Servir una página web que funcione y se comporte de manera óptima independientemente del dispositivo o tamaño de pantalla utilizado sin comprometer la experiencia de uso.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Técnicas para crear layouts</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+En la actualidad existen muchas maneras de crear layouts utilizando CSS. A las técnicas tradicionales (<code>float</code>, <code>inline-block</code>) se suman otras nuevas aportadas por CSS3 (como <code>flexbox</code>) o el futuro modelo de rejilla.
+</p>
+
+<p>
+En este enlace puedes consultar un tutorial de diseño de layouts: <a href="http://es.learnlayout.com/toc.html">http://es.learnlayout.com/toc.html</a>
+</p>
+
+<p>
+En el este <a href="http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/">enlace</a> puedes consultar una comparativa de los distintos métodos, que resumiremos en este apartado.
+</p>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Float</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Se utilizan para layouts que no necesitan centrado vertical ni alturas de capas iguales.
+</p>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Método más popular.
+</li>
+<li>Al ser el método más popular, los fallos que se producen están muy bien documentados y se han desarrollado muchos métodos para corregirlos.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Necesitan ser reseteados (<a href="http://stackoverflow.com/questions/8554043/what-is-clearfix">clearfix</a>). Si se utilizan <i>media queries</i> para personalizar la apariencia en función del dispositivo será necesario hacer un <i>clear</i> para cada adaptación.
+</li>
+<li>No se pueden alinear en vertical.
+</li>
+<li>Las alturas de las capas no son iguales.
+</li>
+<li>Dependen del orden en que aparezcan las capas en el HTML.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Inline-block</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Se utilizan cuando se necesitan layouts con las siguientes características:
+</p>
+
+<ul class="org-ul">
+<li>Sitios que necesitan alineación vertical.
+</li>
+<li>Para evitar tener que realizar el <i>clear</i> de los floats cuando se utilizan <i>media queries</i>.
+</li>
+<li>Para realizar menús horizontales utilizando listas.
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Posibilidad de alineación vertical.
+</li>
+<li>No necesitan hacer <i>clear</i> en diseños complejos adaptados a muchos dispositivos con <i>media queries</i>.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Las alturas de las capas no son iguales.
+</li>
+<li>Dependen del orden en que aparezcan las capas en el HTML.
+</li>
+<li>Tienen un fallo que consiste en <b>crear un espacio en blanco adicional</b> (<i>whitespace bug</i>) entre los elementos. La solución si utilizamos listas consiste en utilizar tipos de documento HTML5 y no cerrar los elementos <code>&lt;li&gt;</code>. En este <a href="http://blog.karenmenezes.com/2013/aug/30/inline-block-conundrum-part-2/">enlace</a> se muestra el problema.
+</li>
+</ul>
+
+<p>
+Ejemplo de galería con <code>inline-block</code>: <a href="http://karenmenezes.com/inlineblockgrid/">http://karenmenezes.com/inlineblockgrid/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Display table</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+La propiedad <code>display: table</code> automáticamente transforma la apariencia de una capa en la de una tabla. De esta manera se consigue un diseño basado en columnas de manera muy sencilla sin tener que utilizar tablas reales (que, recordemos, no son recomendables).
+</p>
+
+<p>
+Sin embargo, para tener un control total es necesario replicar la estructura de una tabla utilizando <code>divs</code>, por lo que se termina cayendo en el mismo error que al diseñar utilizando tablas.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableWrap"</span>&gt;    
+  &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableBlock"</span>&gt;    
+
+    &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableRow"</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+    &lt;/<span style="color: #0000ff;">div</span>&gt;
+
+    &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableRow"</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+      &lt;<span style="color: #0000ff;">div</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"tableCell"</span>&gt; &lt;/<span style="color: #0000ff;">div</span>&gt;
+    &lt;/<span style="color: #0000ff;">div</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">div</span>&gt;
+&lt;/<span style="color: #0000ff;">div</span>&gt;
+</pre>
+</div>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Posibilidad de alineación vertical.
+</li>
+<li>Permite crear capas de alturas iguales.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Es necesario crear <code>&lt;div&gt;</code> adicionales para simular la estructura de las tablas. No obstante, la especificación indica que no es obligatorio.
+</li>
+<li>Dependen del orden en que aparezcan las capas en el HTML.
+</li>
+<li>Para separar las celdas no se pueden utilizar los márgenes: hay que utilizar la propiedad <code>border-collapse</code> del elemento padre.
+</li>
+<li>Es posible que el contenido traspase los límites de las celdas.
+</li>
+<li>Es difícil de adaptar para crear diseños responsivos con varios puntos de ruptura.
+</li>
+<li>Problemas con IE6 y IE7.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Cajas Flexibles (FlexBox)</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+<b>FlexBox</b> ofrece un mecanismo muy completo para realizar layouts. Tiene una gran variedad de opciones y es muy versátil.
+</p>
+
+<p>
+Para aprender a manejar FlexBox se pueden consultar estos tutoriales:
+</p>
+<ul class="org-ul">
+<li><a href="http://demo.agektmr.com/flexbox/">http://demo.agektmr.com/flexbox/</a>
+</li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas_flexibles">https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas_flexibles</a>
+</li>
+</ul>
+
+<p>
+Ventajas:
+</p>
+<ul class="org-ul">
+<li>Independencia del orden en que aparezcan las capas en el HTML. Elimina la necesidad de utilizar JavaScript para esto.
+</li>
+<li>Ofrecen alineación vertical.
+</li>
+<li>Permiten crear capas con la misma altura.
+</li>
+<li>Permiten la estructura en filas o columnas de manera sencilla.
+</li>
+<li>Ofrecen una gran flexibilidad en cuanto a las opciones a utilizar.
+</li>
+<li>Las cajas pueden ocupar automáticamente el espacio disponible, crecer o menguar a petición.
+</li>
+</ul>
+
+<p>
+Desventajas:
+</p>
+<ul class="org-ul">
+<li>Existe una especificación inicial que ha quedado desfasada (hay que tener cuidado al buscar tutoriales en Internet).
+</li>
+<li>La sintaxis es algo compleja.
+</li>
+<li>Es necesario utilizar prefijos para soportar todos los navegadores.
+</li>
+<li>No es compatible con IE9 y anteriores.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> Grid layout (en borrador)</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+El modelo de <i>Grid Layout</i> (rejilla) es un modelo que está actualmente en desarrollo. Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente. El borrador de la especificación está disponible en <a href="http://www.w3.org/TR/css3-grid-layout/">http://www.w3.org/TR/css3-grid-layout/</a>.
+</p>
+
+<p>
+Tiene múltiples ventajas, entre las que destacan las siguientes:
+</p>
+<ul class="org-ul">
+<li><b>Eliminación</b> total de la necesidad de definir <b>capas contenedoras</b>. Bastará con tener una capa para cada área independiente de la página.
+</li>
+<li>Independencia del orden en que aparezcan las capas en el HTML.
+</li>
+<li><b>Independencia completa</b> entre <b>HTML</b> y <b>presentación visual</b>.
+</li>
+</ul>
+
+<p>
+Todavía no ha sido implementado de manera estándar por los navegadores. Sólo está soportado por el navegador <b>Internet Explorer 11</b> (aunque soporta una versión desfasada de la especificación) y el navegador <b>Chrome</b> de manera experimental (para ello hay que activar la característica "<i>Habilitar funciones experimentales de Web Platform</i>" en el menú <code>chrome://flags</code>. 
+</p>
+
+
+<div class="figure">
+<p><img src="../../images/02_02_chrome_grid.png" alt="Activación de CSS Grid Layout en Chrome">
+</p>
+<p><span class="figure-number">Figura 3:</span> Activación de CSS Grid Layout en Chrome</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Algunos consejos de diseño</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Los bloques que aparecen uno <b>debajo del otro no presentan problemas</b>: se muestran correctamente si son <code>display: block</code> (recordemos que estos elementos introducen saltos de línea, por lo que se muestran uno a continuación del otro).
+</li>
+<li>El <b>problema</b> aparece cuando tenemos capas que deben aparecer a la <b>derecha o izquierda</b> de otras. En ese caso tendremos que utilizar alguno de los métodos propuestos.
+</li>
+<li>La manera más sencilla de diseñar el layout consiste en hacer <b>agrupaciones por filas o columnas</b>:
+<ul class="org-ul">
+<li>Se deben buscar las <b>filas</b> que lleguen a los extremos de las capas contenedoras.
+</li>
+<li>Dentro de cada fila se procederá a agrupar por <b>columnas</b> que lleguen a su vez a los extremos de los contenedores.
+</li>
+<li>Se continuará de esta manera (filas, columnas,&#x2026;) hasta completar el diseño.
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+<div class="figure">
+<p><a href="../../images/02_02_disenyo.png" alt="Agrupación por filas y columnas"><img src="../../images/02_02_disenyo.png" alt="Agrupación por filas y columnas"></a>
+</p>
+<p><span class="figure-number">Figura 4:</span> Agrupación por filas y columnas</p>
+</div>
+
+
+
+
+
+<p>
+Por último, es recomendable pensar en el layout más adecuado para <b>dispositivos móviles</b> o pantallas pequeñas. Este tema será abordado con más detalle en unidades posteriores.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Referencias</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="http://es.slideshare.net/HarshalPatil4/css-layout-techniques">http://es.slideshare.net/HarshalPatil4/css-layout-techniques</a>
+</li>
+<li><a href="http://www.maxdesign.com.au/articles/css-layouts/">http://www.maxdesign.com.au/articles/css-layouts/</a>
+</li>
+<li><a href="http://designshack.net/articles/css/farewell-floats-the-future-of-css-layout/">http://designshack.net/articles/css/farewell-floats-the-future-of-css-layout/</a> (ojo, el modelo de <code>flexbox</code> descrito en este artículo es un modelo antiguo que ya no se utiliza).
+</li>
+<li><a href="http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/">http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p><p class="actualizacion">Última actualización: 08-11-2014 01:07. </p> 
+</div>
+</body>
+</html>

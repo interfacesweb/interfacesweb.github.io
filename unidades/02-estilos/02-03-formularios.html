@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unidad 2.3 - Diseño de formularios web</title>
+<!-- 08-11-2014 01:06 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Unidad 2.3 - Diseño de formularios web"
+>
+<meta  name="keywords" content="form design web formularios">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 2.3 - Diseño de formularios web</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Estructura y diseño visual (código)</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Fieldset</a></li>
+<li><a href="#sec-2-2">2.2. Agrupación de controles</a></li>
+<li><a href="#sec-2-3">2.3. Campos</a></li>
+<li><a href="#sec-2-4">2.4. Etiquetas (labels)</a></li>
+<li><a href="#sec-2-5">2.5. Alineación</a></li>
+<li><a href="#sec-2-6">2.6. Pistas (Placeholders)</a></li>
+<li><a href="#sec-2-7">2.7. Ejemplo completo</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Usabilidad y accesibilidad</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Alineación de etiquetas</a></li>
+<li><a href="#sec-3-2">3.2. Datos obligatorios y opcionales</a></li>
+<li><a href="#sec-3-3">3.3. Longitud de los campos</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Referencias</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En este tema se analizarán algunas recomendaciones de diseño relacionadas con los formularios web. El objetivo es aprender a diseñar formularios que muestren la información de manera limpia, clara y de forma adaptada a cualquier tipo de dispositivo.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Estructura y diseño visual (código)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A continuación se muestran algunos consejos relacionados con el código HTML y CSS utilizado en formularios.
+</p>
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Fieldset</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+La etiqueta <code>&lt;fieldset&gt;</code> se utiliza para agrupar controles relacionados. Se suele utilizar junto con la etiqueta <code>&lt;legend&gt;</code>, que muestra un texto a modo de título.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    <span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Controles del formulario </span><span style="color: #b22222;">--&gt;</span>
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Agrupación de controles</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Los controles de formulario son elementos en línea. Por tanto, para que aparezcan en líneas distintas es conveniente agruparlos mediante etiquetas de bloque.
+</p>
+
+<p>
+En este punto se puede optar por etiquetas <code>&lt;p&gt;</code> o <code>&lt;div&gt;</code>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">p</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">p</span>&gt;
+    &lt;<span style="color: #0000ff;">p</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">p</span>&gt;
+    &lt;<span style="color: #0000ff;">p</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">p</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+
+<p>
+O por listas (ordenadas o desordenadas):
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">ul</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;<span style="color: #b22222;">&lt;!-- </span><span style="color: #b22222;">Control de formulario </span><span style="color: #b22222;">--&gt;</span>&lt;/<span style="color: #0000ff;">li</span>&gt;
+    &lt;/<span style="color: #0000ff;">ul</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+
+<p>
+En caso de utilizar listas es posible ocultar los puntos mediante el siguiente código CSS:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">form ul, form ol </span>{
+    <span style="color: #a0522d;">list-style</span>: none;
+    <span style="color: #a0522d;">padding</span>: 0;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Campos</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Para identificar los controles se deben utilizar los atributos <code>id</code> y <code>name</code>. El atributo <code>id</code> se utiliza para a programación de cliente (<i>front-end</i>), mientras que el atributo <code>name</code> se utiliza para el envío de los datos al servidor (<i>back-end</i>).
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">ul</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"nombre"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"nombre"</span>&gt;&lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape1"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape1"</span>&gt;&lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape2"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape2"</span>&gt;&lt;/<span style="color: #0000ff;">li</span>&gt;
+    &lt;/<span style="color: #0000ff;">ul</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Etiquetas (labels)</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Para mostrar la información asociada a un control se debe utilizar la etiqueta <code>&lt;label&gt;</code>. Dicha etiqueta utiliza el atributo <code>for</code> para indicar el control al que va asociado. El valor del atributo <code>for</code> debe ser el valor del atributo <code>id</code> del control correspondiente.
+</p>
+
+<p>
+El uso de etiquetas tiene varias ventajas:
+</p>
+<ul class="org-ul">
+<li>El usuario puede pulsar con el ratón sobre la etiqueta y activar el control asociado.
+</li>
+<li>Dispositivos como lectores de pantalla o lectores braille necesitan las etiquetas para poder mostrar la información asociada al control.
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">ul</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"nombre"</span>&gt;Nombre&lt;/<span style="color: #0000ff;">label</span>&gt;
+        &lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"nombre"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"nombre"</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape1"</span>&gt;Apellido 1&lt;/<span style="color: #0000ff;">label</span>&gt;
+        &lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape1"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape1"</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape2"</span>&gt;Apellido 2&lt;/<span style="color: #0000ff;">label</span>&gt;
+        &lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape2"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape2"</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+    &lt;/<span style="color: #0000ff;">ul</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Alineación</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+La alineación de controles o etiquetas puede conseguirse utilizando cualquiera de las técnicas de layout estudiadas en el <a href="02-02-layout.html">tema 2.2</a>.
+</p>
+
+<p>
+En el caso concreto de formularios es recomendable utilizar <code>display: inline-block</code> definiendo una anchura igual para las etiquetas junto con otra anchura igual para los controles. La separación entre ambos puede realizarse utilizando el margen.
+</p>
+
+<p>
+A continuación se muestra un ejemplo del código utilizado para ello:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">label </span>{
+    <span style="color: #a0522d;">display</span>: inline-block;
+    <span style="color: #a0522d;">width</span>: 7em;
+}
+
+<span style="color: #0000ff;">input </span>{
+    <span style="color: #a0522d;">display</span>: inline-block;
+    <span style="color: #a0522d;">width</span>: 9em;
+}
+</pre>
+</div>
+
+<p>
+Es posible (y recomendable) utilizar etiquetas <code>&lt;span&gt;</code> para agrupar etiquetas y controles y así poderlos procesar correctamente en CSS.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">ul</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"nombre"</span>&gt;Nombre&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"nombre"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"nombre"</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape1"</span>&gt;Apellido 1&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape1"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape1"</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape2"</span>&gt;Apellido 2&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape2"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape2"</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+    &lt;/<span style="color: #0000ff;">ul</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Pistas (Placeholders)</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Es posible utilizar pistas para indicar al usuario qué información debe introducir en cada campo del formulario. Para ello se puede utilizar el atributo <code>placeholder</code>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">form</span>&gt;
+  &lt;<span style="color: #0000ff;">fieldset</span>&gt;
+    &lt;<span style="color: #0000ff;">legend</span>&gt;T&#237;tulo&lt;/<span style="color: #0000ff;">legend</span>&gt;
+
+    &lt;<span style="color: #0000ff;">ul</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"nombre"</span>&gt;Nombre&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"nombre"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"nombre"</span> <span style="color: #a0522d;">placeholder</span>=<span style="color: #8b2252;">"Nombre..."</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape1"</span>&gt;Apellido 1&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape1"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape1"</span> <span style="color: #a0522d;">placeholder</span>=<span style="color: #8b2252;">"Apellido 1..."</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+      &lt;<span style="color: #0000ff;">li</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"etiqueta"</span>&gt;&lt;<span style="color: #0000ff;">label</span> <span style="color: #a0522d;">for</span>=<span style="color: #8b2252;">"ape2"</span>&gt;Apellido 2&lt;/<span style="color: #0000ff;">label</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+        &lt;<span style="color: #0000ff;">span</span> <span style="color: #a0522d;">class</span>=<span style="color: #8b2252;">"control"</span>&gt;&lt;<span style="color: #0000ff;">input</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text"</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"ape2"</span> <span style="color: #a0522d;">id</span>=<span style="color: #8b2252;">"ape2"</span> <span style="color: #a0522d;">placeholder</span>=<span style="color: #8b2252;">"Apellido 2..."</span>&gt;&lt;/<span style="color: #0000ff;">span</span>&gt;
+      &lt;/<span style="color: #0000ff;">li</span>&gt;
+    &lt;/<span style="color: #0000ff;">ul</span>&gt;
+
+  &lt;/<span style="color: #0000ff;">fieldset</span>&gt;
+
+&lt;/<span style="color: #0000ff;">form</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> Ejemplo completo</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+A continuación puedes ver un ejemplo de formulario utilizando las recomendaciones descritas:
+</p>
+
+<a class="jsbin-embed" href="http://jsbin.com/cefikuzuku/latest/embed?html,css,output">Ejemplo de formulario</a><script src="http://static.jsbin.com/js/embed.js"></script>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Usabilidad y accesibilidad</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Alineación de etiquetas</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Las <b>etiquetas</b> de los formularios suelen colocarse <b>arriba o a la izquierda</b> de los controles. Cuando se colocan a la izquierda, pueden <b>alinearse</b> a la <b>izquierda</b> o a la <b>derecha</b>. Cada una de estas opciones tiene sus ventajas e inconvenientes.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="left">
+</colgroup>
+
+<colgroup>
+<col  class="center">
+</colgroup>
+
+<colgroup>
+<col  class="center">
+</colgroup>
+
+<colgroup>
+<col  class="center">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="center">Arriba</th>
+<th scope="col" class="center">Izquierda</th>
+<th scope="col" class="center">Derecha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Útil para tipos de datos conocidos</td>
+<td class="center">X</td>
+<td class="center">&#xa0;</td>
+<td class="center">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Procesamiento rápido</td>
+<td class="center">X</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+</tr>
+
+<tr>
+<td class="left">No problemas con etiquetas largas</td>
+<td class="center">X</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+</tr>
+
+<tr>
+<td class="left">Asociación etiqueta-control clara</td>
+<td class="center">&#xa0;</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+</tr>
+
+<tr>
+<td class="left">Ocupa poco espacio vertical</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+<td class="center">X</td>
+</tr>
+
+<tr>
+<td class="left">Favorece el escaneo de etiquetas</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+<td class="center">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Útil para tipos de  datos desconocidos</td>
+<td class="center">&#xa0;</td>
+<td class="center">X</td>
+<td class="center">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Datos obligatorios y opcionales</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Se debe <b>minimizar</b> el número de <b>datos opcionales</b>.
+</li>
+<li>Si la mayoría de datos son obligatorios: indicar los opcionales.
+</li>
+<li>Si la mayoría de datos son opcionales: indicar los obligatorios.
+</li>
+<li>Es mejor utilizar indicadores mediante <b>texto</b>; también se puede utilizar <code>*</code> para los campos <b>obligatorios</b>.
+</li>
+<li>Se deben asociar los indicadores con las etiquetas.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Longitud de los campos</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>El tamaño de los campos puede ofrecer información sobre su contenido.
+</li>
+<li>Muchos tamaños: ruido adicional
+</li>
+<li>En caso de duda, tamaño igual para todos los campos.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Referencias</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><a href="http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07">Recomendaciones para diseño de formularios (en inglés)</a>
+</li>
+<li><a href="http://www.slideshare.net/psykoreactor/best-practices-for-form-design">Consejos de usabilidad de formularios (en inglés)</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p><p class="actualizacion">Última actualización: 08-11-2014 01:06. </p> 
+</div>
+</body>
+</html>

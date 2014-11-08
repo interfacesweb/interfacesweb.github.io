@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unidad 1.1 - Fundamentos del Diseño Web</title>
+<!-- 08-11-2014 01:07 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Fundamentos del Diseño Web. Basado en el libro Don't make me think de Steven Krug."
+>
+<meta  name="keywords" content="krug web design usability">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 1.1 - Fundamentos del Diseño Web</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Don't make me think!</a></li>
+<li><a href="#sec-3">3. Errores típicos</a></li>
+<li><a href="#sec-4">4. Diseño orientado al escaneo, no a la lectura</a></li>
+<li><a href="#sec-5">5. Elecciones sencillas</a></li>
+<li><a href="#sec-6">6. Omisión de palabras inútiles</a></li>
+<li><a href="#sec-7">7. Diseño de la navegación</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Tipos de usuarios</a></li>
+<li><a href="#sec-7-2">7.2. Objetivos del menú de navegación</a></li>
+<li><a href="#sec-7-3">7.3. Convenciones</a></li>
+<li><a href="#sec-7-4">7.4. Elementos de la navegación</a>
+<ul>
+<li><a href="#sec-7-4-1">7.4.1. Navegación primaria.</a></li>
+<li><a href="#sec-7-4-2">7.4.2. Utilidades</a></li>
+<li><a href="#sec-7-4-3">7.4.3. Enlace a la página principal</a></li>
+<li><a href="#sec-7-4-4">7.4.4. Navegación secundaria y posteriores</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-5">7.5. Búsqueda</a></li>
+<li><a href="#sec-7-6">7.6. Nombres de las páginas</a></li>
+<li><a href="#sec-7-7">7.7. Localización</a></li>
+<li><a href="#sec-7-8">7.8. Migas de pan</a></li>
+<li><a href="#sec-7-9">7.9. Pestañas</a></li>
+<li><a href="#sec-7-10">7.10. Test de navegación</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Basado en el libro "Don't Make Me Think" (No me hagas pensar), de Steven Krug.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Don't make me think!</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+"No me hagas pensar" es el principio más importante que toda página debería seguir en cuanto a usabilidad. El objetivo principal de toda página web debería ser que fuera evidente, auto-explicativa. El usuario debería ser capaz de ver de un vistazo lo que la página propone sin gastar mucho tiempo pensando sobre ello.
+</p>
+
+<p>
+¿Cómo de evidente? Lo suficiente como para que una persona que no sea experta en el tema propuesto en la página y que apenas sepa usar el navegador sea capaz de llegar al sitio y decir "Ah, esta página va de &#x2014;".
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Errores típicos</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Nombres poco claros, como nombres de marcas, específicos del funcionamiento interno de la empresa o siglas o nombres técnicos.
+</li>
+<li>Enlaces y botones que no se muestran de manera obvia y se confunden con texto normal.
+</li>
+<li>Asumir que el usuario conoce una información que en realidad desconoce.
+</li>
+<li>No saber en qué lugar del sitio web se está ni cómo volver a un sitio conocido (como por ejemplo, la página principal).
+</li>
+<li>No ofrecer un punto de entrada claro para empezar a utilizar el sitio.
+</li>
+<li>No mostrar los elementos típicos (menús de navegación, etc.) en los sitios habituales.
+</li>
+<li>Sobrecargar la página con información de manera que no se sepa qué es importante o qué no.
+</li>
+<li>Mezclar el contenido de la página con la publicidad de la misma de manera que sea muy difícil diferenciar ambas cosas.
+</li>
+</ul>
+
+<p>
+El objetivo principal es eliminar todas aquellas preguntas que se pueda hacer el usuario a la hora de utilizar la página.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Diseño orientado al escaneo, no a la lectura</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>Sigue las <b>convenciones</b> del diseño web.
+<ul class="org-ul">
+<li>Los elementos (menús, logo, contenido,&#x2026;) están dispuestos de manera convencional.
+</li>
+<li>Los elementos (cuadros de búsqueda, iconos de vídeo o audio, redes sociales,&#x2026;) son reconocibles.
+</li>
+</ul>
+</li>
+<li>Dispone de una <b>jerarquía</b> clara.
+<ul class="org-ul">
+<li>Queda claro qué apartados son más importantes que otros.
+</li>
+<li>Los encabezados de distintos niveles son perfectamente distinguibles unos de otros.
+</li>
+<li>Las capas agrupan correctamente los contenidos relacionados entre sí.
+</li>
+</ul>
+</li>
+<li>Las páginas están <b>divididas en áreas</b> bien definidas.
+</li>
+<li>Los <b>enlaces y botones</b> se distinguen del texto normal.
+</li>
+<li>No hay contenido que <b>distraiga</b> al usuario.
+<ul class="org-ul">
+<li>No hay demasiadas zonas que llamen la atención del usuario de manera evidente (animaciones, exclamaciones, anuncios parpadeando,&#x2026;).
+</li>
+<li>La página muestra un aspecto organizado y es fácil reconocer cada una de las áreas en que está dividida.
+</li>
+</ul>
+</li>
+<li>El contenido está <b>estructurado</b> de manera que sea fácil escanear la página.
+<ul class="org-ul">
+<li>Hay encabezados que separan las secciones de texto.
+</li>
+<li>Queda claro qué encabezado está relacionado con el contenido.
+</li>
+<li>Los párrafos son cortos.
+</li>
+<li>Se utilizan listas para esquematizar el contenido.
+</li>
+<li>La cursiva y la negrita se utilizan pero de manera puntual.
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Elecciones sencillas</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Los usuarios buscan elecciones sencillas.
+</li>
+<li>Es más recomendable ofrecer pocas opciones  en varios pasos que muchas opciones en pocos pasos.
+</li>
+<li>Las opciones que se ofrecen deben ser lo suficientemente distintas como para no dudar entre una u otra.
+</li>
+<li>Las instrucciones deben desaparecer o minimizarse al máximo. En caso de aparecer, deben ser:
+<ul class="org-ul">
+<li>Breves (mínima cantidad de información que sea útil).
+</li>
+<li>Oportunas (deben aparecer exclusivamente cuando sean necesarias).
+</li>
+<li>Visibles (deben captar la atención del usuario y no pasar desapercibidas).
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Omisión de palabras inútiles</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Es conveniente eliminar la mayoría de palabras inútiles en la página.
+</li>
+<li>Una vez escrito el texto, es conveniente analizarlo para intentar eliminar la mitad de las palabras.
+</li>
+<li>Se debe intentar evitar textos de bienvenida y descripciones al principio de las secciones y en la página principal.
+</li>
+<li>Las instrucciones deben escribirse de manera concisa.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Diseño de la navegación</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Tipos de usuarios</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Orientados a la navegación.
+</li>
+<li>Orientados a la búsqueda.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Objetivos del menú de navegación</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Ayudar a encontrar lo que se está buscando.
+</li>
+<li>Indicar la localización actual dentro del sitio.
+</li>
+<li>Mostrar el contenido del sitio web.
+</li>
+<li>Explicar cómo utilizar el sitio.
+</li>
+<li>Dar confianza en la calidad del sitio.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Convenciones</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>Los menús de navegación deben aparecer en los sitios convencionales.
+</li>
+<li>La navegación debe de mostrarse de manera consistente en todas las páginas, con algunas excepciones:
+<ul class="org-ul">
+<li>Páginas de pago online.
+</li>
+<li>Páginas de registro, suscripción, personalización de preferencias,&#x2026;
+</li>
+</ul>
+</li>
+<li>Es conveniente mostrar el logo de la página que actúe de enlace a la página principal en la parte superior izquierda.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Elementos de la navegación</h3>
+<div class="outline-text-3" id="text-7-4">
+</div><div id="outline-container-sec-7-4-1" class="outline-4">
+<h4 id="sec-7-4-1"><span class="section-number-4">7.4.1</span> Navegación primaria.</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<ul class="org-ul">
+<li>Muestra las secciones principales del sitio.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4-2" class="outline-4">
+<h4 id="sec-7-4-2"><span class="section-number-4">7.4.2</span> Utilidades</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<ul class="org-ul">
+<li>Son herramientas que utilizará el usuario. Ejemplos: cuadro de búsqueda, carrito de compra, "mi cuenta", enlaces para iniciar sesión,&#x2026;
+</li>
+<li>Se deben mostrar las cuatro o cinco más importantes en lugar visible (junto a la navegación primaria, por ejemplo).
+</li>
+<li>El resto deben mostrarse en el pie de página.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4-3" class="outline-4">
+<h4 id="sec-7-4-3"><span class="section-number-4">7.4.3</span> Enlace a la página principal</h4>
+<div class="outline-text-4" id="text-7-4-3">
+<ul class="org-ul">
+<li>En el logo de la empresa.
+</li>
+<li>En la navegación principal.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4-4" class="outline-4">
+<h4 id="sec-7-4-4"><span class="section-number-4">7.4.4</span> Navegación secundaria y posteriores</h4>
+<div class="outline-text-4" id="text-7-4-4">
+<ul class="org-ul">
+<li>Se debe prestar atención a todos los niveles de navegación, no solo a los principales.
+</li>
+<li>De esta manera se asegura una coherencia a todos los niveles.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Búsqueda</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>Es conveniente mostrar un cuadro de búsqueda en las utilidades.
+</li>
+<li>El cuadro de búsqueda debe mostrarse de manera convencional (icono de buscar o palabra "Buscar").
+</li>
+<li>No deben mostrarse muchas opciones de búsqueda o filtrado en primera instancia. En su lugar, se deben mostrar cuando ya se haya realizado la primera búsqueda con el objeto de ayudar a filtrar los resultados.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> Nombres de las páginas</h3>
+<div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li>Se debe mostrar el nombre de cada una de las páginas en la parte superior del contenido.
+</li>
+<li>El nombre debe resaltarse de manera adecuada, ya que es el elemento de mayor jerarquía de la página.
+</li>
+<li>El nombre debe concordar con el nombre de la opción del menú que ha conducido a dicha página.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-7" class="outline-3">
+<h3 id="sec-7-7"><span class="section-number-3">7.7</span> Localización</h3>
+<div class="outline-text-3" id="text-7-7">
+<ul class="org-ul">
+<li>El menú de navegación debe resaltar la sección o secciones en las que se está en cada momento.
+</li>
+<li>El resaltado debe ser evidente.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-8" class="outline-3">
+<h3 id="sec-7-8"><span class="section-number-3">7.8</span> Migas de pan</h3>
+<div class="outline-text-3" id="text-7-8">
+<ul class="org-ul">
+<li>Deben aparecer en la parte superior.
+</li>
+<li>Se debe utilizar "<b>&gt;</b>" para separar niveles.
+</li>
+<li>El último nivel (nombre de la página actual) no debe ser un enlace y debe aparecer destacado.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-9" class="outline-3">
+<h3 id="sec-7-9"><span class="section-number-3">7.9</span> Pestañas</h3>
+<div class="outline-text-3" id="text-7-9">
+<ul class="org-ul">
+<li>Son evidentes y fáciles de usar.
+</li>
+<li>Deben estar correctamente configuradas para resaltar la sección actual.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-10" class="outline-3">
+<h3 id="sec-7-10"><span class="section-number-3">7.10</span> Test de navegación</h3>
+<div class="outline-text-3" id="text-7-10">
+<p>
+El diseñador siempre piensa que el usuario va a llegar a la página deseada a través de la página principal y desde allí a través de la navegación. Sin embargo, en multitud de ocasiones se llega a una página directamente a través de un enlace enviado por otra persona o a través de un buscador.
+Por ello, al llegar a una página interior de un sitio web directamente se debería poder contestar a las siguientes preguntas sin demasiada dificultad:
+</p>
+<ul class="org-ul">
+<li>¿Qué sitio es éste? (Nombre del sitio o compañía)
+</li>
+<li>¿En qué página estoy? (Nombre de la página)
+</li>
+<li>¿Cuáles son las secciones principales? (Navegación primaria)
+</li>
+<li>¿Qué opciones tengo en este nivel? (Navegación local)
+</li>
+<li>¿En qué lugar me encuentro dentro de la jerarquía? (Localización)
+</li>
+<li>¿Dónde puedo realizar una búsqueda?
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p><p class="actualizacion">Última actualización: 08-11-2014 01:07. </p> 
+</div>
+</body>
+</html>

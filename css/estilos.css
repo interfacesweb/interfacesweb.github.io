@@ -1,0 +1,337 @@
+body {
+    font-family: 'Open Sans',verdana,sans-serif;
+    font-size: 100%;
+    text-align: justify;
+    background-color: white;
+    margin: 0px;
+    width: 100%;
+
+}
+
+.title {
+    font-size: 2em;
+    text-align: left;
+}
+
+#preamble {
+    background-color: #eaeff2;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 900px;
+    margin: auto;
+
+}
+#preamble h1 {
+    margin: 0;
+}
+
+#postamble {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #eaeff2;
+}
+
+h1, h2, h3 {
+    text-align: left;
+    line-height: initial;
+}
+
+#content {
+    min-height: 400px;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+
+}
+
+#content h2, #content h3, #content h4 {
+    margin-top: 1.7em;
+    margin-bottom: 0.3em;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    border-bottom: 1px solid;
+    border-color: rgb(0,149,221);
+}
+
+#content h2 {
+    font-size: 2em;
+}
+
+#content h3 {
+
+    font-size: 1.5em;
+}
+
+#content h4 {
+    font-size: 1.2em;
+}
+
+p, #content ul, #content ol {
+    margin-top: 0em;
+    margin-bottom: 1.25em;
+    text-rendering: optimizelegibility;
+}
+
+#content ul, #content ol {
+    padding-left: 1.5em;
+}
+
+
+#content li {
+    margin-bottom: 0.3em;
+    margin-top: 0.2em;
+}
+
+#content img {
+    max-width: 70%;
+}
+
+blockquote {
+    border: 1px solid black;
+    background-color: #E6E6E6;
+    padding: 1em;
+}
+
+.navbar, #postamble {
+    margin-top: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding: 1em;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.licencia, .actualizacion {
+    text-align: center;
+    margin-bottom: 0em;
+    font-size: 0.8em;
+}
+
+.actualizacion {
+    margin-top: 1em;
+}
+
+.licencia img {
+    display: inline;
+}
+
+.breadcrumb {
+    font-size: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.breadcrumb a:link, .breadcrumb a:hover, .breadcrumb a:visited {
+    color:  rgb(0,149,221);
+
+}
+
+a:link, a:hover, a:visited {
+    color:  rgb(0,149,221);
+}
+
+#table-of-contents {
+
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.toc, .index_page {
+    width: 25em;
+    text-align: left;
+    padding: 0.5em;
+    background-color:  rgb(244,247,248);
+    font-size: 0.8em;
+}
+
+#text-table-of-contents {
+    margin-left: 1.5em;
+}
+
+.toc h2 {
+    font-size: 1.4em;
+    margin-left: 0.2em;
+    margin-top: 0.5em;
+}
+
+
+
+
+
+.index_page h2 {
+    width: auto;
+}
+
+#content .toc ul {
+    line-height: 1.5;
+    padding-left: 0.1em;
+    margin: 0px;
+}
+
+.toc li {
+    list-style-type: none;
+    margin-left: 0.3em;
+}
+
+.toc a, .toc a:visited, .toc a:hover {
+    color: rgb(0,149,221);
+}
+
+
+.banner {
+    float: right;
+    margin: 1em;
+}
+
+#content ul.lista_main {
+    text-align: center;
+    padding-left: 0em;
+
+}
+.lista_main li {
+    display: inline-block;
+    margin: 0.5em;
+    text-align: center;
+    padding: 0.7em;
+    font-size: 1.5em;
+}
+
+.lista_main li:first-child:before {
+    content: url('../images/unidades.png');
+    vertical-align: -50%;
+    margin-right: 0.2em;
+}
+
+.lista_main li:nth-child(2):before {
+    content: url('../images/ejercicios.png');
+    vertical-align: -50%;
+    margin-right: 0.2em;
+}
+
+
+.lista_main a, .lista_main a:visited, .lista_main a:hover {
+    color: rgb(0,149,221);
+}
+
+.paginicial {
+    max-width: 30em;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+    .title {
+	text-align: center;
+}
+    #container {
+	width: auto;
+    }
+    
+    .banner {
+	width: 300px;
+	float: none;
+	margin: auto;
+    }
+
+    #table-of-contents {
+	margin: auto;
+    }
+
+    .toc, .index_page {
+	width: auto;
+    }
+    /* Para evitar enlaces largos que se salgan del contenedor */
+    a {
+	word-wrap: break-word;
+    }
+    
+}
+
+.lista {
+    font-size: 1em;
+}
+
+code, pre.src {
+    font-size: 0.9375em;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 5px;
+}
+
+pre.src{
+
+    overflow: auto;
+}
+
+code {
+    background-color: #E9E9E9;
+    color: #333;
+    padding: 2px 8px;
+}
+
+.outline-3 {
+    margin-left: 0.5em;
+}
+
+.outline-4 {
+    margin-left: 1em;
+}
+
+
+/* Estos estilos los aplica orgmode automáticamente para el código 
+Convendría revisarlo para que no incluyera código y poder ponerlo aquí */
+.resultado {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    overflow: auto;
+    margin: 1.2em;
+}
+
+/* Estilos de la plantilla de org-mode respetados */
+.timestamp { color: #bebebe; }
+.timestamp-kwd { color: #5f9ea0; }
+.right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.right  { text-align: center;  }
+th.left   { text-align: center;   }
+th.center { text-align: center; }
+td.right  { text-align: right;  }
+td.left   { text-align: left;   }
+td.center { text-align: center; }
+dt { font-weight: bold; }
+.footpara:nth-child(2) { display: inline; }
+.footpara { display: block; }
+.footdef  { margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+.inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+}
+#org-div-home-and-up
+{ text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: smaller }
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+{ font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight { 
+    background-color: #ffff00; color: #000000; font-weight: bold; 
+}
+
+/* Fin de estilos de org-mode */

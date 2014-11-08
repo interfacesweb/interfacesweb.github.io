@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unidad 1.3 - Estructuración de contenidos en HTML</title>
+<!-- 08-11-2014 01:07 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Estructuración de contenidos en HTML"
+>
+<meta  name="keywords" content="estructura div HTML plantilla">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 1.3 - Estructuración de contenidos en HTML</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Elementos de bloque y elementos en línea</a></li>
+<li><a href="#sec-3">3. Elementos de bloque</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Encabezados</a></li>
+<li><a href="#sec-3-2">3.2. Párrafos</a></li>
+<li><a href="#sec-3-3">3.3. Listas</a></li>
+<li><a href="#sec-3-4">3.4. Tablas</a></li>
+<li><a href="#sec-3-5">3.5. Capas</a>
+<ul>
+<li><a href="#sec-3-5-1">3.5.1. Elementos semánticos HTML5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Elementos en línea (inline)</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Formato (cursiva, negrita,&#x2026;)</a></li>
+<li><a href="#sec-4-2">4.2. Span</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+HTML es un lenguaje <b>estructurado</b>. Su función es organizar los contenidos de manera jerárquica, agrupando la información relacionada en bloques que pueden anidarse unos dentro de otros para expresar <b>jerarquía</b>. 
+</p>
+
+<p>
+Posteriormente, dichos bloques pueden formatearse de distintas maneras para que tengan un aspecto visual determinado o para que aparezcan en una zona u otra de la pantalla. Esta tarea no compete a HTML, sino que es competencia de <b>CSS</b>. Las etiquetas de HTML que se utilizaban exclusivamente para dar formato y no estructura (como las etiquetas <code>&lt;font&gt;</code>) han sido eliminadas o marcadas como obsoletas en las versiones recientes de HTML.
+</p>
+
+<p>
+En este tema estudiaremos las principales etiquetas que se utilizan para estructurar un documento HTML de manera adecuada.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Elementos de bloque y elementos en línea</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+En HTML hay dos tipos elementos: elementos de <b>bloque</b> (<i>block</i>) y elementos <b>en línea</b> (<i>inline</i>).
+</p>
+
+<p>
+Los elementos de <b>bloque</b> ocupan por defecto todo el ancho del elemento contenedor y están separados por <b>saltos de línea</b>. Por tanto, si aparecen varios elementos de bloque uno a continuación del otro estos se mostrarán como cajas que se muestran una debajo de otra. A estos elementos se les aplica el <a href="http://www.w3schools.com/css/css_boxmodel.asp">modelo de caja</a>. Los <b>párrafos</b> se comportan como elementos en bloque: cada párrafo nuevo aparece debajo del anterior; además, el ancho del párrafo ocupa por defecto el ancho del elemento contenedor (o la pantalla, en su defecto).
+</p>
+
+<p>
+Los elementos <b>en línea</b> ocupan el ancho del contenido que tengan dentro y no están separados por saltos de línea. Por tanto, si aparecen varios elementos en línea uno a continuación del otro estos se mostrarán en la misma línea uno a la derecha del otro. En caso de que la línea sea más larga que el ancho del elemento contenedor (o la pantalla en su defecto), aparecerán en una línea más abajo. El <b>texto de un párrafo</b> se comporta como un elemento en línea: el texto aparece de izquierda a derecha hasta llegar al final de la pantalla, donde empieza una nueva línea.
+</p>
+
+<p>
+<a href="http://www.w3schools.com/html/html_blocks.asp">Más información</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Elementos de bloque</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación se muestran los elementos en bloque más utilizados.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Encabezados</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Los encabezados se utilizan para mostrar los <b>títulos de las secciones y subsecciones</b> en que está dividido el documento. Existen varios <b>niveles</b> de encabezados (1 a 6). El número 1 representa el nivel más alto o importante, mientras que el nivel 6 es el nivel más bajo.
+</p>
+
+<p>
+Típicamente los encabezados van seguidos de uno o más párrafos. Los párrafos que aparecen a continuación del encabezado están asociados a él, de manera que el encabezado hace referencia al título y los párrafos al contenido de la sección.
+</p>
+
+<p>
+Si aparece otro <b>encabezado del mismo nivel</b> que el último significa que se inicia una nueva sección: el contenido que aparezca a continuación hará referencia a la sección nombrada en el encabezado nuevo.
+</p>
+
+<p>
+Si por el contrario aparece un <b>encabezado de un nivel inferior</b> significa que se inicia una subsección dentro de la sección principal. Las subsecciones deben partir del nivel anterior: si partimos de un encabezado de nivel 1 y tenemos que abrir una subsección, utilizaremos un encabezado de nivel 2.
+</p>
+
+<p>
+Los navegadores web suelen destacar los encabezados mediante unos estilos predefinidos que se pueden consultar en este <a href="http://www.w3schools.com/tags/tag_hn.asp">enlace</a>. Típicamente el texto de los encabezados aparece destacado en negrita, con tipo de letra más grande y con un espacio vertical que separa el texto del encabezado del contenido anterior y posterior.
+</p>
+
+<p>
+Los encabezados se definen con las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Párrafos</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Los párrafos se utilizan para <b>agrupar porciones de texto que expresan una idea</b> o argumento. El texto escrito se suele agrupar en párrafos para facilitar su lectura.
+</p>
+
+<p>
+Los navegadores web suelen dejar un <b>espacio vertical mayor que el espacio entre líneas</b> entre un párrafo y el siguiente.
+</p>
+
+<p>
+La etiqueta HTML utilizada para representar párrafos es <code>&lt;p&gt;</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Listas</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Las listas se utilizan para escribir <b>enumeraciones</b>. Los navegadores suelen dejar un espacio adicional entre las listas y el contenido anterior y posterior.
+</p>
+
+<p>
+Las etiquetas que engloban las listas son las etiquetas <code>&lt;ul&gt;</code> para lista desordenadas y <code>&lt;ol&gt;</code> para listas ordenadas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Tablas</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Las tablas se utilizan para representar <b>información de manera tabular</b>. Anteriormente se utilizaban también para organizar visualmente las secciones de las páginas, pero en la actualidad esa práctica está en desuso y es poco recomendable. Los navegadores suelen dejar un espacio adicional entre las tablas y el contenido anterior y posterior.
+</p>
+
+<p>
+La etiqueta <code>&lt;table&gt;</code> es la que se utiliza en HTML para definir tablas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Capas</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Las capas son elementos que se utilizan para <b>agrupar otros elementos de tipo bloque</b>. De esta manera es posible hacer referencia a un conjunto de elementos para darles <b>formato</b> con hojas de estilo <b>CSS</b>.
+</p>
+
+<p>
+Las capas se utilizan típicamente para dividir la página en secciones independientes y posteriormente colocarlas en algún sitio concreto de la página mediante CSS y el uso de nombres de clase e identificadores. Algunas de las secciones más utilizadas son:
+</p>
+
+<ul class="org-ul">
+<li>Outer (exterior) - Se utiliza para almacenar todas las demás capas.
+</li>
+<li>Menu (menú) - Se utiliza para alojar el menú de navegación.
+</li>
+<li>Header (cabecera) - Se utiliza para alojar la cabecera de la página (título, logo,&#x2026;).
+</li>
+<li>Footer (pie) - Se utiliza para alojar el pie de página.
+</li>
+<li>Content (contenido) - Se utiliza para alojar el contenido principal de la página.
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1"><span class="section-number-4">3.5.1</span> Elementos semánticos HTML5</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+HTML5 ha introducido algunos elementos adicionales para representar determinadas capas. Estos elementos son más descriptivos que los elementos <code>&lt;div&gt;</code> y pueden consultarse en este <a href="http://www.w3schools.com/html/html5_semantic_elements.asp">enlace</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Elementos en línea (inline)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Los elementos en línea suelen utilizarse para destacar o agrupar trozos de texto o algunos otros elementos en línea. Su única limitación radica en que no pueden rebasar los límites del elemento en bloque que los contiene. Así, por ejemplo, este código sería <b>CORRECTO</b>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">p</span>&gt;Este texto tiene una palabra &lt;<span style="color: #0000ff;">b</span>&gt;<span style="font-weight: bold;">destacada</span>&lt;/<span style="color: #0000ff;">b</span>&gt;&lt;/<span style="color: #0000ff;">p</span>&gt;
+</pre>
+</div>
+
+<p>
+Sin embargo, este código sería <b>INCORRECTO</b>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">p</span>&gt;Este texto tiene  palabras &lt;<span style="color: #0000ff;">b</span>&gt;destacadas que abarcan varios p&#225;rrafos.&lt;/<span style="color: #0000ff;">p</span>&gt;
+
+&lt;<span style="color: #0000ff;">p</span>&gt;Por tanto, es incorrecto.&lt;/<span style="color: #0000ff;">b</span>&gt;&lt;/<span style="color: #0000ff;">p</span>&gt;
+</pre>
+</div>
+
+
+<p>
+A continuación se muestran los elementos en línea más utilizados.
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Formato (cursiva, negrita,&#x2026;)</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Son elementos que se utilizan para <b>destacar determinadas porciones de texto</b>. Los navegadores web se encargan de darles el formato apropiado para que se muestren correctamente en pantalla (negrita, cursiva,&#x2026;). Los más importantes pueden consultarse en este <a href="http://www.w3schools.com/html/html_formatting.asp">enlace</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Span</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+El elemento <code>&lt;span&gt;</code> es un elemento en línea <b>genérico</b>. No tiene asociado ningún estilo en particular, por lo que el texto marcado con esta etiqueta no mostrará un aspecto especial en la pantalla.
+</p>
+
+<p>
+Se utiliza para <b>agrupar otros elementos en línea</b> (texto, imágenes,&#x2026;) y así poder cambiar su aspecto visual mediante hojas de estilo y el uso de nombres de clase e identificadores.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p><p class="actualizacion">Última actualización: 08-11-2014 01:07. </p> 
+</div>
+</body>
+</html>

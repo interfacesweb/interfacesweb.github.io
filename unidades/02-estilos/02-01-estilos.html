@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unidad 2.1 - Hojas de estilo</title>
+<!-- 08-11-2014 01:07 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Unidad 2.1 - Hojas de estilo"
+>
+<meta  name="keywords" content="CSS stylesheet estilos">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 2.1 - Hojas de estilo</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Referencia de CSS</a></li>
+<li><a href="#sec-3">3. Tipos de hojas de estilo</a></li>
+<li><a href="#sec-4">4. Cascada y herencia</a></li>
+<li><a href="#sec-5">5. Hojas de estilo alternativas</a></li>
+<li><a href="#sec-6">6. Compatibilidad entre navegadores</a></li>
+<li><a href="#sec-7">7. Modelo de cajas: algunas notas</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Box-sizing</a></li>
+<li><a href="#sec-7-2">7.2. Altura y anchura</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Unidades de medida</a>
+<ul>
+<li><a href="#sec-8-1">8.1. Unidades absolutas</a></li>
+<li><a href="#sec-8-2">8.2. Unidades relativas</a>
+<ul>
+<li><a href="#sec-8-2-1">8.2.1. Unidad 'em'</a></li>
+<li><a href="#sec-8-2-2">8.2.2. Unidad 'rem'</a></li>
+<li><a href="#sec-8-2-3">8.2.3. Porcentaje</a></li>
+<li><a href="#sec-8-2-4">8.2.4. Unidades 'vw', 'vh', 'vmin' y 'vmax'</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-9">9. Creación de clases centralizadas</a></li>
+<li><a href="#sec-10">10. Minimización de hojas de estilo</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Las hojas de estilo en cascada <b>CSS</b> - <i>Cascade Style Sheet</i> en inglés - se utilizan para <b>diseñar y dar formato</b> a las páginas web escritas con HTML. Las razones de su aparición son las siguientes:
+</p>
+
+<ul class="org-ul">
+<li><b>HTML</b> ofrece muy <b>pocas opciones</b> para dar formato al texto. Su función es estructurar el texto en secciones tales como tablas, listas, párrafos, etc., pero en cuanto a diseño visual resulta un tanto pobre.
+</li>
+<li>El diseñador de páginas web se encontraba con archivos HTML extremadamente <b>liosos</b>, ya que en el mismo texto se agrupaban contenidos, estructuras e instrucciones de formato visual, por lo que su modificación y elaboración resultaba ser muy complicada.
+</li>
+<li>La <b>modificación</b> del formato utilizado en un sitio web compuesto por un gran número de páginas resultaba <b>muy difícil</b>, ya que se tenían que cambiar manualmente los estilos de cada una de las páginas que formaban el sitio. 
+</li>
+</ul>
+
+<p>
+Frente a esta situación, el organismo W3C decidió crear un sistema por el que las <b>instrucciones de formato</b> se encontraran <b>separadas</b> de los otros elementos. Así, a partir de la versión 4 de HTML se desaconseja utilizar elementos de formato y se sugiere la utilización de las hojas de estilo en cascada o CSS.
+</p>
+
+<p>
+Un ejemplo de las posibilidades que ofrecen las hojas de estilo se puede encontrar visitando la página Zengarden, donde se puede observar el efecto que produce en la misma página HTML utilizar una hoja de estilo u otra.
+</p>
+
+<p>
+En esta unidad repasaremos y ampliaremos algunos de los conceptos de CSS que se estudiaron en el primer curso, dando por hecho que el alumno está familiarizado con la sintaxis básica y la mayoría de las propiedades.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Referencia de CSS</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><a href="http://librosweb.es/css/">http://librosweb.es/css/</a>
+</li>
+<li><a href="http://www.w3schools.com/cssref/">Guía de referencia de propiedades CSS</a>
+</li>
+<li><a href="http://www.w3schools.com/cssref/css_selectors.asp">Selectores CSS</a>
+</li>
+<li><a href="http://www.w3schools.com/cssref/css_colors.asp">Colores CSS</a>
+</li>
+<li><a href="http://www.w3schools.com/cssref/css_colornames.asp">Nombres de colores CSS</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Tipos de hojas de estilo</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Una hoja de estilos contiene datos de formato relativos a los elementos definidos en la página HTML. Por lo tanto, ambos (documento HTML y hoja de estilo) deben estar relacionados de alguna manera. Existen tres maneras de utilizar hojas de estilo:
+</p>
+
+<ul class="org-ul">
+<li><b>Aplicar estilos directamente a elementos HTML</b>. De esta manera se escribe el código CSS dentro del atributo style de la etiqueta HTML en cuestión.Por ejemplo, para aplicar un estilo css a un párrafo:
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">p</span> <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">"c&#243;digo_css"</span>&gt;HOLA&lt;/<span style="color: #0000ff;">p</span>&gt;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b>Hojas de estilos internas</b>. Se utilizan para aplicar estilos a la página en la cual se utiliza. El código de la hoja de estilo se ubicará en la cabecera de la página web, entre las etiquetas siguientes:
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">style</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span>&gt;
+  ...c&#243;digo_css...
+&lt;/<span style="color: #0000ff;">style</span>&gt;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b>Hojas de estilos externas</b>. Se utilizan para aplicar el mismo formato a varias páginas de un portal. Se definen en un archivo externo que será consultado por todas las páginas HTML del sitio web, reutilizando por tanto el código. Para ello se escribirá el código CSS en un documento externo con extensión css. Posteriormente se vinculará a la página web mediante la utilización de la siguiente <b>etiqueta</b> en la <b>cabecera</b> del documento HTML en cuestión:
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"stylesheet"</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span> <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"nombre_archivo_css.css"</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Cascada y herencia</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+CSS permite definir estilos en varios sitios, tal como hemos visto en el punto anterior. Además, es posible que un elemento reciba estilos de varios orígenes distintos. Algunos ejemplos de ello son:
+</p>
+
+<ul class="org-ul">
+<li>Un elemento tiene asignado un nombre de clase y un identificador. En la hoja de estilos se definen estilos para dicho identificador y dicho nombre de clase.
+</li>
+<li>Un elemento hereda el valor de una propiedad definida en alguno de los elementos que lo contienen.
+</li>
+<li>Un elemento recibe un estilo de una hoja externa, de una hoja interna y de un estilo aplicado directamente en la etiqueta.
+</li>
+</ul>
+
+<p>
+En casos como los descritos, ¿cómo se resuelven los conflictos si se definen valores distintos para la misma propiedad? ¿Son más importantes los estilos definidos para nombres de clase? ¿Los definidos en hojas internas?
+</p>
+
+<p>
+La regla general es la siguiente: <b>los estilos aplicados a selectores más concretos tienen mayor peso que los aplicados a selectores más generales</b>. En caso de empate, el <b>último</b> estilo que se aplica es el que prevalece (las hojas de estilo externas se considera que se cargan antes que las hojas de estilo internas).
+</p>
+
+<p>
+En concreto, el procedimiento que se aplica es el siguiente (fuente: <a href="http://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#cascade">http://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#cascade</a>):
+</p>
+
+<ul class="org-ul">
+<li>Se cuenta 1 si la declaración está incluida en un atributo <code>style</code>; si no, se cuenta 0. (Peso "<b>a</b>", mayor importancia).
+</li>
+<li>Se cuenta el número de identificadores (ID) que aparezcan en el selector. (Peso "<b>b</b>").
+</li>
+<li>Se cuenta el número de atributos (distintos al ID) , clases y pseudo-clases en el selector. (Peso "<b>c</b>").
+</li>
+<li>Se cuenta el número de nombres de elementos y pseudo-elementos en el selector. (Peso "<b>d</b>", menor importancia).
+</li>
+</ul>
+
+<p>
+Para determinar qué estilo se aplica en caso de conflicto se mira el resultado: el número más alto en la casilla de mayor peso es el que se aplica; en caso de empate, se comprueban los números de los pesos más bajos sucesivamente.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html"> *             {}  /* a=0 b=0 c=0 d=0 -&gt; especificidad = 0,0,0,0 */
+ li            {}  /* a=0 b=0 c=0 d=1 -&gt; especificidad = 0,0,0,1 */
+ li:first-line {}  /* a=0 b=0 c=0 d=2 -&gt; especificidad = 0,0,0,2 */
+ ul li         {}  /* a=0 b=0 c=0 d=2 -&gt; especificidad = 0,0,0,2 */
+ ul ol+li      {}  /* a=0 b=0 c=0 d=3 -&gt; especificidad = 0,0,0,3 */
+ h1 + *[rel=up]{}  /* a=0 b=0 c=1 d=1 -&gt; especificidad = 0,0,1,1 */
+ ul ol li.red  {}  /* a=0 b=0 c=1 d=3 -&gt; especificidad = 0,0,1,3 */
+ li.red.level  {}  /* a=0 b=0 c=2 d=1 -&gt; especificidad = 0,0,2,1 */
+ #x34y         {}  /* a=0 b=1 c=0 d=0 -&gt; especificidad = 0,1,0,0 */
+ <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">""</span>          /* a=1 b=0 c=0 d=0 -&gt; especificidad = 1,0,0,0 . 
+                      &#201;ste &#250;ltimo es el que se aplica.*/
+
+&lt;<span style="color: #0000ff;">head</span>&gt;
+  &lt;<span style="color: #0000ff;">style</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span>&gt;
+    #x97z { color: red }
+  &lt;/<span style="color: #0000ff;">style</span>&gt;
+  &lt;/<span style="color: #0000ff;">head</span>&gt;
+&lt;<span style="color: #0000ff;">body</span>&gt;
+  &lt;<span style="color: #0000ff;">p</span> ID=x97z <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">"color: green"</span>&gt;
+&lt;/<span style="color: #0000ff;">body</span>&gt;
+</pre>
+</div>
+
+<p>
+En el ejemplo, el párrafo tendrá color verde, ya que el valor de su peso "a" es 1. Como el peso "a" es el más importante, es el que se impone a los demás.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Hojas de estilo alternativas</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Es posible incluir más de una hoja de estilo en un sitio web y ofrecer al usuario la posibilidad de usar una u otra mediante el uso de <b>hojas de estilo alternativas</b>.
+</p>
+
+<p>
+Algunos navegadores (como Firefox) permiten seleccionar la hoja de estilos a través de sus menús (en Firefox, menú <i>Ver</i> / <i>Estilo de página</i>).
+</p>
+
+<p>
+Para incluir hojas de estilo alternativas se debe utilizar la etiqueta <code>&lt;link rel="alternate stylesheet"&gt;</code>. A continuación se muestra un ejemplo:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"stylesheet"</span> 
+      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo principal"</span>
+      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos.css"</span>&gt;
+
+&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"alternate stylesheet"</span>
+      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo alternativo 1"</span>
+      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos1.css"</span>&gt;
+
+&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"alternate stylesheet"</span>
+      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo alternativo 2"</span>
+      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos2.css"</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Compatibilidad entre navegadores</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><a href="http://www.w3schools.com/cssref/css3_browsersupport.asp">Tabla de compatibilidad de propiedades CSS con los principales navegadores</a>
+</li>
+<li><a href="http://caniuse.com/">Can I Use? (¿Puedo utilizar&#x2026;?)</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Modelo de cajas: algunas notas</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Box-sizing</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Existe una propiedad en CSS3 denominada <code>box-sizing</code> que permite cambiar la definición de anchura para ésta que incluya el <b>contenido, relleno (padding) y bordes</b> (no se incluye el margen). En este <a href="http://www.w3schools.com/cssref/css3_pr_box-sizing.asp">enlace</a> puedes consultar su funcionamiento.
+</p>
+
+<p>
+De esta manera, al utilizar el código <code>box-sizing: border-box;</code>, no habrá que hacer sumas para calcular el ancho total de las cajas. En este otro <a href="http://es.learnlayout.com/box-sizing.html">enlace</a> puedes encontrar una explicación más detallada.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Altura y anchura</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+La utilización de porcentajes en la definición de anchuras y alturas tiene algunas diferencias:
+</p>
+<ul class="org-ul">
+<li>La <b>anchura</b> de los elementos es <b>independiente de su contenido</b>: depende del ancho del elemento contenedor o del ancho de la ventana del navegador en última instancia.
+</li>
+<li>La <b>altura</b> de los elementos es <b>dependiente</b> de su contenido: si el contenido ocupa más espacio, la altura será mayor; si ocupa menos, será menor.
+</li>
+</ul>
+
+<p>
+Debido a estas características, la utilización del <b>porcentaje</b> como unidad de medida varía: mientras que puede utilizarse <b>sin problemas en la anchura</b> aunque no se defina una anchura absoluta de base (ya que el 100% corresponde al ancho del contenedor), para que pueda utilizarse en la <b>altura</b> deberá definirse una <b>altura de referencia</b> en algún elemento <b>contenedor</b> para que pueda funcionar correctamente.
+</p>
+
+<p>
+Para solucionar este problema puede utilizarse la unidad <code>vh</code> en lugar del porcentaje. Puedes encontrar la explicación en este <a href="http://stackoverflow.com/questions/1622027/percentage-height-html-5-css">enlace</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Unidades de medida</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+CSS define distintas unidades para representar medidas. Dichas unidades se pueden consultar en el siguiente enlace: <a href="http://www.w3schools.com/cssref/css_units.asp">unidades CSS 2.1</a>.
+</p>
+
+<p>
+CSS 3 define algunas unidades adicionales: <a href="http://www.w3.org/TR/css3-values/">unidades CSS 3</a>.
+</p>
+
+<p>
+El uso de una u otra unidad vendrá marcado por el tipo de <b>pantalla objetivo</b> (referencia: <a href="http://www.w3.org/Style/Examples/007/units">aquí</a>):
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">Recomendado</th>
+<th scope="col" class="left">Uso ocasional</th>
+<th scope="col" class="left">No recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Pantalla</td>
+<td class="left">em, px, %</td>
+<td class="left">ex</td>
+<td class="left">pt, cm, mm, in, pc</td>
+</tr>
+
+<tr>
+<td class="left">Impresión</td>
+<td class="left">em, cm, mm, in, pt, pc, %</td>
+<td class="left">px, ex</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+A continuación veremos un pequeño resumen de las características de las unidades más utilizadas.
+</p>
+</div>
+
+<div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Unidades absolutas</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Las unidades absolutas se pueden consultar en este enlace: <a href="http://www.w3.org/TR/css3-values/#absolute-lengths">unidades absolutas</a>.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="left">
+
+<col  class="left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">unidad</th>
+<th scope="col" class="left">definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">‘cm’</td>
+<td class="left">centímetro</td>
+</tr>
+
+<tr>
+<td class="left">‘mm’</td>
+<td class="left">milímetros</td>
+</tr>
+
+<tr>
+<td class="left">‘in’</td>
+<td class="left">pulgadas (1in = 2.54cm)</td>
+</tr>
+
+<tr>
+<td class="left">‘px’</td>
+<td class="left">píxeles (1px = 1/96in)</td>
+</tr>
+
+<tr>
+<td class="left">‘pt’</td>
+<td class="left">puntos (1pt = 1/72in = 0.35mm)</td>
+</tr>
+
+<tr>
+<td class="left">‘pc’</td>
+<td class="left">picas (1pc = 12pt = 4.23mm)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+La relación entre unidades de medida es la siguiente: 1in = 2.54cm = 25.4mm = 72pt = 6pc 
+</p>
+
+<p>
+En general se utilizarán las unidades absolutas cuando se pretenda determinar el <b>tamaño exacto</b> que tendrán los elementos. Estas unidades son especialmente útiles para definir el <b>tamaño de imágenes</b> o capas que queremos que ocupen exactamente el tamaño de una imagen.
+</p>
+
+<p>
+Estas unidades son también útiles para definir estilos para <b>hojas impresas</b> (por ejemplo, para especificar el tamaño de una fuente en puntos).
+</p>
+
+<p>
+El inconveniente de estas unidades es que <b>no se adaptan bien a tipos de pantalla distintos</b> (móviles, tabletas,&#x2026;) o de distintos tamaños.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Unidades relativas</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+Las unidades relativas se pueden consultar en este enlace: <a href="http://www.w3.org/TR/css3-values/#relative-lengths">unidades relativas</a>. Las unidades relativas expresan tamaños en función de otros.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="left">
+
+<col  class="left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">unidad</th>
+<th scope="col" class="left">relativa a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">‘em’</td>
+<td class="left">tamaño de letra del elemento</td>
+</tr>
+
+<tr>
+<td class="left">‘ex’</td>
+<td class="left">altura del carácter 'x' del tipo de letra del elemento</td>
+</tr>
+
+<tr>
+<td class="left">‘ch’</td>
+<td class="left">anchura del carácter '0' del tipo de letra del elemento</td>
+</tr>
+
+<tr>
+<td class="left">‘rem’</td>
+<td class="left">tamaño de letra del elemento raíz</td>
+</tr>
+
+<tr>
+<td class="left">‘vw’</td>
+<td class="left">1% de la anchura del viewport</td>
+</tr>
+
+<tr>
+<td class="left">‘vh’</td>
+<td class="left">1% de la altura del viewport</td>
+</tr>
+
+<tr>
+<td class="left">‘vmin’</td>
+<td class="left">1% de la dimensión más pequeña del viewport</td>
+</tr>
+
+<tr>
+<td class="left">‘vmax’</td>
+<td class="left">1% de la dimensión más alta del viewport</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+La ventaja de utilizar estas unidades es que se <b>adaptan muy bien a distintos tipos y tamaños de pantalla</b>. 
+</p>
+
+<p>
+El valor de las medidas relativas no se hereda directamente, sino que se hereda su <b>valor real una vez calculado</b>. 
+</p>
+
+<p>
+A continuación estudiaremos las características de las unidades más utilizadas.
+</p>
+</div>
+
+<div id="outline-container-sec-8-2-1" class="outline-4">
+<h4 id="sec-8-2-1"><span class="section-number-4">8.2.1</span> Unidad 'em'</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<p>
+Esta unidad hace referencia al <b>tamaño de letra calculado heredado por el elemento</b>. Por tanto, para calcular el valor real aplicado habrá que determinar los <b>valores que se van heredando</b> de los elementos <b>contenedores</b>. A continuación se muestra un ejemplo:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">html </span>{
+  <span style="color: #a0522d;">font-size</span>: 12px;
+  <span style="color: #a0522d;">text-indent</span>: 1em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">1em = 12px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">p </span>{                 <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 1em = 12px; </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">font-size</span>: 0.5em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">p span </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 1em = 6px </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">font-size</span>: 0.5em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 3px </span><span style="color: #b22222;">*/</span>
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-8-2-2" class="outline-4">
+<h4 id="sec-8-2-2"><span class="section-number-4">8.2.2</span> Unidad 'rem'</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<p>
+Esta unidad tiene una <b>referencia fija</b>, que es el <b>tamaño de letra definido en el elemento raíz</b>. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">html </span>{
+  <span style="color: #a0522d;">font-size</span>: 12px;
+  <span style="color: #a0522d;">text-indent</span>: 1rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">1em = 12px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">p </span>{                 
+  <span style="color: #a0522d;">font-size</span>: 0.5rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">p span </span>{            
+  <span style="color: #a0522d;">font-size</span>: 0.5rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+}
+</pre>
+</div>
+
+<p>
+Estas unidades simplifican los cálculos al tener una referencia fija (no hay que ir calculando valores heredados de los elementos contenedores).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-3" class="outline-4">
+<h4 id="sec-8-2-3"><span class="section-number-4">8.2.3</span> Porcentaje</h4>
+<div class="outline-text-4" id="text-8-2-3">
+<p>
+El porcentaje suele tomarse como una unidad relativa más. Un porcentaje de un 100% hace referencia al tamaño calculado del elemento contenedor (un tamaño de un 100% en un tipo de letra hace referencia al tamaño del tipo de letra aplicado en el elemento contenedor). Por tanto, para calcular el valor real aplicado habrá que determinar los <b>valores que se van heredando</b> de los elementos <b>contenedores</b>. A continuación se muestra un ejemplo:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">body </span>{
+  <span style="color: #a0522d;">width</span>: 1024px; <span style="color: #b22222;">/* </span><span style="color: #b22222;">100% = 1024px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">div </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 100% = 1024px </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">width</span>: 50%;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">div div </span>{        <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 100% = 512px </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">width</span>: 50%;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 256px </span><span style="color: #b22222;">*/</span>
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-8-2-4" class="outline-4">
+<h4 id="sec-8-2-4"><span class="section-number-4">8.2.4</span> Unidades 'vw', 'vh', 'vmin' y 'vmax'</h4>
+<div class="outline-text-4" id="text-8-2-4">
+<p>
+Estas unidades hacen referencia al tamaño del <b>viewport</b>. CSS define el <i>viewport</i> como el <b>tamaño del área que se utiliza para representar la página web</b>. Coincide con el <code>&lt;body&gt;</code> incluyendo los márgenes. Es importante indicar que en los <b>navegadores móviles</b> el <i>viewport</i> tiene un <b>tamaño superior al tamaño real</b> de la pantalla: es por ello que las páginas web se muestran completas como vistas desde un zoom de alejamiento (este tema será tratado con más detalle más adelante).
+</p>
+
+<p>
+Estas unidades tienen una <b>referencia fija</b>, que es el ancho ('vw'), alto ('vh'), dimensión más pequeña ('vmin') o dimensión más grande ('vmax') del <i>viewport</i>. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #0000ff;">/* </span><span style="color: #0000ff;">Suponemos que el ancho de la pantalla</span>
+<span style="color: #0000ff;">del dispositivo es de 1024px, por lo que</span>
+<span style="color: #0000ff;">100vw = 1024px </span><span style="color: #0000ff;">*/</span>
+
+<span style="color: #0000ff;">div </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">1vw = 1024/100 </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">width</span>: 50vw;   <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+}
+
+<span style="color: #0000ff;">div div </span>{         <span style="color: #b22222;">/* </span><span style="color: #b22222;">1vw = 1024/100 </span><span style="color: #b22222;">*/</span>
+  <span style="color: #a0522d;">width</span>: 50vw;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+}
+</pre>
+</div>
+
+<p>
+Como ocurre con las unidades 'rem', las unidades relativas al <i>viewport</i> simplifican los cálculos al tener una referencia fija.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Creación de clases centralizadas</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+En el diseño de interfaces es recomendable definir <b>clases de estilos</b> para aplicar a determinadas secciones, elementos destacados, etc. De esta manera se conseguirá un código altamente <b>modular</b> que permitirá realizar cambios tanto de apariencia como de estructura con relativa facilidad.
+</p>
+
+<p>
+Por tanto, se intentará <b>priorizar el uso de clases</b> por encima del uso de selectores basados en nombres o agrupaciones de elementos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Minimización de hojas de estilo</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+La minimización de código tiene como objetivo <b>reducir el tamaño del archivo eliminando caracteres innecesarios</b>. Se utiliza en diseño web para reducir el tamaño de los archivos CSS y JavaScript y así reducir el tiempo de carga del sitio web.
+</p>
+
+<p>
+El proceso de minimización es distinto del de compresión, ya que el archivo minimizado es totalmente compatible con el original y no requiere de un proceso previo (descompresión) para su correcta interpretación.
+</p>
+
+<p>
+El procedimiento consiste en eliminar espacios en blanco innecesarios, saltos de línea y comentarios. En ocasiones también se renombran los nombres de variables (cambiándolas por otros más cortos, como letras) y se optimiza el código eliminando las instrucciones innecesarias o redundantes.
+</p>
+
+<p>
+Existen varias herramientas para minimizar código. En concreto, para CSS podemos utilizar algunos de los siguientes servicios online:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://cssminifier.com/">http://cssminifier.com/</a>
+</li>
+<li><a href="http://csscompressor.com/">http://csscompressor.com/</a>
+</li>
+<li><a href="http://gpbmike.github.io/refresh-sf/">http://gpbmike.github.io/refresh-sf/</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p><p class="actualizacion">Última actualización: 08-11-2014 01:07. </p> 
+</div>
+</body>
+</html>
