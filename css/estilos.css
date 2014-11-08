@@ -263,8 +263,7 @@ code, pre.src {
     padding: 5px;
 }
 
-pre.src{
-
+pre.src, div.tabla{
     overflow: auto;
 }
 

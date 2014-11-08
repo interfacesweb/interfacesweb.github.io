@@ -95,7 +95,8 @@ $( document ).ready(function() {
 /* ]]> */
 //</script>
 
-
+    // Poner tablas dentro de un div para overflow: auto
+    $( "table" ).wrap( "<div class='tabla'></div>" );
 
 
 
