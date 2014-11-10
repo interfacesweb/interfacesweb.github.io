@@ -1,1 +1,2 @@
 * Diseño de Interfaces Web - Apuntes del módulo
+Este repositorio almacena los apuntes del módulo de Diseño de Interfaces Web.
