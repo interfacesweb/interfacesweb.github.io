@@ -57,7 +57,7 @@
 <h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Se pretende crear una aplicación web para gestionar una <b>biblioteca sencilla de recursos multimedia</b>. Los tipos de elementos que gestionará la biblioteca son: <b>películas, discos de música, libros y revistas</b>. El diseño de la aplicación abarcará tanto la parte de <b>cliente</b> como la parte de <b>servidor</b>, utilizando un modelo de datos ya establecido.
+Se pretende crear una aplicación web para gestionar una <b>biblioteca sencilla de recursos multimedia</b>. Los tipos de elementos que gestionará la biblioteca son: <b>películas, discos de música, libros y videojuegos</b>. El diseño de la aplicación abarcará tanto la parte de <b>cliente</b> como la parte de <b>servidor</b>, utilizando un modelo de datos ya establecido.
 </p>
 
 <p>
@@ -297,7 +297,7 @@ El servidor está alojado en la ruta <code>/api</code>. Es una aplicación basad
 </p>
 
 <p>
-La página principal de la API devuelve un objeto <code>collection</code> con enlaces a cada uno de los tipos de elementos de la biblioteca: películas, discos, libros y revistas. Si se sigue alguno de esos enlaces se accederá a un nuevo objeto <code>collection</code> que devolverá la lista de elementos correspondientes junto con otra serie de enlaces y opciones para poder:
+La página principal de la API devuelve un objeto <code>collection</code> con enlaces a cada uno de los tipos de elementos de la biblioteca: películas, discos, libros y videojuegos. Si se sigue alguno de esos enlaces se accederá a un nuevo objeto <code>collection</code> que devolverá la lista de elementos correspondientes junto con otra serie de enlaces y opciones para poder:
 </p>
 <ul class="org-ul">
 <li>Crear un elemento nuevo.
@@ -400,7 +400,7 @@ El modelo de datos de cada uno de los elementos se ha obtenido a partir de los m
 Las <b>tareas</b> que hay que realizar son:
 </p>
 <ul class="org-ul">
-<li>Crear las rutas apropiadas para acceder a cada uno de los recursos (listas y elementos) ofrecidos por la aplicación: listas de películas, películas, listas de discos, discos, listas de libros, libros, listas de revistas y revistas.
+<li>Crear las rutas apropiadas para acceder a cada uno de los recursos (listas y elementos) ofrecidos por la aplicación: listas de películas, películas, listas de discos, discos, listas de libros, libros, listas de videojuegos y videojuegos.
 </li>
 <li>Para cada tipo de elemento habrá que crear la lógica apropiada para realizar las operaciones relacionadas (<a href="http://es.wikipedia.org/wiki/CRUD">CRUD</a>):
 <ul class="org-ul">
@@ -442,7 +442,7 @@ El objetivo que se persigue es <b>modificar dicho cliente</b> para que no muestr
 </p>
 
 <p>
-Para ello se deberán realizar cambios en el código del cliente (archivo <code>cjlib.js</code>) para que identifique el tipo de datos devuelto en cada caso (si son libros, películas, revistas o discos) y ejecute una <b>función JavaScript diferente</b> para mostrar cada uno de ellos. Dichas funciones se definirán en ficheros JavaScript distintos para que cada miembro pueda trabajar de forma separada. Para mantener la <b>compatibilidad</b> del cliente con futuros tipos de datos distintos se mantendrá la funcionalidad original en el caso de que el tipo de elemento devuelto no coincida con ninguno de los cuatro elementos de la aplicación.
+Para ello se deberán realizar cambios en el código del cliente (archivo <code>cjlib.js</code>) para que identifique el tipo de datos devuelto en cada caso (si son libros, películas, videojuegos o discos) y ejecute una <b>función JavaScript diferente</b> para mostrar cada uno de ellos. Dichas funciones se definirán en ficheros JavaScript distintos para que cada miembro pueda trabajar de forma separada. Para mantener la <b>compatibilidad</b> del cliente con futuros tipos de datos distintos se mantendrá la funcionalidad original en el caso de que el tipo de elemento devuelto no coincida con ninguno de los cuatro elementos de la aplicación.
 </p>
 
 <p>
@@ -472,7 +472,7 @@ Por último, se dará <b>formato</b> a la página de la aplicación. Para ello s
 <ul class="org-ul">
 <li>Los equipos deben ponerse de acuerdo para dedicar una sesión de clase a las tareas relacionadas con <b>OpenShift</b>.
 </li>
-<li>Es recomendable que <b>cada miembro del equipo</b> trabaje con <b>código de cliente</b> y <b>código de servidor</b>. La idea es que cada miembro del equipo trabaje con uno de los grupos de elementos de la biblioteca: películas, discos, libros y revistas.
+<li>Es recomendable que <b>cada miembro del equipo</b> trabaje con <b>código de cliente</b> y <b>código de servidor</b>. La idea es que cada miembro del equipo trabaje con uno de los grupos de elementos de la biblioteca: películas, discos, libros y videojuegos.
 </li>
 <li>Es recomendable que cada miembro del equipo trabaje en un archivo JavaScript de cliente diferente. La página de la aplicación cargará cada uno de dichos archivos para que el cliente genérico llame a las funciones de dichos archivos.
 </li>
