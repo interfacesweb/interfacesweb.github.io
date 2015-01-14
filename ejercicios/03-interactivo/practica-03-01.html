@@ -323,16 +323,76 @@ Al acceder a un elemento determinado se accederá a otro objeto <code>collection
 </ul>
 
 <p>
-Las propiedades de cada uno de los elementos son:
+El modelo de datos de cada uno de los elementos se ha obtenido a partir de los modelos estandarizados en <a href="http://schema.org">http://schema.org</a>. Las propiedades de cada uno de los elementos son:
 </p>
 <ul class="org-ul">
-<li>Películas (todo)
+<li>Película (<code>Movie</code>)
+<ul class="org-ul">
+<li><code>name</code> - Nombre de la película (texto)
 </li>
-<li>Discos (todo)
+<li><code>url</code> - URL para acceder a la película en cuestión (texto)
 </li>
-<li>Libros (todo)
+<li><code>description</code> - Descripción de la película (texto)
 </li>
-<li>Revistas (todo)
+<li><code>director</code> - Director de la película (texto)
+</li>
+<li><code>datePublished</code> - Fecha de lanzamiento (fecha)
+</li>
+<li><code>embedUrl</code> - Código para incrustar el vídeo del trailer desde YouTube (texto)
+</li>
+</ul>
+</li>
+<li>Disco (<code>MusicAlbum</code>)
+<ul class="org-ul">
+<li><code>name</code> - Nombre del disco (texto)
+</li>
+<li><code>url</code> - URL para acceder al disco en cuestión (texto)
+</li>
+<li><code>description</code> - Descripción del disco (texto)
+</li>
+<li><code>datePublished</code> - Fecha de lanzamiento (fecha)
+</li>
+<li><code>image</code> - URL de la imagen de la carátula del disco (por simplicidad, esta ruta hará referencia a una imagen publicada en Internet) (texto)
+</li>
+<li><code>embedUrl</code> - Código para incrustar el audio de una de las canciones del álbum desde <a href="http://grooveshark.com">GrooveShark</a> (u otro servicio como Spotify) (texto) 
+</li>
+</ul>
+</li>
+<li>Libros (<code>Book</code>)
+<ul class="org-ul">
+<li><code>name</code> - Nombre del libro (texto)
+</li>
+<li><code>url</code> - URL para acceder al libro en cuestión (texto)
+</li>
+<li><code>description</code> - Descripción del libro (texto)
+</li>
+<li><code>isbn</code> - El ISBN del libro (texto)
+</li>
+<li><code>datePublished</code> - Fecha de publicación (fecha)
+</li>
+<li><code>image</code> - URL de la imagen de la portada del libro (por simplicidad, esta ruta hará referencia a una imagen publicada en Internet) (texto)
+</li>
+</ul>
+</li>
+<li>Videojuegos (<code>VideoGame</code>)
+<ul class="org-ul">
+<li><code>name</code> - Nombre del videojuego (texto)
+</li>
+<li><code>url</code> - URL para acceder al videojuego en cuestión (texto)
+</li>
+<li><code>description</code> - Descripción del videojuego (texto)
+</li>
+<li><code>gamePlatform</code> - Plataforma en la que está disponible (texto)
+</li>
+<li><code>applicationSubCategory</code> - Categoría del videojuego (plataformas, arcade,&#x2026;) (texto)
+</li>
+<li><code>screenshot</code> - URL de la imagen de una pantalla del juego (por simplicidad, esta ruta hará referencia a una imagen publicada en Internet) (texto)
+</li>
+<li><code>datePublished</code> - Fecha de lanzamiento (fecha)
+</li>
+<li><code>embedUrl</code> - Código para incrustar el vídeo del trailer desde YouTube (texto)
+</li>
+</ul>
 </li>
 </ul>
 
