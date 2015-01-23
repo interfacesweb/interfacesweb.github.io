@@ -221,9 +221,11 @@ Esta tarea será realizada <b>por todos los grupos a la vez</b>.
 </li>
 <li>Creación de una cuenta para cada grupo de trabajo en OpenShift.
 </li>
-<li>Creación de una aplicación donde se alojará el proyecto.
+<li>Creación de una aplicación donde se alojará el proyecto. Para ello se creará una aplicación (<i>Gear</i>) Openshift <b>PHP 5.4</b> con el cartucho <b>MySQL</b> y <b>PHPMyAdmin</b>.
 </li>
-<li>Modificación del archivo <code>travis.yml</code> para utilizar la cuenta de OpenShift creada anteriormente.
+<li>Carga de la base de datos en la aplicación de OpenShift utilizando PHPMyAdmin. Entender cómo está configurado el archivo <code>api/database.php</code> de la aplicación mediante <a href="https://developers.openshift.com/en/managing-environment-variables.html#database-variables">variables de entorno</a> para no tener que poner las claves de acceso al servidor MySQL en el archivo.
+</li>
+<li>Modificación del archivo <code>travis.yml</code> para utilizar la cuenta de OpenShift creada anteriormente. Consultar <a href="http://docs.travis-ci.com/user/deployment/openshift/">este enlace</a> y <a href="http://docs.travis-ci.com/user/deployment/openshift/#Application-to-deploy">este otro</a>. Opcional: ver cómo encriptar la clave de OpenShift para que no aparezca de manera pública en el archivo <code>.travis.yml</code>. La información está disponible <a href="http://docs.travis-ci.com/user/encryption-keys/">aquí</a>.
 </li>
 <li>Comprobación de que la aplicación está operativa en OpenShift.
 </li>
