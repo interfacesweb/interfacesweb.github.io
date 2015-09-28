@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Unidad 2.3 - Diseño de formularios web</title>
 <meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidad 2.3 - Diseño de formularios web</title>
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Pedro Prieto Alarcón">
 <meta  name="description" content="Unidad 2.3 - Diseño de formularios web"
@@ -32,55 +33,55 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Introducción</a></li>
-<li><a href="#sec-2">2. Estructura y diseño visual (código)</a>
+<li><a href="#orgheadline1">1. Introducción</a></li>
+<li><a href="#orgheadline9">2. Estructura y diseño visual (código)</a>
 <ul>
-<li><a href="#sec-2-1">2.1. Fieldset</a></li>
-<li><a href="#sec-2-2">2.2. Agrupación de controles</a></li>
-<li><a href="#sec-2-3">2.3. Campos</a></li>
-<li><a href="#sec-2-4">2.4. Etiquetas (labels)</a></li>
-<li><a href="#sec-2-5">2.5. Alineación</a></li>
-<li><a href="#sec-2-6">2.6. Pistas (Placeholders)</a></li>
-<li><a href="#sec-2-7">2.7. Ejemplo completo</a></li>
+<li><a href="#orgheadline2">2.1. Fieldset</a></li>
+<li><a href="#orgheadline3">2.2. Agrupación de controles</a></li>
+<li><a href="#orgheadline4">2.3. Campos</a></li>
+<li><a href="#orgheadline5">2.4. Etiquetas (labels)</a></li>
+<li><a href="#orgheadline6">2.5. Alineación</a></li>
+<li><a href="#orgheadline7">2.6. Pistas (Placeholders)</a></li>
+<li><a href="#orgheadline8">2.7. Ejemplo completo</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Usabilidad y accesibilidad</a>
+<li><a href="#orgheadline21">3. Usabilidad y accesibilidad</a>
 <ul>
-<li><a href="#sec-3-1">3.1. Alineación de etiquetas</a></li>
-<li><a href="#sec-3-2">3.2. Datos obligatorios y opcionales</a></li>
-<li><a href="#sec-3-3">3.3. Longitud de los campos</a></li>
-<li><a href="#sec-3-4">3.4. Acciones</a></li>
-<li><a href="#sec-3-5">3.5. Ayuda</a></li>
-<li><a href="#sec-3-6">3.6. Entrada de datos</a></li>
-<li><a href="#sec-3-7">3.7. Control por teclado</a></li>
-<li><a href="#sec-3-8">3.8. Retroalimentación</a></li>
-<li><a href="#sec-3-9">3.9. Errores</a></li>
-<li><a href="#sec-3-10">3.10. Progreso de envío</a></li>
-<li><a href="#sec-3-11">3.11. Envío</a></li>
+<li><a href="#orgheadline10">3.1. Alineación de etiquetas</a></li>
+<li><a href="#orgheadline11">3.2. Datos obligatorios y opcionales</a></li>
+<li><a href="#orgheadline12">3.3. Longitud de los campos</a></li>
+<li><a href="#orgheadline13">3.4. Acciones</a></li>
+<li><a href="#orgheadline14">3.5. Ayuda</a></li>
+<li><a href="#orgheadline15">3.6. Entrada de datos</a></li>
+<li><a href="#orgheadline16">3.7. Control por teclado</a></li>
+<li><a href="#orgheadline17">3.8. Retroalimentación</a></li>
+<li><a href="#orgheadline18">3.9. Errores</a></li>
+<li><a href="#orgheadline19">3.10. Progreso de envío</a></li>
+<li><a href="#orgheadline20">3.11. Envío</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. Referencias</a></li>
+<li><a href="#orgheadline22">4. Referencias</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este tema se analizarán algunas recomendaciones de diseño relacionadas con los formularios web. El objetivo es aprender a diseñar formularios que muestren la información de manera limpia, clara y de forma adaptada a cualquier tipo de dispositivo.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Estructura y diseño visual (código)</h2>
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">2</span> Estructura y diseño visual (código)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A continuación se muestran algunos consejos relacionados con el código HTML y CSS utilizado en formularios.
 </p>
 </div>
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Fieldset</h3>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2"><span class="section-number-3">2.1</span> Fieldset</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 La etiqueta <code>&lt;fieldset&gt;</code> se utiliza para agrupar controles relacionados. Se suele utilizar junto con la etiqueta <code>&lt;legend&gt;</code>, que muestra un texto a modo de título.
@@ -102,8 +103,8 @@ La etiqueta <code>&lt;fieldset&gt;</code> se utiliza para agrupar controles rela
 </div>
 </div>
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Agrupación de controles</h3>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">2.2</span> Agrupación de controles</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Los controles de formulario son elementos en línea. Por tanto, para que aparezcan en líneas distintas es conveniente agruparlos mediante etiquetas de bloque.
@@ -166,8 +167,8 @@ En caso de utilizar listas es posible ocultar los puntos mediante el siguiente c
 </div>
 </div>
 
-<div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Campos</h3>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">2.3</span> Campos</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Para identificar los controles se deben utilizar los atributos <code>id</code> y <code>name</code>. El atributo <code>id</code> se utiliza para a programación de cliente (<i>front-end</i>), mientras que el atributo <code>name</code> se utiliza para el envío de los datos al servidor (<i>back-end</i>).
@@ -193,8 +194,8 @@ Para identificar los controles se deben utilizar los atributos <code>id</code> y
 </div>
 </div>
 
-<div id="outline-container-sec-2-4" class="outline-3">
-<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Etiquetas (labels)</h3>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">2.4</span> Etiquetas (labels)</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Para mostrar la información asociada a un control se debe utilizar la etiqueta <code>&lt;label&gt;</code>. Dicha etiqueta utiliza el atributo <code>for</code> para indicar el control al que va asociado. El valor del atributo <code>for</code> debe ser el valor del atributo <code>id</code> del control correspondiente.
@@ -204,10 +205,8 @@ Para mostrar la información asociada a un control se debe utilizar la etiqueta 
 El uso de etiquetas tiene varias ventajas:
 </p>
 <ul class="org-ul">
-<li>El usuario puede pulsar con el ratón sobre la etiqueta y activar el control asociado.
-</li>
-<li>Dispositivos como lectores de pantalla o lectores braille necesitan las etiquetas para poder mostrar la información asociada al control.
-</li>
+<li>El usuario puede pulsar con el ratón sobre la etiqueta y activar el control asociado.</li>
+<li>Dispositivos como lectores de pantalla o lectores braille necesitan las etiquetas para poder mostrar la información asociada al control.</li>
 </ul>
 
 <div class="org-src-container">
@@ -239,8 +238,8 @@ El uso de etiquetas tiene varias ventajas:
 </div>
 </div>
 
-<div id="outline-container-sec-2-5" class="outline-3">
-<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Alineación</h3>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">2.5</span> Alineación</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 La alineación de controles o etiquetas puede conseguirse utilizando cualquiera de las técnicas de layout estudiadas en el <a href="02-02-layout.html">tema 2.2</a>.
@@ -301,8 +300,8 @@ Es posible (y recomendable) utilizar etiquetas <code>&lt;span&gt;</code> para ag
 </div>
 </div>
 
-<div id="outline-container-sec-2-6" class="outline-3">
-<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Pistas (Placeholders)</h3>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">2.6</span> Pistas (Placeholders)</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Es posible utilizar pistas para indicar al usuario qué información debe introducir en cada campo del formulario. Para ello se puede utilizar el atributo <code>placeholder</code>.
@@ -337,8 +336,8 @@ Es posible utilizar pistas para indicar al usuario qué información debe introd
 </div>
 </div>
 
-<div id="outline-container-sec-2-7" class="outline-3">
-<h3 id="sec-2-7"><span class="section-number-3">2.7</span> Ejemplo completo</h3>
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">2.7</span> Ejemplo completo</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 A continuación puedes ver un ejemplo de formulario utilizando las recomendaciones descritas:
@@ -349,11 +348,11 @@ A continuación puedes ver un ejemplo de formulario utilizando las recomendacion
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Usabilidad y accesibilidad</h2>
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">3</span> Usabilidad y accesibilidad</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Alineación de etiquetas</h3>
+</div><div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">3.1</span> Alineación de etiquetas</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Las <b>etiquetas</b> de los formularios suelen colocarse <b>arriba o a la izquierda</b> de los controles. Cuando se colocan a la izquierda, pueden <b>alinearse</b> a la <b>izquierda</b> o a la <b>derecha</b>. Cada una de estas opciones tiene sus ventajas e inconvenientes.
@@ -363,211 +362,184 @@ Las <b>etiquetas</b> de los formularios suelen colocarse <b>arriba o a la izquie
 
 
 <colgroup>
-<col  class="left">
+<col  class="org-left">
 </colgroup>
 
 <colgroup>
-<col  class="center">
+<col  class="org-center">
 </colgroup>
 
 <colgroup>
-<col  class="center">
+<col  class="org-center">
 </colgroup>
 
 <colgroup>
-<col  class="center">
+<col  class="org-center">
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="left">&#xa0;</th>
-<th scope="col" class="center">Arriba</th>
-<th scope="col" class="center">Izquierda</th>
-<th scope="col" class="center">Derecha</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-center">Arriba</th>
+<th scope="col" class="org-center">Izquierda</th>
+<th scope="col" class="org-center">Derecha</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="left">Útil para tipos de datos conocidos</td>
-<td class="center">X</td>
-<td class="center">&#xa0;</td>
-<td class="center">&#xa0;</td>
+<td class="org-left">Útil para tipos de datos conocidos</td>
+<td class="org-center">X</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="left">Procesamiento rápido</td>
-<td class="center">X</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
+<td class="org-left">Procesamiento rápido</td>
+<td class="org-center">X</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
 </tr>
 
 <tr>
-<td class="left">No problemas con etiquetas largas</td>
-<td class="center">X</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
+<td class="org-left">No problemas con etiquetas largas</td>
+<td class="org-center">X</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
 </tr>
 
 <tr>
-<td class="left">Asociación etiqueta-control clara</td>
-<td class="center">&#xa0;</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
+<td class="org-left">Asociación etiqueta-control clara</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
 </tr>
 
 <tr>
-<td class="left">Ocupa poco espacio vertical</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
-<td class="center">X</td>
+<td class="org-left">Ocupa poco espacio vertical</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
+<td class="org-center">X</td>
 </tr>
 
 <tr>
-<td class="left">Favorece el escaneo de etiquetas</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
-<td class="center">&#xa0;</td>
+<td class="org-left">Favorece el escaneo de etiquetas</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
+<td class="org-center">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="left">Útil para tipos de  datos desconocidos</td>
-<td class="center">&#xa0;</td>
-<td class="center">X</td>
-<td class="center">&#xa0;</td>
+<td class="org-left">Útil para tipos de  datos desconocidos</td>
+<td class="org-center">&#xa0;</td>
+<td class="org-center">X</td>
+<td class="org-center">&#xa0;</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Datos obligatorios y opcionales</h3>
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">3.2</span> Datos obligatorios y opcionales</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
-<li>Se debe <b>minimizar</b> el número de <b>datos opcionales</b>.
-</li>
-<li>Si la mayoría de datos son obligatorios: indicar los opcionales.
-</li>
-<li>Si la mayoría de datos son opcionales: indicar los obligatorios.
-</li>
-<li>Es mejor utilizar indicadores mediante <b>texto</b>; también se puede utilizar <code>*</code> para los campos <b>obligatorios</b>.
-</li>
-<li>Se deben asociar los indicadores con las etiquetas.
-</li>
+<li>Se debe <b>minimizar</b> el número de <b>datos opcionales</b>.</li>
+<li>Si la mayoría de datos son obligatorios: indicar los opcionales.</li>
+<li>Si la mayoría de datos son opcionales: indicar los obligatorios.</li>
+<li>Es mejor utilizar indicadores mediante <b>texto</b>; también se puede utilizar <code>*</code> para los campos <b>obligatorios</b>.</li>
+<li>Se deben asociar los indicadores con las etiquetas.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Longitud de los campos</h3>
+<div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><span class="section-number-3">3.3</span> Longitud de los campos</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
-<li>El tamaño de los campos puede ofrecer información sobre su contenido.
-</li>
-<li>Muchos tamaños: ruido adicional
-</li>
-<li>En caso de duda, tamaño igual para todos los campos.
-</li>
+<li>El tamaño de los campos puede ofrecer información sobre su contenido.</li>
+<li>Muchos tamaños: ruido adicional</li>
+<li>En caso de duda, tamaño igual para todos los campos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-4" class="outline-3">
-<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Acciones</h3>
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">3.4</span> Acciones</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
-<li>Es recomendable mostrar el mínimo número de acciones posibles (idealmente sólo 1).
-</li>
-<li>En caso de mostrar más de una acción, diferenciar visualmente la opción principal de las secundarias.
-</li>
+<li>Es recomendable mostrar el mínimo número de acciones posibles (idealmente sólo 1).</li>
+<li>En caso de mostrar más de una acción, diferenciar visualmente la opción principal de las secundarias.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-5" class="outline-3">
-<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Ayuda</h3>
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">3.5</span> Ayuda</h3>
 <div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
-<li>Se debe minimizar la cantidad de ayuda mostrada.
-</li>
-<li>En caso de necesitar instrucciones, mostrar la ayuda adosada a los campos que la necesiten (ayuda dinámica).
-</li>
+<li>Se debe minimizar la cantidad de ayuda mostrada.</li>
+<li>En caso de necesitar instrucciones, mostrar la ayuda adosada a los campos que la necesiten (ayuda dinámica).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-6" class="outline-3">
-<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Entrada de datos</h3>
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">3.6</span> Entrada de datos</h3>
 <div class="outline-text-3" id="text-3-6">
 <ul class="org-ul">
-<li>Se debe mostrar claramente el camino a seguir para completar el formulario.
-</li>
-<li>En caso de que el formulario sea <b>muy largo</b>, se debe ofrecer la posibilidad de <b>salvar el progreso</b>.
-</li>
-<li>Es conveniente permitir la <b>entrada flexible de datos</b> (por ejemplo, en números de teléfono: 999-112233, 999112233, 999 11 22 33, 999 112 233, etc.).
-</li>
+<li>Se debe mostrar claramente el camino a seguir para completar el formulario.</li>
+<li>En caso de que el formulario sea <b>muy largo</b>, se debe ofrecer la posibilidad de <b>salvar el progreso</b>.</li>
+<li>Es conveniente permitir la <b>entrada flexible de datos</b> (por ejemplo, en números de teléfono: 999-112233, 999112233, 999 11 22 33, 999 112 233, etc.).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-7" class="outline-3">
-<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Control por teclado</h3>
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">3.7</span> Control por teclado</h3>
 <div class="outline-text-3" id="text-3-7">
 <ul class="org-ul">
-<li>Se debe tener en cuenta el uso del teclado para rellenar formularios. Para ello puede utilizarse el atributo <a href="http://www.w3schools.com/tags/att_global_tabindex.asp">tabindex</a>.
-</li>
+<li>Se debe tener en cuenta el uso del teclado para rellenar formularios. Para ello puede utilizarse el atributo <a href="http://www.w3schools.com/tags/att_global_tabindex.asp">tabindex</a>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-8" class="outline-3">
-<h3 id="sec-3-8"><span class="section-number-3">3.8</span> Retroalimentación</h3>
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">3.8</span> Retroalimentación</h3>
 <div class="outline-text-3" id="text-3-8">
 <ul class="org-ul">
-<li>Se debe utilizar validación automática en campos con alta tasa de error.
-</li>
-<li>Es recomendable utilizar sugerencias para evitar errores.
-</li>
-<li><b>Siempre</b> se debe mostrar un <b>mensaje</b> cuando se <b>envíe un formulario</b> indicando si la acción ha tenido éxito o si se ha producido un error.
-</li>
+<li>Se debe utilizar validación automática en campos con alta tasa de error.</li>
+<li>Es recomendable utilizar sugerencias para evitar errores.</li>
+<li><b>Siempre</b> se debe mostrar un <b>mensaje</b> cuando se <b>envíe un formulario</b> indicando si la acción ha tenido éxito o si se ha producido un error.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-9" class="outline-3">
-<h3 id="sec-3-9"><span class="section-number-3">3.9</span> Errores</h3>
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><span class="section-number-3">3.9</span> Errores</h3>
 <div class="outline-text-3" id="text-3-9">
 <ul class="org-ul">
-<li>Se debe comunicar claramente que ha ocurrido un error: en la <b>parte superior</b> de la página utilizando <b>contraste visual</b>.
-</li>
-<li>Además, se debe indicar qué <b>campos</b> son los que contienen <b>errores</b>.
-</li>
+<li>Se debe comunicar claramente que ha ocurrido un error: en la <b>parte superior</b> de la página utilizando <b>contraste visual</b>.</li>
+<li>Además, se debe indicar qué <b>campos</b> son los que contienen <b>errores</b>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-10" class="outline-3">
-<h3 id="sec-3-10"><span class="section-number-3">3.10</span> Progreso de envío</h3>
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">3.10</span> Progreso de envío</h3>
 <div class="outline-text-3" id="text-3-10">
 <ul class="org-ul">
-<li>Es recomendable mostrar indicaciones de las acciones en progreso.
-</li>
-<li>Es muy recomendable <b>desactivar el botón de envío</b> después de que el usuario lo haya pulsado. De esta manera evitamos que se produzcan envíos duplicados.
-</li>
+<li>Es recomendable mostrar indicaciones de las acciones en progreso.</li>
+<li>Es muy recomendable <b>desactivar el botón de envío</b> después de que el usuario lo haya pulsado. De esta manera evitamos que se produzcan envíos duplicados.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-11" class="outline-3">
-<h3 id="sec-3-11"><span class="section-number-3">3.11</span> Envío</h3>
+<div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">3.11</span> Envío</h3>
 <div class="outline-text-3" id="text-3-11">
 <ul class="org-ul">
-<li>Se debe mostrar claramente si los datos se han enviado con éxito.
-</li>
-<li>Se debe indicar alguna <b>referencia a la acción que se ha realizado</b>: actualización, creación de información nueva, pago,&#x2026;
-</li>
+<li>Se debe mostrar claramente si los datos se han enviado con éxito.</li>
+<li>Se debe indicar alguna <b>referencia a la acción que se ha realizado</b>: actualización, creación de información nueva, pago,&#x2026;</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Referencias</h2>
+<div id="outline-container-orgheadline22" class="outline-2">
+<h2 id="orgheadline22"><span class="section-number-2">4</span> Referencias</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
-<li><a href="http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07">Recomendaciones para diseño de formularios (en inglés)</a>
-</li>
-<li><a href="http://www.slideshare.net/psykoreactor/best-practices-for-form-design">Consejos de usabilidad de formularios (en inglés)</a>
-</li>
+<li><a href="http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07">Recomendaciones para diseño de formularios (en inglés)</a></li>
+<li><a href="http://www.slideshare.net/psykoreactor/best-practices-for-form-design">Consejos de usabilidad de formularios (en inglés)</a></li>
 </ul>
 </div>
 </div>

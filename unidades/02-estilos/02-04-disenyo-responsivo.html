@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Unidad 2.4 - Diseño web adaptativo</title>
 <meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidad 2.4 - Diseño web adaptativo</title>
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Pedro Prieto Alarcón">
 <meta  name="description" content="Unidad 2.4 - Diseño web adaptativo"
@@ -32,40 +33,40 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Introducción</a></li>
-<li><a href="#sec-2">2. Mobile First</a></li>
-<li><a href="#sec-3">3. Dispositivos</a>
+<li><a href="#orgheadline1">1. Introducción</a></li>
+<li><a href="#orgheadline2">2. Mobile First</a></li>
+<li><a href="#orgheadline6">3. Dispositivos</a>
 <ul>
-<li><a href="#sec-3-1">3.1. Resolución CSS (device-width)</a></li>
-<li><a href="#sec-3-2">3.2. <i>ViewPort</i></a></li>
-<li><a href="#sec-3-3">3.3. Etiqueta &lt;meta name="viewport"&gt;</a></li>
+<li><a href="#orgheadline3">3.1. Resolución CSS (device-width)</a></li>
+<li><a href="#orgheadline4">3.2. <i>ViewPort</i></a></li>
+<li><a href="#orgheadline5">3.3. Etiqueta &lt;meta name="viewport"&gt;</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. Media queries</a>
+<li><a href="#orgheadline11">4. Media queries</a>
 <ul>
-<li><a href="#sec-4-1">4.1. Tipos de medio (media types)</a></li>
-<li><a href="#sec-4-2">4.2. Características del medio (media features)</a></li>
-<li><a href="#sec-4-3">4.3. Sintaxis</a></li>
-<li><a href="#sec-4-4">4.4. Ejemplos</a></li>
+<li><a href="#orgheadline7">4.1. Tipos de medio (media types)</a></li>
+<li><a href="#orgheadline8">4.2. Características del medio (media features)</a></li>
+<li><a href="#orgheadline9">4.3. Sintaxis</a></li>
+<li><a href="#orgheadline10">4.4. Ejemplos</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5. Font boosting (Chrome mobile)</a></li>
-<li><a href="#sec-6">6. Testeo de acceso móvil</a></li>
-<li><a href="#sec-7">7. Evolución futura</a></li>
+<li><a href="#orgheadline12">5. Font boosting (Chrome mobile)</a></li>
+<li><a href="#orgheadline13">6. Testeo de acceso móvil</a></li>
+<li><a href="#orgheadline14">7. Evolución futura</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este tema trataremos los fundamentos del diseño adaptable o adaptativo (<i>Responsive Web Design</i> en inglés). 
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Mobile First</h2>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Mobile First</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La tendencia actual consiste en diseñar siguiendo la teoría de <b>Mobile First</b>, o Móvil primero. Esta teoría aboga por realizar el diseño pensando en dispositivos móviles y a continuación añadir o modificar características para adaptar el diseño a otro tipo de dispositivos. 
@@ -76,16 +77,16 @@ En <a href="http://zurb.com/word/mobile-first">este enlace</a> puedes consultar 
 </p>
 </div>
 </div>
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Dispositivos</h2>
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">3</span> Dispositivos</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Cada dispositivo (móvil, tablet, monitor, televisión,&#x2026;) tiene una <b>resolución nativa</b> (también llamada <b>física</b>) indicada en sus especificaciones. Esta resolución se expresa en el formato <code>anchura x altura</code> (por ejemplo, 1024 x 768 píxeles).
 </p>
 </div>
 
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Resolución CSS (device-width)</h3>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Resolución CSS (device-width)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Sin embargo, la <b>resolución nativa no se suele utilizar como referencia en CSS</b> en dispositivos que no sean monitores o pantallas convencionales. Esto es debido a que determinados <b>dispositivos</b>, como teléfonos móviles o tablets, tienen un <b>tamaño de pantalla muy pequeño</b>. Por hacernos una idea, el tamaño de letra por defecto en los navegadores es de 16px. Este tamaño de letra puede ser aceptable en un monitor con una resolución 1440x900 con un tamaño de pantalla de 22 pulgadas, pero resultaría muy pequeño en un teléfono de resolución 1920x1024 de 5 pulgadas.
@@ -101,8 +102,8 @@ En <a href="http://mydevice.io/devices/">http://mydevice.io/devices/</a> puedes 
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <i>ViewPort</i></h3>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">3.2</span> <i>ViewPort</i></h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Por último, existe un tercer valor de resolución utilizado en el diseño web, que es la resolución del <i>ViewPort</i>. El <i>ViewPort</i> se corresponde con el <b>ancho de la pantalla del navegador web</b>.
@@ -125,11 +126,11 @@ Es importante dejar claro que la resolución del <i>ViewPort</i> es <b>distinta 
 </div>
 </div>
 
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Etiqueta &lt;meta name="viewport"&gt;</h3>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Etiqueta &lt;meta name="viewport"&gt;</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
-En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta <a href="https://developer.mozilla.org/es/docs/M%25C3%25B3vil/Viewport_meta_tag">&lt;meta name="viewport"&gt;</a>. Esta etiqueta sirve para <b>indicar al navegador</b> qué <b>tamaño</b> debe definir para su <i>ViewPort</i>. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
+En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta <a href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag">&lt;meta name="viewport"&gt;</a>. Esta etiqueta sirve para <b>indicar al navegador</b> qué <b>tamaño</b> debe definir para su <i>ViewPort</i>. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 </p>
 
 <div class="org-src-container">
@@ -149,8 +150,8 @@ Este código indica al navegador que debe utilizar la <b>anchura CSS</b> (<code>
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Media queries</h2>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">4</span> Media queries</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Las <i>media queries</i> son expresiones que se utilizan en CSS3 para <b>identificar el dispositivo</b> al que va dirigido un determinado <b>conjunto de reglas de estilo CSS</b>.
@@ -165,20 +166,17 @@ Cada expresión <i>media query</i> está formada por un <b>tipo de medio</b> (<i
 </p>
 </div>
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Tipos de medio (media types)</h3>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.1</span> Tipos de medio (media types)</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Un <i>media type</i> define un tipo de dispositivo. Los tipos de medio más utilizados son:
 </p>
 
 <ul class="org-ul">
-<li><code>all</code>. Se utiliza para hacer referencia a <b>todos los dispositivos</b>. Si no se indica ningún <i>media type</i> es el que se utiliza <b>por defecto</b>.
-</li>
-<li><code>screen</code>. Se utiliza para hacer referencia a <b>pantallas</b> (móvil, tabletas, ordenadores, portátiles,&#x2026;).
-</li>
-<li><code>print</code>. Se utiliza para hacer referencia a <b>impresoras</b>. Define las reglas de estilo que se aplicarán al imprimir la página.
-</li>
+<li><code>all</code>. Se utiliza para hacer referencia a <b>todos los dispositivos</b>. Si no se indica ningún <i>media type</i> es el que se utiliza <b>por defecto</b>.</li>
+<li><code>screen</code>. Se utiliza para hacer referencia a <b>pantallas</b> (móvil, tabletas, ordenadores, portátiles,&#x2026;).</li>
+<li><code>print</code>. Se utiliza para hacer referencia a <b>impresoras</b>. Define las reglas de estilo que se aplicarán al imprimir la página.</li>
 </ul>
 
 <p>
@@ -187,26 +185,20 @@ Se puede consultar el resto de opciones en este <a href="http://www.w3schools.co
 </div>
 </div>
 
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Características del medio (media features)</h3>
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.2</span> Características del medio (media features)</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Se pueden utilizar expresiones adicionales al <i>media type</i> para determinar de manera más concreta las características del dispositivo. Algunas de las características más utilizadas son:
 </p>
 
 <ul class="org-ul">
-<li><code>width</code>. Indica la anchura del <i>ViewPort</i> del dispositivo. Sólo se incluyen los dispositivos cuya anchura del <i>ViewPort</i> se corresponda con la indicada.
-</li>
-<li><code>max-width</code>. Indica la anchura máxima del <i>ViewPort</i> del dispositivo. Los dispositivos con una anchura del <i>ViewPort</i> igual o inferior a la indicada estarán incluidos en la regla.
-</li>
-<li><code>min-width</code>.Indica la anchura mínima del <i>ViewPort</i> del dispositivo. Los dispositivos con una anchura del <i>ViewPort</i> igual o superior a la indicada estarán incluidos en la regla.
-</li>
-<li><code>device-width</code>. Indica la <b>anchura CSS</b> del dispositivo. Sólo se incluyen los dispositivos cuya anchura CSS se corresponda con la indicada.
-</li>
-<li><code>max-device-width</code>. Indica la <b>anchura CSS máxima</b> del dispositivo. Los dispositivos con una anchura CSS igual o inferior a la indicada estarán incluidos en la regla.
-</li>
-<li><code>min-device-width</code>. Indica la <b>anchura CSS mínima</b> del dispositivo. Los dispositivos con una anchura CSS igual o superior a la indicada estarán incluidos en la regla.
-</li>
+<li><code>width</code>. Indica la anchura del <i>ViewPort</i> del dispositivo. Sólo se incluyen los dispositivos cuya anchura del <i>ViewPort</i> se corresponda con la indicada.</li>
+<li><code>max-width</code>. Indica la anchura máxima del <i>ViewPort</i> del dispositivo. Los dispositivos con una anchura del <i>ViewPort</i> igual o inferior a la indicada estarán incluidos en la regla.</li>
+<li><code>min-width</code>.Indica la anchura mínima del <i>ViewPort</i> del dispositivo. Los dispositivos con una anchura del <i>ViewPort</i> igual o superior a la indicada estarán incluidos en la regla.</li>
+<li><code>device-width</code>. Indica la <b>anchura CSS</b> del dispositivo. Sólo se incluyen los dispositivos cuya anchura CSS se corresponda con la indicada.</li>
+<li><code>max-device-width</code>. Indica la <b>anchura CSS máxima</b> del dispositivo. Los dispositivos con una anchura CSS igual o inferior a la indicada estarán incluidos en la regla.</li>
+<li><code>min-device-width</code>. Indica la <b>anchura CSS mínima</b> del dispositivo. Los dispositivos con una anchura CSS igual o superior a la indicada estarán incluidos en la regla.</li>
 </ul>
 
 <p>
@@ -215,8 +207,8 @@ Se puede consultar el resto de características en este <a href="http://www.w3sc
 </div>
 </div>
 
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Sintaxis</h3>
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.3</span> Sintaxis</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Para definir una <i>media query</i> se sigue la siguiente sintaxis en CSS:
@@ -242,8 +234,8 @@ También es posible definir que una determinada hoja de estilos se aplique para 
 </div>
 </div>
 
-<div id="outline-container-sec-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Ejemplos</h3>
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">4.4</span> Ejemplos</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 A continuación se muestran algunos ejemplos de <i>media queries</i>:
@@ -286,8 +278,8 @@ A continuación se muestran algunos ejemplos de <i>media queries</i>:
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Font boosting (Chrome mobile)</h2>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">5</span> Font boosting (Chrome mobile)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 El navegador <i>Chrome Mobile</i> <b>cambia el tamaño de la letra</b> de algunos <b>elementos de bloque</b> en función de la <b>altura</b> de los mismos para favorecer su legibilidad. Esta característica hace que los estilos que se muestran no coincidan en ocasiones con los estilos establecidos en las hojas de estilo.
@@ -313,28 +305,25 @@ Para desactivarlo de manera global basta con establecer una altura máxima con u
 Para más información puedes consultar los siguientes artículos de <i>Stack Overflow</i>:
 </p>
 <ul class="org-ul">
-<li><a href="http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font">http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font</a>
-</li>
-<li><a href="http://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome">http://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome</a>
-</li>
+<li><a href="http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font">http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font</a></li>
+<li><a href="http://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome">http://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Testeo de acceso móvil</h2>
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">6</span> Testeo de acceso móvil</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Existen multitud de páginas que proporcionan herramientas para comprobar el aspecto visual de una web en distintos tipos de dispositivos. A continuación se indican algunas de ellas:
 </p>
 <ul class="org-ul">
-<li><a href="http://quirktools.com/screenfly/">http://quirktools.com/screenfly/</a>
-</li>
+<li><a href="http://quirktools.com/screenfly/">http://quirktools.com/screenfly/</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Evolución futura</h2>
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">7</span> Evolución futura</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Las tendencias actuales en el campo del diseño adaptativo van enfocadas a <b>personalizar el código que proporciona el servidor</b> en función del tipo de cliente que hace la petición.
