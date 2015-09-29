@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrum 1 - Website analysis &amp; prototyping</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Análisis de usabilidad de páginas web"
+>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script> 
+
+<script type="text/javascript" src="/scripts/code-highlight.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Scrum 1 - Website analysis &amp; prototyping</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introduction</a></li>
+<li><a href="#orgheadline2">2. Learning goals</a></li>
+<li><a href="#orgheadline3">3. Agenda</a></li>
+<li><a href="#orgheadline12">4. Product Backlog</a>
+<ul>
+<li><a href="#orgheadline4">4.1. Reading: Don't Make Me Think</a></li>
+<li><a href="#orgheadline5">4.2. Website analysis</a></li>
+<li><a href="#orgheadline8">4.3. Prototyping</a>
+<ul>
+<li><a href="#orgheadline6">4.3.1. Pages to design</a></li>
+<li><a href="#orgheadline7">4.3.2. Elements to display (depending on the page)</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline11">4.4. HTML Layout with Jade</a>
+<ul>
+<li><a href="#orgheadline9">4.4.1. Install Jade</a></li>
+<li><a href="#orgheadline10">4.4.2. Template creation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline13">5. Definition of Done</a></li>
+<li><a href="#orgheadline14">6. Grading criteria</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We are going to learn some basic guiding principles to improve usability and accesibility of web sites. We will also analyze some web sites to check if they implement these guidelines. Finally, we will design a prototype (mockup) of a web site and we will generate a HTML template for that prototype.
+</p>
+
+<p>
+We will use the <a href="http://eduscrum.nl/en/">Eduscrum</a> framework. Students will work in teams and they will prepare a presentation to show what they have accomplished.
+</p>
+
+<p>
+Each team will have a repository in GitHub to store the HTML code. The main branch will be <code>gh-pages</code>. This branch allows us to browse an HTML site in <a href="http://github.io/">http://github.io/</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt>Tuesday 09/29/2015</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Wednesday 09/30/2015 to Wednesday 10/14/2015</dt><dd>Sprint (8 days / 16 hours).</dd>
+<dt>Thursday 10/15/2015</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Friday 10/16/2015</dt><dd>Retrospective (1 day / 2 hours).</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">4</span> Product Backlog</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: Don't Make Me Think</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Each team must <b>read and prepare a summary</b> of some chapters of the book <i>Don't Make Me Think, Revisited</i>, by Steven Krug. Each team will pick one of these options (each team MUST choose a different option):
+</p>
+
+<ul class="org-ul">
+<li>Chapter 1, 2 &amp; 3</li>
+<li>Chapter 4, 5 &amp; 6</li>
+<li>Chapters 7, 8 &amp; 9</li>
+<li>Chapters 10, 11 &amp; 12</li>
+</ul>
+
+<p>
+Teams can divide the pages to read among the team members. Team members can then explain what they have read to the rest of the team in order to practice their oral English skills.
+</p>
+
+<p>
+Teams must pick up <b>20 key words</b> and look for its definition. They will create a glossary entry for each of them in the DIW Moodle course. <b>Key words must be different from the other teams' key words</b>.
+</p>
+
+<p>
+Teams will <b>read their summary</b> in the demo class. <b>Every member of the team must read aloud a piece</b> of the summary. Remember you will have 20 minutes for the whole demo, not only the reading.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Website analysis</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Each team must analyze <b>one</b> the proposed websites in terms of usability and navigation. <b>Each team</b> must pick a <b>different site</b>. 
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.lingscars.com/">http://www.lingscars.com/</a></li>
+<li><a href="http://www.avis.es/">http://www.avis.es/</a></li>
+<li><a href="http://www.pcbox.com/">http://www.pcbox.com/</a></li>
+<li><a href="http://www.pccomponentes.com/">http://www.pccomponentes.com/</a></li>
+</ul>
+
+<p>
+Teams will browse through the site and they will try to answer the following questions:
+</p>
+
+<ul class="org-ul">
+<li>What site is this? (Is it clear enough?)</li>
+<li>Does it follow conventions?
+<ul class="org-ul">
+<li>Menus, logos, content,&#x2026;</li>
+<li>Are elements clear enough? (Search inputs, icons, social networks,&#x2026;)</li>
+</ul></li>
+<li>Is the hierarchy evident (sections, subsections,&#x2026;)? Can I see the major sections of the site? What options do I have at this level of the hierarchy?</li>
+<li>Are the pages divided in well defined sections / layers?</li>
+<li>Can you distinguish links and buttons?</li>
+<li>Is there any content that distracts the user?</li>
+<li>Is the content structured?</li>
+<li>Are there any search options? Are they clear enough?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.3</span> Prototyping</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Teams will choose a <b>free theme</b> for a website (restaurant, school, store,&#x2026;). They will prepare a <b>mockup</b> of the website using <b>Pencil</b>, available <a href="http://pencil.evolus.vn/">here</a>. Alternate options are <a href="http://webdemo.balsamiq.com/">balsamiq</a> and <a href="https://wireframe.cc/">wireframe.cc</a>.
+</p>
+
+<p>
+Teams must try to follow the guidelines of <i>Don't Make Me Think</i>.
+</p>
+
+<p>
+Each site must have <b>2 navigation levels</b> (categories). 
+</p>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">4.3.1</span> Pages to design</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>Home page</li>
+<li>First level page</li>
+<li>Second level page</li>
+<li>Sign-up / sign-in form page</li>
+<li>Location &amp; contact information page</li>
+<li>Contact form page</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">4.3.2</span> Elements to display (depending on the page)</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>Logo</li>
+<li>Site name (company name, service name,&#x2026;)</li>
+<li>Page title</li>
+<li>General search form</li>
+<li>Main navigation menu</li>
+<li>Secondary navigation menu</li>
+<li>Location map</li>
+<li>Telephone and address info</li>
+<li>Home link</li>
+<li>Important info (sales, notifications,&#x2026;)</li>
+<li>Ads</li>
+<li>Login link</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">4.4</span> HTML Layout with Jade</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Teams will create an <b>HTML template</b> using <b>Jade</b> for the site prototyped previously.
+</p>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="section-number-4">4.4.1</span> Install Jade</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>Download node: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></li>
+<li>Install Jade <a href="http://jade-lang.com/command-line/">http://jade-lang.com/command-line/</a></li>
+<li>Read some of the documentation
+<ul class="org-ul">
+<li><a href="http://jade-lang.com/reference/doctype/">http://jade-lang.com/reference/doctype/</a></li>
+<li><a href="http://jade-lang.com/reference/tags/">http://jade-lang.com/reference/tags/</a></li>
+<li><a href="http://jade-lang.com/reference/attributes/">http://jade-lang.com/reference/attributes/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">4.4.2</span> Template creation</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li>Create a layout for each page you have defined in the prototype. Do not include the CSS yet. It will be done during the next sprint. Only HTML markup. Prepare some example content (Lorem ipsum dolor&#x2026;): <a href="http://es.lipsum.com/">http://es.lipsum.com/</a></li>
+<li>Deploy it in your Github team repository.</li>
+<li>Preview it in github.io.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">5</span> Definition of Done</h2>
+</div>
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">6</span> Grading criteria</h2>
+<div class="outline-text-2" id="text-6">
+<dl class="org-dl">
+<dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
+<dt>Percentage of completed Product Backlog  (20%)</dt><dd>Completed tasks.</dd>
+<dt>Quality (20%)</dt><dd>Originality, design, usability and accesibility features.</dd>
+<dt>Retrospective (20%)</dt><dd>Correct revision of processes, identification of strengths and weaknesses, team analysis, individual analysis.</dd>
+<dt>Demo session (20%)</dt><dd>Participation of all team members, oral presentation, materials used in the presentation, adecuation to available time.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+</div>
+</body>
+</html>
