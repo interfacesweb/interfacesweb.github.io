@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrum 2 - Styles and Multimedia</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Use of CSS. How to include multimedia files in web pages."
+>
+<meta  name="keywords" content="CSS styles multimedia">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script> 
+
+<script type="text/javascript" src="/scripts/code-highlight.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Scrum 2 - Styles and Multimedia</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introduction</a></li>
+<li><a href="#orgheadline2">2. Learning goals</a></li>
+<li><a href="#orgheadline3">3. Agenda</a></li>
+<li><a href="#orgheadline10">4. Product Backlog</a>
+<ul>
+<li><a href="#orgheadline4">4.1. Reading: class documentation</a></li>
+<li><a href="#orgheadline5">4.2. Reading: GIT workflow for teams</a></li>
+<li><a href="#orgheadline6">4.3. CSS Layout</a></li>
+<li><a href="#orgheadline7">4.4. CSS styling</a></li>
+<li><a href="#orgheadline8">4.5. Forms design</a></li>
+<li><a href="#orgheadline9">4.6. Multimedia content</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline11">5. Hints</a></li>
+<li><a href="#orgheadline12">6. Grading criteria</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We are going to create the visual design for the websites developed in Scrum 1. We will use CSS3 to create the layout and visual appearance. We will use Media Queries to make the site responsive for tablets and mobile devices. We will use CSS3 to design form layouts. And finally, we will prepare multimedia content (images, audio and video) and add it to the website.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Create cascade style sheets.</li>
+<li>Test the CSS style sheets.</li>
+<li>Validate CSS style sheets.</li>
+<li>Create responsive web pages.</li>
+<li>Know the different licenses available for multimedia content.</li>
+<li>Prepare multimedia content (image, audio and video) for its use in web pages.</li>
+<li>Include multimedia content in web pages.</li>
+<li>Use control version software to work in teams.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt>Wednesday 10/21/2015</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Thursday 10/22/2015 to Thursday 11/12/2015</dt><dd>Sprint (13 days / 26 hours).</dd>
+<dt>Friday 11/13/2015</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Tuesday 11/17/2015</dt><dd>Retrospective (1 day / 2 hours).</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">4</span> Product Backlog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Teams will use the <b>websites designed in Scrum 1</b>. Remember that the minimum number of pages the site should include are:
+</p>
+
+<ul class="org-ul">
+<li>Home page</li>
+<li>First level page</li>
+<li>Second level page</li>
+<li>Sign-up / sign-in form page</li>
+<li>Location &amp; contact information page</li>
+<li>Contact form page</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: class documentation</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Every member of the team must read the documentation about CSS available <a href="../unidades/02-estilos/index.html">here</a>.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have read and understood the documentation.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Reading: GIT workflow for teams</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Every member of the team must read the documentation about GIT available <a href="../unidades/00-introduccion/git.html">here</a>.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have understood how to use the proposed GIT workflow.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">4.3</span> CSS Layout</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Teams will design a layout for the website. Common layers (header, navigation, footer) must appear in the same place in all pages.</li>
+<li>You must use <b>external style sheets</b>.</li>
+<li>You must use <b>at least two of the layout techniques</b> explained in the documentation in your website (floats, flexbox, etc.). As a proposal, teams can do the following:
+<ul class="org-ul">
+<li>Use a layout technique for the home page.</li>
+<li>Use a different layout technique for the rest of the pages.</li>
+</ul></li>
+<li>Navigation must be <b>consistent</b> and it must show where the user is in any level of the hierarchy. You can use whatever technique you want: menus, breadcrumbs,&#x2026;</li>
+<li>You must use <b>relative units</b> for the layout.</li>
+<li>You can change the HTML (Jade) structure from Scrum 1 if you need it. Some layout techniques use more layers (<code>divs</code>) than others.</li>
+<li>All pages must be <b>responsive</b>. You can use <b>media queries</b> for that. Pages must be displayed differently for <b>three kinds of devices</b>:
+<ul class="org-ul">
+<li>Mobile devices</li>
+<li>Tablets</li>
+<li>Rest of screens (monitors)</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Each page is displayed correctly with its layout. Each page is available in GitHub Pages. Each page has been tested for the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.4</span> CSS styling</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Teams will design the visual appearance of the website using <b>CSS3</b>.</li>
+<li>Visual design must be <b>homogeneous</b> (all the pages in the website must have the same "look and feel") and <b>personalized</b>. Teams are encouraged to design their own <b>logos</b> and choose <b>colors</b>, <b>font faces</b> and <b>icons</b>.</li>
+<li>You must use <b>external style sheets</b>.</li>
+<li>Use of <b>CSS classes</b> is encouraged.</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The website uses CSS classes for its visual design. The website looks homogeneous and personalized. The appearance looks professional. All CSS has been tested and validated. All team members are satisfied with the design of the website.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Forms design</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li>Teams will design the visual appearance of the web forms present in the website (sign-up, sign-in and contact forms).</li>
+<li>You have to include a minimum of <b>15 input fields</b> (buttons do not count) among the three forms.</li>
+<li>You must use <b>different types of fields</b> (the more, the better): <code>select</code>, <code>radio</code>, <code>checkbox</code>, <code>textarea</code>,&#x2026;</li>
+<li>Additionally, you can use <a href="http://www.w3schools.com/html/html_form_input_types.asp">HTML5 input fields</a>: <code>date</code>, <code>email</code>, <code>number</code>,&#x2026;</li>
+<li>Form fields must be <b>aligned</b>.</li>
+<li>You <b>must use</b>:
+<ul class="org-ul">
+<li><code>label</code> tags</li>
+<li><code>fieldset</code> tags</li>
+<li><code>placeholder</code> attribute</li>
+</ul></li>
+<li>You can use whatever technique you want (<code>display: table</code>, <code>float</code>, <code>flexbox</code>,&#x2026;) to align forms and labels, although it is recommended the use of <code>display: inline-block</code>. <b>You cannot use HTML tables</b>.</li>
+<li>You should honor the semantic structure of HTML: e.g., you must not put <code>labels</code> and <code>inputs</code> in different layers.</li>
+<li>Forms must be <b>responsive</b>:
+<ul class="org-ul">
+<li><b>Mobile devices</b>
+<ul class="org-ul">
+<li><code>labels</code> must be shown <b>above</b> fields.</li>
+<li><code>select</code>, <code>text</code> and <code>textarea</code> labels must be <b>hidden</b>.</li>
+<li><code>radio</code> and <code>checkbox</code> labels must be <b>visible</b>.</li>
+<li>Input fields must occupy the <b>entire screen width</b>.</li>
+<li>Forms must be centered.</li>
+</ul></li>
+<li><b>Tablets</b>
+<ul class="org-ul">
+<li><code>labels</code> must be shown <b>above</b> fields.</li>
+<li><code>select</code>, <code>text</code> and <code>textarea</code> labels must be <b>visible</b>.</li>
+<li><code>radio</code> and <code>checkbox</code> labels must be <b>visible</b>.</li>
+<li>Input fields must occupy <b>70% of the screen width</b>.</li>
+<li>Forms must be centered.</li>
+</ul></li>
+<li><b>Rest of screens</b>
+<ul class="org-ul">
+<li><code>labels</code> must be shown <b>left side</b> of the fields.</li>
+<li>All <code>labels</code> must be <b>visible</b>.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Forms meet the design requirements. Labels and controls are aligned. All team members are satisfied with the design. The design looks professional.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.6</span> Multimedia content</h3>
+<div class="outline-text-3" id="text-4-6">
+<ul class="org-ul">
+<li>The website must include a <b>photo gallery</b>. It will have a grid of <b>thumbnails</b>. When an image is clicked, it will be shown in full resolution. Optional: show the image in a pop-up layer (it requires JavaScript).
+<ul class="org-ul">
+<li>Chosen images must be related to the website theme.</li>
+<li>You will have to check the <b>compatible formats</b> supported for all browsers.</li>
+<li>Teams will have to look for images with the <b>appropriate license</b> in order to use them.</li>
+<li>Teams are free to choose the place to show the photo gallery.</li>
+</ul></li>
+<li>The website must include <b>three videos</b> that will be displayed through <a href="http://www.w3schools.com/html/html5_video.asp">HTML5</a>. 
+<ul class="org-ul">
+<li>Chosen videos must be related to the website theme.</li>
+<li>You will have to check the <b>compatible formats</b> supported for all browsers. If you have to make <b>conversions</b>, you can use:
+<ul class="org-ul">
+<li><a href="http://www.mirovideoconverter.com/">Miro Video Converter</a></li>
+<li><a href="https://handbrake.fr/">HandBrake</a></li>
+</ul></li>
+<li>Teams will have to look for videos with the <b>appropriate license</b> in order to use them.</li>
+<li>Teams are free to choose the place to show the videos.</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The proposed multimedia content has been included in the website. All multimedia content meets the requirements. You can display the photos and play the videos in the available browsers (Internet Explorer, Firefox, Chrome, Safari, Opera).</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">5</span> Hints</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Teams must create tasks that generate <b>valid product updates</b> (e.g., a task should generate a complete web page available in the web server).</li>
+<li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files.</li>
+<li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">6</span> Grading criteria</h2>
+<div class="outline-text-2" id="text-6">
+<dl class="org-dl">
+<dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
+<dt>Percentage of completed Product Backlog  (20%)</dt><dd>Completed tasks.</dd>
+<dt>Quality (20%)</dt><dd>Originality, design, validation tests, correct visualization in different browsers and devices, design consistency, usability and accessibility features.</dd>
+<dt>Retrospective (20%)</dt><dd>Correct revision of processes, identification of strengths and weaknesses, team analysis, individual analysis.</dd>
+<dt>Demo session (20%)</dt><dd>Participation of all team members, oral presentation, materials used in the presentation, adaptation to available time.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+</div>
+</body>
+</html>
