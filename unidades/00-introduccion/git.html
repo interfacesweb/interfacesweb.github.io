@@ -67,6 +67,7 @@
 </div>
 </div>
 
+
 <div id="outline-container-orgheadline11" class="outline-2">
 <h2 id="orgheadline11"><span class="section-number-2">1</span> Tutorial básico de GIT</h2>
 <div class="outline-text-2" id="text-1">
@@ -112,7 +113,8 @@ Para configurar GIT con nuestro usuario y correo electrónico hay que ejecutar:
 <pre class="src src-sh">git config --global user.name <span style="color: #8b2252;">"Nombre y apellido"</span>
 git config --global user.email CORREO@ELECTRONICO
 git config --global core.editor notepad
-git config --global credential.helper cache
+git config --global credential.helper wincred <span style="color: #b22222;">#</span><span style="color: #b22222;">Para Windows</span>
+git config --global credential.helper cache <span style="color: #b22222;">#</span><span style="color: #b22222;">Para Linux</span>
 </pre>
 </div>
 
