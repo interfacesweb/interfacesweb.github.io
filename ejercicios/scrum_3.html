@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrum 3 - Web Design with Bootstrap</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Bootstrap framework."
+>
+<meta  name="keywords" content="bootstrap framework web design">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script> 
+
+<script type="text/javascript" src="/scripts/code-highlight.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Scrum 3 - Web Design with Bootstrap</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introduction</a></li>
+<li><a href="#orgheadline2">2. Learning goals</a></li>
+<li><a href="#orgheadline3">3. Agenda</a></li>
+<li><a href="#orgheadline15">4. Product Backlog</a>
+<ul>
+<li><a href="#orgheadline4">4.1. Reading: documentation</a></li>
+<li><a href="#orgheadline5">4.2. Video: Bootstrap</a></li>
+<li><a href="#orgheadline6">4.3. Visual appearance</a></li>
+<li><a href="#orgheadline7">4.4. Page sections</a></li>
+<li><a href="#orgheadline8">4.5. Main page</a></li>
+<li><a href="#orgheadline9">4.6. List of categories page</a></li>
+<li><a href="#orgheadline10">4.7. Category pages</a></li>
+<li><a href="#orgheadline11">4.8. Item pages</a></li>
+<li><a href="#orgheadline12">4.9. Contact page</a></li>
+<li><a href="#orgheadline13">4.10. Sign-in / sign-up page</a></li>
+<li><a href="#orgheadline14">4.11. Forms design</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline16">5. Hints</a></li>
+<li><a href="#orgheadline17">6. Grading criteria</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We are going to create the visual design for a new site using the <b>Bootstrap</b> framework.
+</p>
+
+<p>
+Teams will create a responsive web site using CSS classes, components and JavaScript provided by Bootstrap.
+</p>
+
+<p>
+Each team will have a GIT repository for working and deploying their sites. The main branch of the repository will be <code>gh-pages</code> so that the site can be available at <code>github.io</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Develop web interfaces according to given requirements.</li>
+<li>Learn how to use development frameworks to create web sites.</li>
+<li>Develop responsive web interfaces that can be displayed correctly in all kinds of devices and screens.</li>
+<li>Learn how to work in teams using a version control system.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt>Tuesday 11/24/2015</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Wednesday 11/25/2015 to Wednesday 12/16/2015</dt><dd>Sprint (12 days / 24 hours).</dd>
+<dt>Thursday 12/17/2015</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Friday 12/18/2015</dt><dd>Retrospective (1 day / 2 hours).</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">4</span> Product Backlog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Each team must create an <b>online store</b>. Teams can decide the type of store (sporting goods, clothes, technology,&#x2026;) they are going to develop.
+</p>
+
+<p>
+Teams will use GitHub to keep track of their code and GitHub pages to deploy it.
+</p>
+
+<p>
+Only the <b>front-end</b> will be developed. There will be no server logic or database.
+</p>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: documentation</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Every team member must read the following sections of the documentation available in <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>:
+</p>
+<ul class="org-ul">
+<li>Getting started.</li>
+<li>Grid system.</li>
+<li>Tables.</li>
+<li>Images.</li>
+<li>Forms.</li>
+</ul>
+
+<p>
+In addition to this, you should check some of the code in these sections too:
+</p>
+<ul class="org-ul">
+<li>Components.</li>
+<li>Javascript.</li>
+</ul>
+
+<p>
+Finally, have a look at some Bootstrap designs in <a href="http://builtwithbootstrap.com/">http://builtwithbootstrap.com/</a> and <a href="http://expo.getbootstrap.com/">http://expo.getbootstrap.com/</a>.
+</p>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have read and understood the documentation.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Video: Bootstrap</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Every member of the team must view this <a href="https://www.youtube.com/watch?v=no-Ntkc836w">video tutorial</a> about Bootstrap.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have watched the video. You have understood Bootstrap fundamentals.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Visual appearance</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>The site must look homogeneous. It should be personalized (<b>logos</b>, <b>colors</b>, fonts, <b>icons</b>,&#x2026;). You can use the standard Bootstrap theme or get other themes from Internet.</li>
+<li>All pages must be <b>responsive</b>. They must be different for:
+<ul class="org-ul">
+<li>Mobile</li>
+<li>Tablet</li>
+<li>Other screens</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Each page is displayed correctly and meets the style specifications the team has decided. Each page is available in GitHub Pages. Each page has been tested for the three kinds of devices. All team members are satisfied with the design of the website.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.4</span> Page sections</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+The site must be organized and it must have <b>at least</b> these <b>sections</b>:
+</p>
+<ul class="org-ul">
+<li>Header</li>
+<li>Footer</li>
+<li>Navigation menus</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Each page has the three required sections.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Main page</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+It must show the <b>name, logo and main info</b> of the site. It should also display the most important info of the site (sales, special products, deals,&#x2026;).
+</p>
+
+<p>
+At least it must include a <b>link</b> to the <b>list of categories</b> page.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.6</span> List of categories page</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+It must show all the <b>categories of items</b> of the store. At least there must be <b>4 categories</b> of items. Each category must have:
+</p>
+<ul class="org-ul">
+<li>Description.</li>
+<li>Image.</li>
+<li>Link to its category page.</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">4.7</span> Category pages</h3>
+<div class="outline-text-3" id="text-4-7">
+<ul class="org-ul">
+<li>There must be at least <b>4 pages of categories</b> (one for each category).</li>
+<li>Each page must show at least <b>6 items</b>.</li>
+<li>Each item must show (at least):
+<ul class="org-ul">
+<li>Name.</li>
+<li>Image.</li>
+<li>Price.</li>
+<li>Link to the item page (it it exists).</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The pages are deployed in GitHub pages. The pages meet the proposed requirements. All members are satisfied with the result. Each page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">4.8</span> Item pages</h3>
+<div class="outline-text-3" id="text-4-8">
+<ul class="org-ul">
+<li>There must be at least <b>8 item pages</b> (two of each category). You can choose 2 of the 6 items of each category.</li>
+<li>Each page must show (at least):
+<ul class="org-ul">
+<li>Item name.</li>
+<li><b>2 item images</b> (at least).</li>
+<li>Price.</li>
+<li>Link or button to buy.</li>
+<li>Client opinions.</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The pages are deployed in GitHub pages. The pages meet the proposed requirements. All members are satisfied with the result. Each page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><span class="section-number-3">4.9</span> Contact page</h3>
+<div class="outline-text-3" id="text-4-9">
+<p>
+It must have a <b>form</b> to contact <b>customer service</b>.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">4.10</span> Sign-in / sign-up page</h3>
+<div class="outline-text-3" id="text-4-10">
+<p>
+It must have <b>two forms</b>: one for sign-in and one for sign-up.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">4.11</span> Forms design</h3>
+<div class="outline-text-3" id="text-4-11">
+<ul class="org-ul">
+<li>Teams will design the visual appearance of the web forms present in the website (sign-up, sign-in and contact forms).</li>
+<li>You have to include a minimum of <b>15 input fields</b> (buttons do not count) among the three forms.</li>
+<li>You must use <b>different types of fields</b> (the more, the better): <code>select</code>, <code>radio</code>, <code>checkbox</code>, <code>textarea</code>,&#x2026;</li>
+<li>Additionally, you can use <a href="http://www.w3schools.com/html/html_form_input_types.asp">HTML5 input fields</a>: <code>date</code>, <code>email</code>, <code>number</code>,&#x2026;</li>
+<li>Form fields must be <b>aligned</b>.</li>
+<li>You <b>must use</b>:
+<ul class="org-ul">
+<li><code>label</code> tags</li>
+<li><code>fieldset</code> tags</li>
+<li><code>placeholder</code> attribute</li>
+</ul></li>
+<li>You should honor the semantic structure of HTML: e.g., you must not put <code>labels</code> and <code>inputs</code> in different layers.</li>
+<li>Forms must be <b>responsive</b>:
+<ul class="org-ul">
+<li><b>Mobile devices</b>
+<ul class="org-ul">
+<li><code>labels</code> must be <b>hidden</b>.</li>
+<li><code>radio</code> and <code>checkbox</code> labels must be <b>visible</b>.</li>
+<li>Input fields must occupy the <b>entire screen width</b>.</li>
+<li>Forms must be centered.</li>
+</ul></li>
+<li><b>Tablets</b>
+<ul class="org-ul">
+<li><code>labels</code> must be shown <b>above</b> fields.</li>
+<li><code>radio</code> and <code>checkbox</code> labels must be <b>visible</b>.</li>
+<li>You can put more than one field in one line if you want.</li>
+</ul></li>
+<li><b>Rest of screens</b>
+<ul class="org-ul">
+<li><code>labels</code> must be shown <b>left side</b> of the fields.</li>
+<li><code>labels</code> must be <b>right aligned</b>.</li>
+<li>All <code>labels</code> must be <b>visible</b>.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Forms meet the design requirements. Labels and controls are aligned. All team members are satisfied with the design. The design looks professional.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">5</span> Hints</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
+<li><b>Do not create new CSS</b> unless necessary. You should <b>assign Bootstrap class names</b> to elements instead.</li>
+<li>Teams must create tasks that generate <b>valid product updates</b> (e.g., a task should generate a complete web page available in the web server).</li>
+<li>Teams should <b>agree on a base HTML template</b> for all files. This task should be the <b>first</b> to work on. The structure can be changed during the Sprint, however.</li>
+<li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files.</li>
+<li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline17" class="outline-2">
+<h2 id="orgheadline17"><span class="section-number-2">6</span> Grading criteria</h2>
+<div class="outline-text-2" id="text-6">
+<dl class="org-dl">
+<dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
+<dt>Percentage of completed Product Backlog  (20%)</dt><dd>Completed tasks.</dd>
+<dt>Quality (20%)</dt><dd>Originality, design, validation tests, correct visualization in different browsers and devices, design consistency, usability and accessibility features.</dd>
+<dt>Retrospective (20%)</dt><dd>Correct revision of processes, identification of strengths and weaknesses, team analysis, individual analysis.</dd>
+<dt>Demo session (20%)</dt><dd>Participation of all team members, oral presentation, materials used in the presentation, adaptation to available time.</dd>
+</dl>
+
+
+<p>
+Individuals who <b>do not attend the Eduscrum events</b> (planning meeting, demo, retrospective) will get the <b>corresponding decrease in their grade</b>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+</div>
+</body>
+</html>
