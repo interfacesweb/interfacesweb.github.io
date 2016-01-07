@@ -33,34 +33,35 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline11">1. Tutorial básico de GIT</a>
+<li><a href="#orgheadline12">1. Tutorial básico de GIT</a>
 <ul>
 <li>
 <ul>
 <li><a href="#orgheadline1">1.0.1. Descarga</a></li>
 <li><a href="#orgheadline2">1.0.2. Ejecución de GIT</a></li>
 <li><a href="#orgheadline3">1.0.3. Configuración inicial</a></li>
-<li><a href="#orgheadline4">1.0.4. Clonado de un repositorio</a></li>
-<li><a href="#orgheadline5">1.0.5. Actualización de cambios generados en el repositorio</a></li>
-<li><a href="#orgheadline6">1.0.6. Modificación de archivos locales</a></li>
-<li><a href="#orgheadline7">1.0.7. Comprobación del estado</a></li>
-<li><a href="#orgheadline8">1.0.8. Grabación de los cambios (add y commit)</a></li>
-<li><a href="#orgheadline9">1.0.9. Guardado de los cambios en el repositorio remoto (push)</a></li>
-<li><a href="#orgheadline10">1.0.10. Guía completa</a></li>
+<li><a href="#orgheadline4">1.0.4. Descarga e instalación de Meld (resolución de conflictos)</a></li>
+<li><a href="#orgheadline5">1.0.5. Clonado de un repositorio</a></li>
+<li><a href="#orgheadline6">1.0.6. Actualización de cambios generados en el repositorio</a></li>
+<li><a href="#orgheadline7">1.0.7. Modificación de archivos locales</a></li>
+<li><a href="#orgheadline8">1.0.8. Comprobación del estado</a></li>
+<li><a href="#orgheadline9">1.0.9. Grabación de los cambios (add y commit)</a></li>
+<li><a href="#orgheadline10">1.0.10. Guardado de los cambios en el repositorio remoto (push)</a></li>
+<li><a href="#orgheadline11">1.0.11. Guía completa</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline20">2. Flujo de trabajo GIT para Scrum</a>
+<li><a href="#orgheadline21">2. Flujo de trabajo GIT para Scrum</a>
 <ul>
-<li><a href="#orgheadline12">2.1. Actualizar origen</a></li>
-<li><a href="#orgheadline13">2.2. Crear rama para el trabajo personal</a></li>
-<li><a href="#orgheadline14">2.3. Trabajar</a></li>
-<li><a href="#orgheadline15">2.4. Crear <i>pull request</i></a></li>
-<li><a href="#orgheadline16">2.5. Inspeccionar y comentar <i>pull request</i> (opcional)</a></li>
-<li><a href="#orgheadline17">2.6. Aceptar y hacer el <i>merge</i> del <i>pull request</i></a></li>
-<li><a href="#orgheadline18">2.7. Borrar la rama (desde GitHub)</a></li>
-<li><a href="#orgheadline19">2.8. Borrar la rama local</a></li>
+<li><a href="#orgheadline13">2.1. Actualizar origen</a></li>
+<li><a href="#orgheadline14">2.2. Crear rama para el trabajo personal</a></li>
+<li><a href="#orgheadline15">2.3. Trabajar</a></li>
+<li><a href="#orgheadline16">2.4. Crear <i>pull request</i></a></li>
+<li><a href="#orgheadline17">2.5. Inspeccionar y comentar <i>pull request</i> (opcional)</a></li>
+<li><a href="#orgheadline18">2.6. Aceptar y hacer el <i>merge</i> del <i>pull request</i></a></li>
+<li><a href="#orgheadline19">2.7. Borrar la rama (desde GitHub)</a></li>
+<li><a href="#orgheadline20">2.8. Borrar la rama local</a></li>
 </ul>
 </li>
 </ul>
@@ -68,8 +69,8 @@
 </div>
 
 
-<div id="outline-container-orgheadline11" class="outline-2">
-<h2 id="orgheadline11"><span class="section-number-2">1</span> Tutorial básico de GIT</h2>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">1</span> Tutorial básico de GIT</h2>
 <div class="outline-text-2" id="text-1">
 </div><div id="outline-container-orgheadline1" class="outline-4">
 <h4 id="orgheadline1"><span class="section-number-4">1.0.1</span> Descarga</h4>
@@ -110,22 +111,42 @@ Para configurar GIT con nuestro usuario y correo electrónico hay que ejecutar:
 </p>
 <div class="org-src-container">
 
-<pre class="src src-sh">git config --global user.name <span style="color: #8b2252;">"Nombre y apellido"</span>
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">Opciones obligatorias (nombre y correo)</span>
+git config --global user.name <span style="color: #8b2252;">"Nombre y apellido"</span>
 git config --global user.email CORREO@ELECTRONICO
-git config --global core.editor notepad
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Editor de preferencia (dejar s&#243;lo una l&#237;nea de las opciones indicadas)</span>
+git config --global core.editor notepad <span style="color: #b22222;"># </span><span style="color: #b22222;">Notepad de Windows</span>
+git config --global core.editor <span style="color: #8b2252;">"'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">Notepad ++</span>
+git config --global core.editor <span style="color: #8b2252;">"'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">Notepad ++ 32 bit</span>
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Herramienta para resoluci&#243;n de conflictos (Meld)</span>
+git config --global merge.tool <span style="color: #8b2252;">"meld"</span>
+git config --global mergetool.meld.path <span style="color: #8b2252;">"'C:/Program Files (x86)/Meld/Meld.exe'"</span>
+
+<span style="color: #b22222;">#</span><span style="color: #b22222;">Almacenamiento de credenciales para no pedir usuario y contrase&#241;a de GitHub cada vez que se realice un push</span>
 git config --global credential.helper wincred <span style="color: #b22222;">#</span><span style="color: #b22222;">Para Windows</span>
 git config --global credential.helper cache <span style="color: #b22222;">#</span><span style="color: #b22222;">Para Linux</span>
 </pre>
 </div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4"><span class="section-number-4">1.0.4</span> Descarga e instalación de Meld (resolución de conflictos)</h4>
+<div class="outline-text-4" id="text-1-0-4">
+<p>
+<b>Meld</b> es un programa para resolver conflictos en archivos al realizar una operación de mezclado o <i>merge</i>. Puedes descargarlo de <a href="http://meldmerge.org/">http://meldmerge.org/</a> y seleccionar la versión para Windows (en Linux se instala con el gestor de paquetes de la distribución).
+</p>
 
 <p>
-La última línea almacena el usuario y contraseña del usuario para no pedirlo cada vez que se realice un <i>push</i>.
+Una vez instalado, y habiendo realizado la configuración correspondiente indicada en el paso anterior, se ejecutará al lanzar la opción <code>git mergetool</code> de resolución de conflictos de archivo.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline4" class="outline-4">
-<h4 id="orgheadline4"><span class="section-number-4">1.0.4</span> Clonado de un repositorio</h4>
-<div class="outline-text-4" id="text-1-0-4">
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5"><span class="section-number-4">1.0.5</span> Clonado de un repositorio</h4>
+<div class="outline-text-4" id="text-1-0-5">
 <p>
 Para obtener una copia local de un repositorio remoto hay que ejecutar el comando:
 </p>
@@ -139,9 +160,9 @@ La <code>RUTA_AL_REPOSITORIO</code> se obtiene de la página de GitHub del repos
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5"><span class="section-number-4">1.0.5</span> Actualización de cambios generados en el repositorio</h4>
-<div class="outline-text-4" id="text-1-0-5">
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">1.0.6</span> Actualización de cambios generados en el repositorio</h4>
+<div class="outline-text-4" id="text-1-0-6">
 <p>
 Si el repositorio original se modifica después de realizar el clonado inicial puede realizarse la actualización ejecutando:
 </p>
@@ -152,9 +173,9 @@ Si el repositorio original se modifica después de realizar el clonado inicial p
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">1.0.6</span> Modificación de archivos locales</h4>
-<div class="outline-text-4" id="text-1-0-6">
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.0.7</span> Modificación de archivos locales</h4>
+<div class="outline-text-4" id="text-1-0-7">
 <p>
 Después de realizar cambios en los archivos es posible visualizarlos mediante el comando:
 </p>
@@ -165,9 +186,9 @@ Después de realizar cambios en los archivos es posible visualizarlos mediante e
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">1.0.7</span> Comprobación del estado</h4>
-<div class="outline-text-4" id="text-1-0-7">
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8"><span class="section-number-4">1.0.8</span> Comprobación del estado</h4>
+<div class="outline-text-4" id="text-1-0-8">
 <p>
 Para comprobar el estado del repositorio puede ejecutarse:
 </p>
@@ -178,9 +199,9 @@ Para comprobar el estado del repositorio puede ejecutarse:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-4">
-<h4 id="orgheadline8"><span class="section-number-4">1.0.8</span> Grabación de los cambios (add y commit)</h4>
-<div class="outline-text-4" id="text-1-0-8">
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="section-number-4">1.0.9</span> Grabación de los cambios (add y commit)</h4>
+<div class="outline-text-4" id="text-1-0-9">
 <p>
 Después de realizar cambios en el repositorio local se deben añadir con el siguiente comando:
 </p>
@@ -206,9 +227,9 @@ De esta manera se guardarán los cambios realizados.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-4">
-<h4 id="orgheadline9"><span class="section-number-4">1.0.9</span> Guardado de los cambios en el repositorio remoto (push)</h4>
-<div class="outline-text-4" id="text-1-0-9">
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">1.0.10</span> Guardado de los cambios en el repositorio remoto (push)</h4>
+<div class="outline-text-4" id="text-1-0-10">
 <p>
 Para actualizar los cambios en el repositorio remoto (GitHub) se debe ejecutar)
 </p>
@@ -222,9 +243,9 @@ De esta manera se guardarán los cambios en el repositorio remoto de GitHub.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">1.0.10</span> Guía completa</h4>
-<div class="outline-text-4" id="text-1-0-10">
+<div id="outline-container-orgheadline11" class="outline-4">
+<h4 id="orgheadline11"><span class="section-number-4">1.0.11</span> Guía completa</h4>
+<div class="outline-text-4" id="text-1-0-11">
 <p>
 Para conocer Git en profundidad puedes consultar el libro publicado en este <a href="http://git-scm.com/book/en/v2">enlace</a>.
 </p>
@@ -232,8 +253,8 @@ Para conocer Git en profundidad puedes consultar el libro publicado en este <a h
 </div>
 </div>
 
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">2</span> Flujo de trabajo GIT para Scrum</h2>
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">2</span> Flujo de trabajo GIT para Scrum</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A continuación se muestra un ejemplo de flujo de trabajo de Git para grupos. Existen muchas otras posibilidades, pero considero que ésta es de las que menos problemas pueden presentar. No obstante, si el equipo de desarrollo considera más adecuado utilizar otro método podrá hacerlo sin ningún problema.
@@ -256,8 +277,8 @@ Para evitar la aparición de conflictos, cada usuario realizará sus cambios en 
 </p>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-3">
-<h3 id="orgheadline12"><span class="section-number-3">2.1</span> Actualizar origen</h3>
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">2.1</span> Actualizar origen</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 
@@ -267,8 +288,8 @@ Para evitar la aparición de conflictos, cada usuario realizará sus cambios en 
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-3">
-<h3 id="orgheadline13"><span class="section-number-3">2.2</span> Crear rama para el trabajo personal</h3>
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">2.2</span> Crear rama para el trabajo personal</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 El siguiente código crea una rama nueva con el nombre <i>nombre<sub>rama</sub></i> y la selecciona para trabajar. Todos los cambios que se realicen después afectarán sólo a la rama de trabajo, no a la rama principal.
@@ -281,8 +302,8 @@ El siguiente código crea una rama nueva con el nombre <i>nombre<sub>rama</sub><
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-3">
-<h3 id="orgheadline14"><span class="section-number-3">2.3</span> Trabajar</h3>
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">2.3</span> Trabajar</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 add - commit, add - commit, add - commit,&#x2026;
@@ -322,8 +343,8 @@ Por último, volver a subir la rama con los cambios:
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">2.4</span> Crear <i>pull request</i></h3>
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">2.4</span> Crear <i>pull request</i></h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Al terminar, con todos los cambios de la rama subidos a Github, crear una <b>pull request</b> desde GitHub. Para ello se seleccionará la rama con los cambios y se realizará una <i>pull request</i> desde ella. De esta manera todos los miembros del equipo recibirán un aviso con la notificación de que hay cambios nuevos que se van a incorporar a la rama principal.
@@ -331,8 +352,8 @@ Al terminar, con todos los cambios de la rama subidos a Github, crear una <b>pul
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">2.5</span> Inspeccionar y comentar <i>pull request</i> (opcional)</h3>
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">2.5</span> Inspeccionar y comentar <i>pull request</i> (opcional)</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Opcionalmente, los miembros del equipo pueden inspeccionar y comentar la <i>pull request</i>.
@@ -340,8 +361,8 @@ Opcionalmente, los miembros del equipo pueden inspeccionar y comentar la <i>pull
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">2.6</span> Aceptar y hacer el <i>merge</i> del <i>pull request</i></h3>
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><span class="section-number-3">2.6</span> Aceptar y hacer el <i>merge</i> del <i>pull request</i></h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Desde GitHub, aceptar la <i>pull request</i> o seguir las instrucciones para corregir conflictos. A continuación, hacer el <i>merge</i> de la rama en cuestión.
@@ -349,8 +370,8 @@ Desde GitHub, aceptar la <i>pull request</i> o seguir las instrucciones para cor
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-3">
-<h3 id="orgheadline18"><span class="section-number-3">2.7</span> Borrar la rama (desde GitHub)</h3>
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">2.7</span> Borrar la rama (desde GitHub)</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 Al hacer el <i>merge</i> desde GitHub se pregunta si se desea borrar la rama. Si este paso se olvida puede volver a realizarse accediendo a la <i>pull request</i> correspondiente.
@@ -358,8 +379,8 @@ Al hacer el <i>merge</i> desde GitHub se pregunta si se desea borrar la rama. Si
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">2.8</span> Borrar la rama local</h3>
+<div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">2.8</span> Borrar la rama local</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Ojo, sólo cuando estemos seguros de que los cambios se han integrado en Github.
