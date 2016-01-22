@@ -36,7 +36,7 @@
 <li><a href="#orgheadline1">1. Introduction</a></li>
 <li><a href="#orgheadline2">2. Learning goals</a></li>
 <li><a href="#orgheadline3">3. Agenda</a></li>
-<li><a href="#orgheadline20">4. Product Backlog</a>
+<li><a href="#orgheadline21">4. Product Backlog</a>
 <ul>
 <li><a href="#orgheadline4">4.1. Reading: documentation</a></li>
 <li><a href="#orgheadline5">4.2. Setting up the development environment</a></li>
@@ -49,21 +49,22 @@
 <li><a href="#orgheadline10">4.7.1. How to process data sent with POST or PUT</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline19">4.8. Create the client code</a>
+<li><a href="#orgheadline20">4.8. Create the client code</a>
 <ul>
 <li><a href="#orgheadline12">4.8.1. Include Angular lib and Bootstrap CSS</a></li>
 <li><a href="#orgheadline13">4.8.2. Implement the AJAX functions</a></li>
 <li><a href="#orgheadline14">4.8.3. Implement a function to create the editTemplate object</a></li>
 <li><a href="#orgheadline15">4.8.4. Implement a directive to display the collection links</a></li>
 <li><a href="#orgheadline16">4.8.5. Implement a directive to display the collection items</a></li>
-<li><a href="#orgheadline17">4.8.6. Implement a directive to implement the create item form</a></li>
-<li><a href="#orgheadline18">4.8.7. Implement a directive to implement the edit form</a></li>
+<li><a href="#orgheadline17">4.8.6. Implement a directive for the "create item" form</a></li>
+<li><a href="#orgheadline18">4.8.7. Implement a directive for the "edit item" form</a></li>
+<li><a href="#orgheadline19">4.8.8. Improvements (optional)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline21">5. Hints</a></li>
-<li><a href="#orgheadline22">6. Grading criteria</a></li>
+<li><a href="#orgheadline22">5. Hints</a></li>
+<li><a href="#orgheadline23">6. Grading criteria</a></li>
 </ul>
 </div>
 </div>
@@ -120,8 +121,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">4</span> Product Backlog</h2>
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">4</span> Product Backlog</h2>
 <div class="outline-text-2" id="text-4">
 </div><div id="outline-container-orgheadline4" class="outline-3">
 <h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: documentation</h3>
@@ -333,7 +334,7 @@ To do <b>tasks</b>:
 <li>Update an item.</li>
 <li>Delete an item.</li>
 </ul></li>
-<li><b>Test</b> the API in <b>Chrome</b> with this <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo">Chrome extension</a>.</li>
+<li><b>Test</b> the API in <b>Chrome</b> with <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop">Postman</a>.</li>
 <li><b>Optionally</b>, you can create <b>unit tests</b> following the example provided in the repository. These tests will be executed by <b>Travis CI</b> when you do a <b>commit</b> or a <b>pull request</b> in GitHub.</li>
 </ul>
 
@@ -359,8 +360,8 @@ The <b>Collection + JSON</b> format is based on JSON. For that reason, the serve
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">4.8</span> Create the client code</h3>
+<div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">4.8</span> Create the client code</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
 The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Angular JS</b> and <b>Bootstrap</b>. The client will use <a href="https://en.wikipedia.org/wiki/AJAX">AJAX</a> to send and receive data in the <i>Collection + JSON</i> format to the server. 
@@ -439,27 +440,89 @@ When the user clicks on a link, the application must call the <code>readCollecti
 <h4 id="orgheadline16"><span class="section-number-4">4.8.5</span> Implement a directive to display the collection items</h4>
 <div class="outline-text-4" id="text-4-8-5">
 <p>
-This directive must <b>call 4 different directives</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> property to <b>show and hide</b> the appropriate ones.
+This directive must <b>call 4 different directives</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> along with the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directive to display the appropriate one.
 </p>
 
 <p>
-Each category of items must display its own types of data
+Each these category directives must <b>display the item data according to its category</b>: for example, a <b>movie</b> must show an embedded YouTube player that plays the trailer available in its <code>embedUrl</code> property.
+</p>
+
+<p>
+Each item must have <b>three links/buttons</b>:
+</p>
+<ul class="org-ul">
+<li>A <b>link</b> to the URL of the item (<code>item.href</code>). When the user clicks on it, the function <code>readCollection</code> will be called and the client will connect to the item URL and get its representation in Collection + JSON format.</li>
+<li>A link/button for building and displaying the edit template. When the user clicks on the <b>edit</b> button, the function <code>buildEditForm</code> will be called to create the edit template, fill it with the item data and store it in <code>c.collection.editTemplate</code>.  When the user submits this form, the function <code>editItem</code> will be called.</li>
+<li>A link/button for deleting the item. When the user clicks on the <b>delete</b> button, the function <code>deleteItem</code> will be called.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a directive for the "create item" form</h4>
+<div class="outline-text-4" id="text-4-8-6">
+<p>
+This directive must <b>build a form</b> binded to the <code>collection.template</code> object.
+</p>
+
+<p>
+Form fields and labels can be formatted with <b>Bootstrap</b> classes.
+</p>
+
+<p>
+<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). Again, you can use the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directives for that.
+</p>
+
+<p>
+The form must be <b>validated</b> before its submission.
+</p>
+
+<p>
+When the user submits the form, the function <code>createItem</code> will be called. It will send the <code>collection.template</code> object to the URL stored in <code>collection.href</code>.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a directive to implement the create item form</h4>
-</div>
 
 <div id="outline-container-orgheadline18" class="outline-4">
-<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Implement a directive to implement the edit form</h4>
+<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Implement a directive for the "edit item" form</h4>
+<div class="outline-text-4" id="text-4-8-7">
+<p>
+This directive must <b>build a form</b> binded to the <code>collection.editTemplate</code> object.
+</p>
+
+<p>
+Form fields and labels can be formatted with <b>Bootstrap</b> classes.
+</p>
+
+<p>
+<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). Again, you can use the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directives for that.
+</p>
+
+<p>
+The form must be <b>validated</b> before its submission.
+</p>
+
+<p>
+When the user submits the form, the function <code>editItem</code> will be called. It will send the <code>collection.editTemplate</code> object to the URL stored in the <b>item</b> <code>href</code> property.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-4">
+<h4 id="orgheadline19"><span class="section-number-4">4.8.8</span> Improvements (optional)</h4>
+<div class="outline-text-4" id="text-4-8-8">
+<ul class="org-ul">
+<li>Improve visual appearance (Bootstrap).</li>
+<li>Show the create and edit forms when the user clicks a button instead of always showing them.</li>
+<li>Use <a href="https://docs.angularjs.org/guide/animations">animations</a>.</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 
-
-<div id="outline-container-orgheadline21" class="outline-2">
-<h2 id="orgheadline21"><span class="section-number-2">5</span> Hints</h2>
+<div id="outline-container-orgheadline22" class="outline-2">
+<h2 id="orgheadline22"><span class="section-number-2">5</span> Hints</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
@@ -470,8 +533,8 @@ Each category of items must display its own types of data
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline22" class="outline-2">
-<h2 id="orgheadline22"><span class="section-number-2">6</span> Grading criteria</h2>
+<div id="outline-container-orgheadline23" class="outline-2">
+<h2 id="orgheadline23"><span class="section-number-2">6</span> Grading criteria</h2>
 <div class="outline-text-2" id="text-6">
 <dl class="org-dl">
 <dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
