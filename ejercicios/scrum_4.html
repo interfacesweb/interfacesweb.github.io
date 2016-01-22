@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrum 4 - Web Design with Angular JS and Hypermedia</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Web Design with Angular JS and Hypermedia"
+>
+<meta  name="keywords" content="angular angularjs hypermedia rest">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script> 
+
+<script type="text/javascript" src="/scripts/code-highlight.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Scrum 4 - Web Design with Angular JS and Hypermedia</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introduction</a></li>
+<li><a href="#orgheadline2">2. Learning goals</a></li>
+<li><a href="#orgheadline3">3. Agenda</a></li>
+<li><a href="#orgheadline20">4. Product Backlog</a>
+<ul>
+<li><a href="#orgheadline4">4.1. Reading: documentation</a></li>
+<li><a href="#orgheadline5">4.2. Setting up the development environment</a></li>
+<li><a href="#orgheadline6">4.3. Understanding Travis CI</a></li>
+<li><a href="#orgheadline7">4.4. OpenShift</a></li>
+<li><a href="#orgheadline8">4.5. Read and inspect the provided server code</a></li>
+<li><a href="#orgheadline9">4.6. Read and inspect the provided client code</a></li>
+<li><a href="#orgheadline11">4.7. Create the server code</a>
+<ul>
+<li><a href="#orgheadline10">4.7.1. How to process data sent with POST or PUT</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline19">4.8. Create the client code</a>
+<ul>
+<li><a href="#orgheadline12">4.8.1. Include Angular lib and Bootstrap CSS</a></li>
+<li><a href="#orgheadline13">4.8.2. Implement the AJAX functions</a></li>
+<li><a href="#orgheadline14">4.8.3. Implement a function to create the editTemplate object</a></li>
+<li><a href="#orgheadline15">4.8.4. Implement a directive to display the collection links</a></li>
+<li><a href="#orgheadline16">4.8.5. Implement a directive to display the collection items</a></li>
+<li><a href="#orgheadline17">4.8.6. Implement a directive to implement the create item form</a></li>
+<li><a href="#orgheadline18">4.8.7. Implement a directive to implement the edit form</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline21">5. Hints</a></li>
+<li><a href="#orgheadline22">6. Grading criteria</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We are going to create a web application to manage an <b>online multimedia database</b>. It will store <b>books, music albums, movies and videogames</b>.
+</p>
+
+<p>
+We will implement both the <b>server</b> and <b>client</b> for this app. 
+</p>
+
+<p>
+The <b>server logic</b> will be an <b>API</b> based on a <b>REST</b> architecture. This API will serve and accept data in a specific format called <b>Collection + JSON</b>. The teacher will provide the skeleton of the application and the team will have to implement the missing functionalities. The server language will be <b>PHP</b> and it will use the <b>Slim</b> framework. The database will be <b>MySQL</b>.
+</p>
+
+<p>
+The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Angular JS</b> and <b>Bootstrap</b>. The client will use <b>AJAX</b> to send and receive data in the <i>Collection + JSON</i> format to the server. Again, the teacher will provide the skeleton of the application and the team will have to develop the main functionality and design its visual appearance.
+</p>
+
+<p>
+Each team will have a <b>GIT repository</b> to work with the code. We will also use <b>continuous integration</b> and <b>automatic deployment</b> to publish the web app. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Learn the fundamentals of REST architecture.</li>
+<li>Design web APIs using REST architecture.</li>
+<li>Learn the fundamentals of Hypermedia (HATEOAS).</li>
+<li>Learn the fundamentals of PHP language and PHP frameworks to design web applications.</li>
+<li>Learn how to use JSON based hypermedia types to send and receive data between client and server.</li>
+<li>Learn how to create basic Single Page Applications using Angular JS.</li>
+<li>Learn how to use AJAX to send and receive data between client and server.</li>
+<li>Learn how to use continous integration to automatically test and deploy web applications.</li>
+<li>Learn how to work in teams using a version control system.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt>Friday 02/22/2016 and Tuesday 02/26/2016</dt><dd>Planning meeting (2 days / 4 hours).</dd>
+<dt>Wednesday 02/27/2016 to Friday 02/19/2016</dt><dd>Sprint (15 days / 30 hours).</dd>
+<dt>Tuesday 02/23/2016</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Wednesday 02/24/2016</dt><dd>Retrospective (1 day / 2 hours).</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20"><span class="section-number-2">4</span> Product Backlog</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: documentation</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<b>Every team member</b> must read the following articles:
+</p>
+
+<ol class="org-ol">
+<li>Wikipedia article about <b>REST</b> architecture: <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">link</a>.</li>
+<li>Wikipedia article about <b>HATEOAS</b>: <a href="https://en.wikipedia.org/wiki/HATEOAS">link</a>.</li>
+<li>Wikipedia article about <b>JSON</b>: <a href="https://en.wikipedia.org/wiki/JSON">link</a>.</li>
+<li><b>Collection + JSON</b> media type specification: <a href="http://amundsen.com/media-types/collection/format/">link</a>.</li>
+<li><b>Collection + JSON</b> examples: <a href="http://amundsen.com/media-types/collection/examples/">link</a>.</li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have read and understood the documentation.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Setting up the development environment</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+<b>Every team member</b> must do the following tasks:
+</p>
+
+<ol class="org-ol">
+<li>Install a portable XAMPP (Apache web server, PHP and MySQL) environment: <a href="http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/5.5.30/xampp-portable-win32-5.5.30-6-VC11.7z/download">link</a>.</li>
+<li>Read the following article about <b>Composer</b>, a dependency manager for PHP: <a href="http://www.desarrolloweb.com/articulos/composer-gestor-dependencias-para-php.html">link</a>.</li>
+<li>Install Composer using the XAMPP console: <a href="https://getcomposer.org/doc/00-intro.md#manual-installation">https://getcomposer.org/doc/00-intro.md#manual-installation</a></li>
+<li>Clone the team's GIT repository <b>inside</b> the <code>htdocs</code> folder of the XAMPP installation.</li>
+<li>Run Composer to automatically download all project dependencies: <a href="https://getcomposer.org/doc/00-intro.md#using-composer">https://getcomposer.org/doc/00-intro.md#using-composer</a></li>
+<li>Import the database file included in the project into the MySQL server provided by XAMPP: <a href="http://kb.webhostface.com/cpanel-faq/phpmyadmin/import-database-through-phpmyadmin">link</a>.</li>
+<li>Test the app in the local XAMPP environment (change <code>PROJECTDIR</code> for the actual name of your project folder):
+<ul class="org-ul">
+<li>Client: <a href="http://localhost/PROJECTDIR/cliente">http://localhost/PROJECTDIR/cliente</a></li>
+<li>Server: <a href="http://localhost/PROJECTDIR/api">http://localhost/PROJECTDIR/api</a></li>
+</ul></li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>Every team member can access its own copy of the app in his/her own local environment. Every team member has read the provided articles.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Understanding Travis CI</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+<b>Every team member</b> must do the following tasks:
+</p>
+
+<ol class="org-ol">
+<li>Read the following article about Travis CI: <a href="http://www.genbetadev.com/sistemas-de-control-de-versiones/travis-ci-sistema-distribuido-de-integracion-continua-libre-integrado-con-github">link</a>.</li>
+<li>Inspect and try to understand the <code>.travis.yml</code> file included in the repository.</li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have read the article. You have read and inspected the <code>.travis.yml</code> file.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.4</span> OpenShift</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+<b>All teams</b> will do this task <b>at the same time</b>. The teacher will guide the teams in this task.
+</p>
+
+<ol class="org-ol">
+<li>Quick introduction to OpenShift.</li>
+<li>Create an OpenShift account for the team.</li>
+<li>Create an application in your OpenShift account. The application will consist on a <code>Gear</code> with <b>PHP 5.4</b> and two cartridges: <b>MySQL</b> and <b>PHPMyAdmin</b>.</li>
+<li>Load the application database in your OpenShift application using PHPMyAdmin.</li>
+<li>Explain the file <code>api/database.php</code> of the project. Explain how to use <a href="https://developers.openshift.com/en/managing-environment-variables.html#database-variables">environment variables</a> to hide account credentials and not to store them in source files.</li>
+<li>Modify the <code>.travis.yml</code> file to use the OpenShift account. More information <a href="http://docs.travis-ci.com/user/deployment/openshift/">here</a> and <a href="http://docs.travis-ci.com/user/deployment/openshift/#Application-to-deploy">here</a>.</li>
+<li>Encrypt the OpenShift password that will be stored in the <code>.travis.yml</code> file. We will use <a href="http://rkh.github.io/travis-encrypt/public/index.html">this service</a>. Additionally, you can use <a href="http://docs.travis-ci.com/user/encryption-keys/">this method</a>.</li>
+<li>Test the app in OpenShift.</li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have understood how to deploy web applications to a cloud service like OpenShift. Every team has its application available in its OpenShift account.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Read and inspect the provided server code</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+<b>Every team member</b> must do the following tasks:
+</p>
+
+<ol class="org-ol">
+<li>Analyse the server code provided in the repository. Get familiar with PHP syntax, <a href="http://docs.slimframework.com/">Slim</a>, the template manager <a href="http://gitnacho.github.io/Twig/templates.html">Twig</a> and the ORM <b>Eloquent</b>.</li>
+<li>Inspect the <code>api/.htaccess</code> file. Try to understand what it does.</li>
+<li>Read the following articles about ORMs and Eloquent:
+<ul class="org-ul">
+<li><a href="http://es.wikipedia.org/wiki/Mapeo_objeto-relacional">http://es.wikipedia.org/wiki/Mapeo_objeto-relacional</a></li>
+<li><a href="http://codehero.co/laravel-4-desde-cero-eloquent-orm/">http://codehero.co/laravel-4-desde-cero-eloquent-orm/</a></li>
+<li><a href="http://laravel.com/docs/4.2/eloquent#basic-usage">http://laravel.com/docs/4.2/eloquent#basic-usage</a></li>
+<li><a href="http://laravel.com/docs/4.2/eloquent#insert-update-delete">http://laravel.com/docs/4.2/eloquent#insert-update-delete</a></li>
+<li><a href="http://laravel.com/docs/4.2/eloquent#timestamps">http://laravel.com/docs/4.2/eloquent#timestamps</a></li>
+</ul></li>
+<li>Test the server with the web browser. Inspect the returned data.</li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have analyzed the server code. You have understood (at least, a little bit) how the code works. You have tested the server with the web browser. You have read the provided articles.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.6</span> Read and inspect the provided client code</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+<b>Every team member</b> must do the following tasks:
+</p>
+
+<ol class="org-ol">
+<li>Analyse the client code provided in the repository.</li>
+<li>Test the client with the web browser.</li>
+<li>Think of how to organize the code to add the missing functionality.</li>
+</ol>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have analyzed the client code. You have understood how it works. You have tested the client with the web browser. The team has thought of how to organize themselves.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">4.7</span> Create the server code</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+The server is available in the <code>/api</code> route. It is an API that works with the <b>Collection + JSON</b> format.
+</p>
+
+<p>
+The main entry point to the API returns a <code>collection</code> object with links to each of the types of multimedia in the database: movies, disc albums, books and videogames. If you access to any of these links URL, the server will send another <code>collection</code> object with the corresponding <b>list</b> of items <b>and</b>:
+</p>
+<ul class="org-ul">
+<li>Links to access a specific item.</li>
+<li>Links to access the other lists of items.</li>
+<li>A template to edit or add an item of the current collection.</li>
+</ul>
+
+<p>
+The data model for each type of item is based on the standarized data types published in  <a href="http://schema.org/">http://schema.org/</a>. The properties of each type of element are:
+</p>
+<ul class="org-ul">
+<li><code>Movie</code>
+<ul class="org-ul">
+<li><code>name</code> - Name of the movie (text)</li>
+<li><code>description</code> - Description of the movie (text)</li>
+<li><code>director</code> - Director of the movie (text)</li>
+<li><code>datePublished</code> - Release date (date)</li>
+<li><code>embedUrl</code> - URL of the YouTube trailer (text)</li>
+</ul></li>
+<li><code>MusicAlbum</code>
+<ul class="org-ul">
+<li><code>name</code> - Name of the music album (text)</li>
+<li><code>description</code> - Description of the music album (text)</li>
+<li><code>datePublished</code> - Release date (date)</li>
+<li><code>image</code> - URL of the album cover image (text)</li>
+<li><code>embedUrl</code> - URL of the SoundCloud stream for the main song of the album (text)</li>
+</ul></li>
+<li><code>Book</code>
+<ul class="org-ul">
+<li><code>name</code> - Name of the book (text)</li>
+<li><code>description</code> - Description of the book (text)</li>
+<li><code>isbn</code> - ISBN book id (text)</li>
+<li><code>datePublished</code> - Release date (date)</li>
+<li><code>image</code> - URL of the cover book image (text)</li>
+</ul></li>
+<li><code>VideoGame</code>
+<ul class="org-ul">
+<li><code>name</code> - Name of the videogame (text)</li>
+<li><code>description</code> - Description of the videogame (text)</li>
+<li><code>gamePlatform</code> - Available gaming platforms for the game (text)</li>
+<li><code>applicationSubCategory</code> - Game category (arcade, platforms,&#x2026;) (text)</li>
+<li><code>screenshot</code> - URL of a screenshot of the game (text)</li>
+<li><code>datePublished</code> - Release date (date)</li>
+<li><code>embedUrl</code> - URL of the YouTube trailer (text)</li>
+</ul></li>
+</ul>
+
+<p>
+To do <b>tasks</b>:
+</p>
+<ul class="org-ul">
+<li>Create the appropriate <b>routes</b> to access each of the <b>resources</b> provided by the API (both <b>lists</b> and <b>individual items</b>): movie list, movie item, music album list, music album item, book list, book item, videogame list and videogame item.</li>
+<li>For each of the <b>four</b> categories, create the server logic to implement the <b>four actions</b> of the <a href="https://en.wikipedia.org/wiki/CRUD">CRUD</a> model: Create, Read, Update and Delete.
+<ul class="org-ul">
+<li>Get a list of elements.</li>
+<li>Get an individual item.</li>
+<li>Create a new item.</li>
+<li>Update an item.</li>
+<li>Delete an item.</li>
+</ul></li>
+<li><b>Test</b> the API in <b>Chrome</b> with this <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo">Chrome extension</a>.</li>
+<li><b>Optionally</b>, you can create <b>unit tests</b> following the example provided in the repository. These tests will be executed by <b>Travis CI</b> when you do a <b>commit</b> or a <b>pull request</b> in GitHub.</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>You have tested the proper operation of the server API. You can make CRUD operations to each of the four categories provided by the API. The server code is correctly deployed in OpenShift.</dd>
+</dl>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">4.7.1</span> How to process data sent with POST or PUT</h4>
+<div class="outline-text-4" id="text-4-7-1">
+<p>
+The <b>Collection + JSON</b> format is based on JSON. For that reason, the server must <b>convert</b> JSON to PHP objects. You can read the following articles to know how to do it:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://docs.slimframework.com/#Request-Body">http://docs.slimframework.com/#Request-Body</a></li>
+<li><a href="http://php.net/manual/en/function.json-decode.php">http://php.net/manual/en/function.json-decode.php</a> (it is easier if you use the <code>true</code> parameter to process it as an associative array).</li>
+<li><a href="http://stackoverflow.com/questions/15043981/how-to-access-json-decoded-array-in-php#15044030">http://stackoverflow.com/questions/15043981/how-to-access-json-decoded-array-in-php#15044030</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">4.8</span> Create the client code</h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Angular JS</b> and <b>Bootstrap</b>. The client will use <a href="https://en.wikipedia.org/wiki/AJAX">AJAX</a> to send and receive data in the <i>Collection + JSON</i> format to the server. 
+</p>
+
+<p>
+The provided <b>source code</b> includes sections marked with the <b>TODO</b> tag to indicate what you have to implement. The code also includes <b>comments</b> that explain how to do it. The main tasks that have to be done are detailed below.
+</p>
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The client can interact with the server API. Each of the four categories are displayed correctly. The client is deployed in OpenShift.</dd>
+</dl>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12"><span class="section-number-4">4.8.1</span> Include Angular lib and Bootstrap CSS</h4>
+<div class="outline-text-4" id="text-4-8-1">
+<p>
+Load both libraries in the <code>index.html</code> file.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13"><span class="section-number-4">4.8.2</span> Implement the AJAX functions</h4>
+<div class="outline-text-4" id="text-4-8-2">
+<p>
+The <b>Collection + JSON</b> format allows <b>four types</b> of interacion (we will not use the <code>queries</code> functionality for simplicity):
+</p>
+<ul class="org-ul">
+<li>Follow links to get a different collection object.</li>
+<li>Send a template to <b>edit</b> an item.</li>
+<li>Send a template to <b>create</b> an item.</li>
+<li>Send a DELETE request to <b>delete</b> an item.</li>
+</ul>
+
+<p>
+For that reason, the client will have to implement 4 functions:
+</p>
+<ul class="org-ul">
+<li><code>readCollection</code> (already created).</li>
+<li><code>createItem</code>.</li>
+<li><code>editItem</code>.</li>
+<li><code>deleteItem</code>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-4">
+<h4 id="orgheadline14"><span class="section-number-4">4.8.3</span> Implement a function to create the editTemplate object</h4>
+<div class="outline-text-4" id="text-4-8-3">
+<p>
+The <b>Collection + JSON</b> format provides an object called <code>template</code> to create and update items. This object will be available for each collection and the client will use it to interact with the <b>create item form</b>, and <b>not for editing items</b>.
+</p>
+
+<p>
+For editing items, the function <code>buildEditForm</code> will be used. It will create a new object called <code>editTemplate</code> using the <code>template</code> object and the <b>item data</b>. This new object will be then linked to the <b>edit form</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15"><span class="section-number-4">4.8.4</span> Implement a directive to display the collection links</h4>
+<div class="outline-text-4" id="text-4-8-4">
+<p>
+This directive will display the list of links stored in the <code>collection</code> object. You can use Bootstrap classes for the UI.
+</p>
+
+<p>
+When the user clicks on a link, the application must call the <code>readCollection</code> function to get the collection referred by that link.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-4">
+<h4 id="orgheadline16"><span class="section-number-4">4.8.5</span> Implement a directive to display the collection items</h4>
+<div class="outline-text-4" id="text-4-8-5">
+<p>
+This directive must <b>call 4 different directives</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> property to <b>show and hide</b> the appropriate ones.
+</p>
+
+<p>
+Each category of items must display its own types of data
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a directive to implement the create item form</h4>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-4">
+<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Implement a directive to implement the edit form</h4>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">5</span> Hints</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
+<li>Every team member <b>must</b> work both with <b>client</b> and <b>server</b> code. Each member <b>must choose</b> a certain item type (movies, books, music albums or videogames) and work both with <b>client and server</b>.</li>
+<li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files. Use Angular <b>directives</b> to work on different files.</li>
+<li>Teams must create tasks that generate <b>valid product updates</b>.</li>
+<li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline22" class="outline-2">
+<h2 id="orgheadline22"><span class="section-number-2">6</span> Grading criteria</h2>
+<div class="outline-text-2" id="text-6">
+<dl class="org-dl">
+<dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
+<dt>Percentage of completed Product Backlog  (20%)</dt><dd>Completed tasks, optional tasks.</dd>
+<dt>Quality (20%)</dt><dd>Originality, design, validation tests, correct visualization in different browsers and devices, design consistency, usability and accessibility features.</dd>
+<dt>Retrospective (20%)</dt><dd>Correct revision of processes, identification of strengths and weaknesses, team analysis, individual analysis.</dd>
+<dt>Demo session (20%)</dt><dd>Participation of all team members, oral presentation, materials used in the presentation, adaptation to available time.</dd>
+</dl>
+
+
+<p>
+Individuals who <b>do not attend the Eduscrum events</b> (planning meeting, demo, retrospective) will get the <b>corresponding decrease in their grade</b>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+</div>
+</body>
+</html>
