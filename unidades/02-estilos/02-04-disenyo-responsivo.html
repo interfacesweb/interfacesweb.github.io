@@ -135,7 +135,7 @@ En el diseño adaptativo se busca que la apariencia visual de la página web est
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">meta</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"viewport"</span> <span style="color: #a0522d;">content</span>=<span style="color: #8b2252;">"width=device-width; initial-scale=1.0;"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">meta</span> <span style="color: #7590db;">name</span>=<span style="color: #2d9574;">"viewport"</span> <span style="color: #7590db;">content</span>=<span style="color: #2d9574;">"width=device-width; initial-scale=1.0;"</span>&gt;
 </pre>
 </div>
 
@@ -216,7 +216,7 @@ Para definir una <i>media query</i> se sigue la siguiente sintaxis en CSS:
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #483d8b;">@media</span> mediatype and|not|only (media_feature) {
+<pre class="src src-css"><span style="color: #4f97d7;">@media</span> mediatype and|not|only (media_feature) {
    C&#243;digo CSS;
 }
 </pre>
@@ -228,7 +228,7 @@ También es posible definir que una determinada hoja de estilos se aplique para 
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"stylesheet"</span> <span style="color: #a0522d;">media</span>=<span style="color: #8b2252;">"mediatype and|not|only (media_feature)"</span> <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"estilos.css"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> <span style="color: #7590db;">media</span>=<span style="color: #2d9574;">"mediatype and|not|only (media_feature)"</span> <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"estilos.css"</span>&gt;
 </pre>
 </div>
 </div>
@@ -243,33 +243,33 @@ A continuación se muestran algunos ejemplos de <i>media queries</i>:
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #b22222;">/* </span><span style="color: #b22222;">Estilos para pantallas de anchura CSS m&#225;xima 300px</span><span style="color: #b22222;">*/</span>
-<span style="color: #483d8b;">@media</span> screen and (max-device-width: 300px) {
-<span style="color: #0000ff;">    body </span>{
-        <span style="color: #a0522d;">background-color</span>: lightblue;
+<pre class="src src-css"><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS m&#225;xima 300px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #4f97d7;">@media</span> screen and (max-device-width: 300px) {
+<span style="color: #bc6ec5; font-weight: bold;">    body </span>{
+        <span style="color: #7590db;">background-color</span>: lightblue;
     }
-<span style="color: #0000ff;">    p </span>{
-        <span style="color: #a0522d;">color</span>: black;
-    }
-}
-
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">Estilos para pantallas de anchura CSS entre 301 y 700 px</span><span style="color: #b22222;">*/</span>
-<span style="color: #483d8b;">@media</span> screen and (min-device-width: 301px) and (max-device-width: 700px) {
-<span style="color: #0000ff;">    body </span>{
-        <span style="color: #a0522d;">background-color</span>: green;
-    }
-<span style="color: #0000ff;">    p </span>{
-        <span style="color: #a0522d;">color</span>: white;
+<span style="color: #bc6ec5; font-weight: bold;">    p </span>{
+        <span style="color: #7590db;">color</span>: black;
     }
 }
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">Estilos para pantallas de anchura CSS de m&#225;s de 700px</span><span style="color: #b22222;">*/</span>
-<span style="color: #483d8b;">@media</span> screen and (min-device-width:701px) {
-<span style="color: #0000ff;">    body </span>{
-        <span style="color: #a0522d;">background-color</span>: red;
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS entre 301 y 700 px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #4f97d7;">@media</span> screen and (min-device-width: 301px) and (max-device-width: 700px) {
+<span style="color: #bc6ec5; font-weight: bold;">    body </span>{
+        <span style="color: #7590db;">background-color</span>: green;
     }
-<span style="color: #0000ff;">    p </span>{
-        <span style="color: #a0522d;">color</span>: white;
+<span style="color: #bc6ec5; font-weight: bold;">    p </span>{
+        <span style="color: #7590db;">color</span>: white;
+    }
+}
+
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS de m&#225;s de 700px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #4f97d7;">@media</span> screen and (min-device-width:701px) {
+<span style="color: #bc6ec5; font-weight: bold;">    body </span>{
+        <span style="color: #7590db;">background-color</span>: red;
+    }
+<span style="color: #bc6ec5; font-weight: bold;">    p </span>{
+        <span style="color: #7590db;">color</span>: white;
     }
 }
 </pre>
@@ -295,8 +295,8 @@ Para desactivarlo de manera global basta con establecer una altura máxima con u
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #0000ff;">html * </span>{
-<span id="coderef-alt-max" class="coderef-off">    <span style="color: #a0522d;">max-height</span>:1000000px;</span>
+<pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html * </span>{
+<span id="coderef-alt-max" class="coderef-off">    <span style="color: #7590db;">max-height</span>:1000000px;</span>
 }
 </pre>
 </div>

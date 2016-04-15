@@ -116,7 +116,7 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">p</span> <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">"c&#243;digo_css"</span>&gt;HOLA&lt;/<span style="color: #0000ff;">p</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">p</span> <span style="color: #7590db;">style</span>=<span style="color: #2d9574;">"c&#243;digo_css"</span>&gt;HOLA&lt;/<span style="color: #bc6ec5; font-weight: bold;">p</span>&gt;
 </pre>
 </div>
 
@@ -126,9 +126,9 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">style</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">style</span> <span style="color: #7590db;">type</span>=<span style="color: #2d9574;">"text/css"</span>&gt;
   ...c&#243;digo_css...
-&lt;/<span style="color: #0000ff;">style</span>&gt;
+&lt;/<span style="color: #bc6ec5; font-weight: bold;">style</span>&gt;
 </pre>
 </div>
 
@@ -138,7 +138,7 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"stylesheet"</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span> <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"nombre_archivo_css.css"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> <span style="color: #7590db;">type</span>=<span style="color: #2d9574;">"text/css"</span> <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"nombre_archivo_css.css"</span>&gt;
 </pre>
 </div>
 </div>
@@ -191,17 +191,17 @@ Para determinar qué estilo se aplica en caso de conflicto se mira el resultado:
  ul ol li.red  {}  /* a=0 b=0 c=1 d=3 -&gt; especificidad = 0,0,1,3 */
  li.red.level  {}  /* a=0 b=0 c=2 d=1 -&gt; especificidad = 0,0,2,1 */
  #x34y         {}  /* a=0 b=1 c=0 d=0 -&gt; especificidad = 0,1,0,0 */
- <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">""</span>          /* a=1 b=0 c=0 d=0 -&gt; especificidad = 1,0,0,0 . 
+ <span style="color: #7590db;">style</span>=<span style="color: #2d9574;">""</span>          /* a=1 b=0 c=0 d=0 -&gt; especificidad = 1,0,0,0 . 
                       &#201;ste &#250;ltimo es el que se aplica.*/
 
-&lt;<span style="color: #0000ff;">head</span>&gt;
-  &lt;<span style="color: #0000ff;">style</span> <span style="color: #a0522d;">type</span>=<span style="color: #8b2252;">"text/css"</span>&gt;
+&lt;<span style="color: #bc6ec5; font-weight: bold;">head</span>&gt;
+  &lt;<span style="color: #bc6ec5; font-weight: bold;">style</span> <span style="color: #7590db;">type</span>=<span style="color: #2d9574;">"text/css"</span>&gt;
     #x97z { color: red }
-  &lt;/<span style="color: #0000ff;">style</span>&gt;
-  &lt;/<span style="color: #0000ff;">head</span>&gt;
-&lt;<span style="color: #0000ff;">body</span>&gt;
-  &lt;<span style="color: #0000ff;">p</span> ID=x97z <span style="color: #a0522d;">style</span>=<span style="color: #8b2252;">"color: green"</span>&gt;
-&lt;/<span style="color: #0000ff;">body</span>&gt;
+  &lt;/<span style="color: #bc6ec5; font-weight: bold;">style</span>&gt;
+  &lt;/<span style="color: #bc6ec5; font-weight: bold;">head</span>&gt;
+&lt;<span style="color: #bc6ec5; font-weight: bold;">body</span>&gt;
+  &lt;<span style="color: #bc6ec5; font-weight: bold;">p</span> ID=x97z <span style="color: #7590db;">style</span>=<span style="color: #2d9574;">"color: green"</span>&gt;
+&lt;/<span style="color: #bc6ec5; font-weight: bold;">body</span>&gt;
 </pre>
 </div>
 
@@ -228,17 +228,17 @@ Para incluir hojas de estilo alternativas se debe utilizar la etiqueta <code>&lt
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"stylesheet"</span> 
-      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo principal"</span>
-      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos.css"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> 
+      <span style="color: #7590db;">title</span>=<span style="color: #2d9574;">"Estilo principal"</span>
+      <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"./css/estilos.css"</span>&gt;
 
-&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"alternate stylesheet"</span>
-      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo alternativo 1"</span>
-      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos1.css"</span>&gt;
+&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"alternate stylesheet"</span>
+      <span style="color: #7590db;">title</span>=<span style="color: #2d9574;">"Estilo alternativo 1"</span>
+      <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"./css/estilos1.css"</span>&gt;
 
-&lt;<span style="color: #0000ff;">link</span> <span style="color: #a0522d;">rel</span>=<span style="color: #8b2252;">"alternate stylesheet"</span>
-      <span style="color: #a0522d;">title</span>=<span style="color: #8b2252;">"Estilo alternativo 2"</span>
-      <span style="color: #a0522d;">href</span>=<span style="color: #8b2252;">"./css/estilos2.css"</span>&gt;
+&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"alternate stylesheet"</span>
+      <span style="color: #7590db;">title</span>=<span style="color: #2d9574;">"Estilo alternativo 2"</span>
+      <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"./css/estilos2.css"</span>&gt;
 </pre>
 </div>
 </div>
@@ -506,17 +506,17 @@ Esta unidad hace referencia al <b>tamaño de letra calculado heredado por el ele
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #0000ff;">html </span>{
-  <span style="color: #a0522d;">font-size</span>: 12px;
-  <span style="color: #a0522d;">text-indent</span>: 1em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">1em = 12px </span><span style="color: #b22222;">*/</span>
+<pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html </span>{
+  <span style="color: #7590db;">font-size</span>: 12px;
+  <span style="color: #7590db;">text-indent</span>: 1em; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">p </span>{                 <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 1em = 12px; </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">font-size</span>: 0.5em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">p </span>{                 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 1em = 12px; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">font-size</span>: 0.5em; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">p span </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 1em = 6px </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">font-size</span>: 0.5em; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 3px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">p span </span>{            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 1em = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">font-size</span>: 0.5em; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 3px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 </pre>
 </div>
@@ -533,17 +533,17 @@ Esta unidad tiene una <b>referencia fija</b>, que es el <b>tamaño de letra defi
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #0000ff;">html </span>{
-  <span style="color: #a0522d;">font-size</span>: 12px;
-  <span style="color: #a0522d;">text-indent</span>: 1rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">1em = 12px </span><span style="color: #b22222;">*/</span>
+<pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html </span>{
+  <span style="color: #7590db;">font-size</span>: 12px;
+  <span style="color: #7590db;">text-indent</span>: 1rem; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">p </span>{                 
-  <span style="color: #a0522d;">font-size</span>: 0.5rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">p </span>{                 
+  <span style="color: #7590db;">font-size</span>: 0.5rem; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">p span </span>{            
-  <span style="color: #a0522d;">font-size</span>: 0.5rem; <span style="color: #b22222;">/* </span><span style="color: #b22222;">Tama&#241;o = 6px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">p span </span>{            
+  <span style="color: #7590db;">font-size</span>: 0.5rem; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 </pre>
 </div>
@@ -563,16 +563,16 @@ El porcentaje suele tomarse como una unidad relativa más. Un porcentaje de un 1
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #0000ff;">body </span>{
-  <span style="color: #a0522d;">width</span>: 1024px; <span style="color: #b22222;">/* </span><span style="color: #b22222;">100% = 1024px </span><span style="color: #b22222;">*/</span>
+<pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">body </span>{
+  <span style="color: #7590db;">width</span>: 1024px; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">100% = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">div </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 100% = 1024px </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">width</span>: 50%;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">div </span>{            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 100% = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">width</span>: 50%;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">div div </span>{        <span style="color: #b22222;">/* </span><span style="color: #b22222;">Hereda 100% = 512px </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">width</span>: 50%;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 256px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">div div </span>{        <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 100% = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">width</span>: 50%;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 256px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 </pre>
 </div>
@@ -594,16 +594,16 @@ Estas unidades tienen una <b>referencia fija</b>, que es el ancho ('vw'), alto (
 
 <div class="org-src-container">
 
-<pre class="src src-css"><span style="color: #0000ff;">/* </span><span style="color: #0000ff;">Suponemos que el ancho de la pantalla</span>
-<span style="color: #0000ff;">del dispositivo es de 1024px, por lo que</span>
-<span style="color: #0000ff;">100vw = 1024px </span><span style="color: #0000ff;">*/</span>
+<pre class="src src-css"><span style="color: #2aa1ae; background-color: #292e34; font-weight: bold;">/* </span><span style="color: #2aa1ae; background-color: #292e34; font-weight: bold;">Suponemos que el ancho de la pantalla</span>
+<span style="color: #2aa1ae; background-color: #292e34; font-weight: bold;">del dispositivo es de 1024px, por lo que</span>
+<span style="color: #2aa1ae; background-color: #292e34; font-weight: bold;">100vw = 1024px </span><span style="color: #2aa1ae; background-color: #292e34; font-weight: bold;">*/</span>
 
-<span style="color: #0000ff;">div </span>{            <span style="color: #b22222;">/* </span><span style="color: #b22222;">1vw = 1024/100 </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">width</span>: 50vw;   <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">div </span>{            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1vw = 1024/100 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">width</span>: 50vw;   <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 
-<span style="color: #0000ff;">div div </span>{         <span style="color: #b22222;">/* </span><span style="color: #b22222;">1vw = 1024/100 </span><span style="color: #b22222;">*/</span>
-  <span style="color: #a0522d;">width</span>: 50vw;    <span style="color: #b22222;">/* </span><span style="color: #b22222;">Anchura = 512px </span><span style="color: #b22222;">*/</span>
+<span style="color: #bc6ec5; font-weight: bold;">div div </span>{         <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1vw = 1024/100 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #7590db;">width</span>: 50vw;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 }
 </pre>
 </div>
