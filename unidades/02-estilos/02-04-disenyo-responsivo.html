@@ -42,18 +42,19 @@
 <li><a href="#orgheadline5">3.3. Etiqueta &lt;meta name="viewport"&gt;</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline11">4. Media queries</a>
+<li><a href="#orgheadline7">4. Diseño de rejilla (Grid)</a></li>
+<li><a href="#orgheadline12">5. Media queries</a>
 <ul>
-<li><a href="#orgheadline7">4.1. Tipos de medio (media types)</a></li>
-<li><a href="#orgheadline8">4.2. Características del medio (media features)</a></li>
-<li><a href="#orgheadline9">4.3. Sintaxis</a></li>
-<li><a href="#orgheadline10">4.4. Ejemplos</a></li>
+<li><a href="#orgheadline8">5.1. Tipos de medio (media types)</a></li>
+<li><a href="#orgheadline9">5.2. Características del medio (media features)</a></li>
+<li><a href="#orgheadline10">5.3. Sintaxis</a></li>
+<li><a href="#orgheadline11">5.4. Ejemplos</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline12">5. Font boosting (Chrome mobile)</a></li>
-<li><a href="#orgheadline13">6. Testeo de acceso móvil</a></li>
-<li><a href="#orgheadline14">7. Evolución futura</a></li>
-<li><a href="#orgheadline15">8. Referencias</a></li>
+<li><a href="#orgheadline13">6. Font boosting (Chrome mobile)</a></li>
+<li><a href="#orgheadline14">7. Testeo de acceso móvil</a></li>
+<li><a href="#orgheadline15">8. Evolución futura</a></li>
+<li><a href="#orgheadline16">9. Referencias</a></li>
 </ul>
 </div>
 </div>
@@ -150,10 +151,22 @@ Este código indica al navegador que debe utilizar la <b>anchura CSS</b> (<code>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgheadline11" class="outline-2">
-<h2 id="orgheadline11"><span class="section-number-2">4</span> Media queries</h2>
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">4</span> Diseño de rejilla (Grid)</h2>
 <div class="outline-text-2" id="text-4">
+<p>
+Muchos diseños actuales se basan en el <b>modelo de rejilla</b>. Básicamente consiste en dividir la página en un número de columnas (usualmente 12) y disponer las capas de manera que ocupen un número de columnas determinado. Este tipo de diseños se suele combinar con <i>media queries</i> para realizar diseños responsivos.
+</p>
+
+<p>
+En este <a href="http://www.w3schools.com/css/css_rwd_grid.asp">enlace</a> se muestra un tutorial de diseño basado en rejilla. En <a href="http://www.w3schools.com/css/css_rwd_mediaqueries.asp">este otro</a> se puede ver cómo combinar el diseño en rejilla con <i>media queries</i> para realizar diseños responsivos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">5</span> Media queries</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 Las <i>media queries</i> son expresiones que se utilizan en CSS3 para <b>identificar el dispositivo</b> al que va dirigido un determinado <b>conjunto de reglas de estilo CSS</b>.
 </p>
@@ -167,9 +180,9 @@ Cada expresión <i>media query</i> está formada por un <b>tipo de medio</b> (<i
 </p>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.1</span> Tipos de medio (media types)</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">5.1</span> Tipos de medio (media types)</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 Un <i>media type</i> define un tipo de dispositivo. Los tipos de medio más utilizados son:
 </p>
@@ -186,9 +199,9 @@ Se puede consultar el resto de opciones en este <a href="http://www.w3schools.co
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.2</span> Características del medio (media features)</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">5.2</span> Características del medio (media features)</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 Se pueden utilizar expresiones adicionales al <i>media type</i> para determinar de manera más concreta las características del dispositivo. Algunas de las características más utilizadas son:
 </p>
@@ -208,9 +221,9 @@ Se puede consultar el resto de características en este <a href="http://www.w3sc
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.3</span> Sintaxis</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">5.3</span> Sintaxis</h3>
+<div class="outline-text-3" id="text-5-3">
 <p>
 Para definir una <i>media query</i> se sigue la siguiente sintaxis en CSS:
 </p>
@@ -235,9 +248,9 @@ También es posible definir que una determinada hoja de estilos se aplique para 
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">4.4</span> Ejemplos</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">5.4</span> Ejemplos</h3>
+<div class="outline-text-3" id="text-5-4">
 <p>
 A continuación se muestran algunos ejemplos de <i>media queries</i>:
 </p>
@@ -279,9 +292,9 @@ A continuación se muestran algunos ejemplos de <i>media queries</i>:
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">5</span> Font boosting (Chrome mobile)</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">6</span> Font boosting (Chrome mobile)</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 El navegador <i>Chrome Mobile</i> <b>cambia el tamaño de la letra</b> de algunos <b>elementos de bloque</b> en función de la <b>altura</b> de los mismos para favorecer su legibilidad. Esta característica hace que los estilos que se muestran no coincidan en ocasiones con los estilos establecidos en las hojas de estilo.
 </p>
@@ -312,9 +325,9 @@ Para más información puedes consultar los siguientes artículos de <i>Stack Ov
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">6</span> Testeo de acceso móvil</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">7</span> Testeo de acceso móvil</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 Existen multitud de páginas que proporcionan herramientas para comprobar el aspecto visual de una web en distintos tipos de dispositivos. A continuación se indican algunas de ellas:
 </p>
@@ -325,9 +338,9 @@ Existen multitud de páginas que proporcionan herramientas para comprobar el asp
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">7</span> Evolución futura</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">8</span> Evolución futura</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 Las tendencias actuales en el campo del diseño adaptativo van enfocadas a <b>personalizar el código que proporciona el servidor</b> en función del tipo de cliente que hace la petición.
 </p>
@@ -341,9 +354,9 @@ De esta manera se reduce el tamaño de los archivos y se aumenta la velocidad de
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">8</span> Referencias</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">9</span> Referencias</h2>
+<div class="outline-text-2" id="text-9">
 <ul class="org-ul">
 <li><a href="http://www.w3schools.com/css/css_rwd_intro.asp">Guía de RWD en W3Schools</a></li>
 </ul>
