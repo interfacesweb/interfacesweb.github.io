@@ -113,9 +113,10 @@ git config --global core.editor <span style="color: #2d9574;">"'C:/Program Files
 git config --global merge.tool <span style="color: #2d9574;">"meld"</span>
 git config --global mergetool.meld.path <span style="color: #2d9574;">"'C:/Program Files (x86)/Meld/Meld.exe'"</span>
 
-<span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">Almacenamiento de credenciales para no pedir usuario y contrase&#241;a de GitHub cada vez que se realice un push</span>
-git config --global credential.helper wincred <span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">Para Windows</span>
-git config --global credential.helper cache <span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">Para Linux</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Almacenamiento de credenciales para no pedir usuario y contrase&#241;a de GitHub cada vez que se realice un push</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Para que tenga efecto habr&#225; que abrir la consola de Git DESPU&#201;S de ejecutar estos comandos</span>
+git config --global credential.helper cache   <span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">Para Linux.   &#161;Elegir s&#243;lo una de las dos opciones y eliminar la l&#237;nea que no se use!</span>
+git config --global credential.helper wincred <span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">Para Windows. &#161;Elegir s&#243;lo una de las dos opciones y eliminar la l&#237;nea que no se use!</span>
 </pre>
 </div>
 </div>
