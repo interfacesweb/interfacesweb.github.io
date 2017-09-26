@@ -36,25 +36,20 @@
 <li><a href="#orgheadline1">1. Introduction</a></li>
 <li><a href="#orgheadline2">2. Learning goals</a></li>
 <li><a href="#orgheadline3">3. Agenda</a></li>
-<li><a href="#orgheadline12">4. Product Backlog</a>
+<li><a href="#orgheadline10">4. Product Backlog</a>
 <ul>
-<li><a href="#orgheadline4">4.1. Reading: Don't Make Me Think</a></li>
+<li><a href="#orgheadline4">4.1. Reading: Unit 1 Theory</a></li>
 <li><a href="#orgheadline5">4.2. Website analysis</a></li>
-<li><a href="#orgheadline8">4.3. Prototyping</a>
+<li><a href="#orgheadline6">4.3. Videos: Rapid Prototyping</a></li>
+<li><a href="#orgheadline9">4.4. Prototyping</a>
 <ul>
-<li><a href="#orgheadline6">4.3.1. Pages to design</a></li>
-<li><a href="#orgheadline7">4.3.2. Elements to display (depending on the page)</a></li>
-</ul>
-</li>
-<li><a href="#orgheadline11">4.4. HTML Layout with PUG</a>
-<ul>
-<li><a href="#orgheadline9">4.4.1. Install PUG</a></li>
-<li><a href="#orgheadline10">4.4.2. Template creation</a></li>
+<li><a href="#orgheadline7">4.4.1. Minimum set of pages to design</a></li>
+<li><a href="#orgheadline8">4.4.2. Minimum set of elements to display (depending on the page)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline13">5. Grading criteria</a></li>
+<li><a href="#orgheadline11">5. Grading criteria</a></li>
 </ul>
 </div>
 </div>
@@ -63,15 +58,11 @@
 <h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-We are going to learn some basic guiding principles to improve usability and accesibility of web sites. We will also analyze some web sites to check if they implement these guidelines. Finally, we will design a prototype (mockup) of a web site and we will generate a HTML template for that prototype.
+We are going to learn some basic guiding principles to improve usability and accesibility of web sites. We will also analyze some web sites to check if they implement these guidelines. Finally, we will design a prototype (mockup) of a web site following those guidelines.
 </p>
 
 <p>
 We will use the <a href="http://eduscrum.nl/en/">Eduscrum</a> framework. Students will work in teams and they will prepare a presentation to show what they have accomplished.
-</p>
-
-<p>
-Each team will have a repository in GitHub to store the HTML code. The main branch will be <code>gh-pages</code>. This branch allows us to browse an HTML site in <a href="http://github.io">http://github.io</a>.
 </p>
 </div>
 </div>
@@ -82,10 +73,8 @@ Each team will have a repository in GitHub to store the HTML code. The main bran
 <ul class="org-ul">
 <li>Learn some key features about web usability and accesibility.</li>
 <li>Structure web pages in a correct way.</li>
-<li>Create web mockups / wireframes.</li>
-<li>Organize a web page using DIV tags.</li>
-<li>Use a template language (JADE) to create HTML layouts.</li>
-<li>Use control version software to work in teams.</li>
+<li>Create web prototypes using paper and digital tools.</li>
+<li>Learn how to use a professional tool to build prototypes.</li>
 </ul>
 </div>
 </div>
@@ -93,47 +82,29 @@ Each team will have a repository in GitHub to store the HTML code. The main bran
 <h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
-<dt>Tuesday 09/27/2016 to Wednesday 09/28/2016</dt><dd>Planning meeting (2 days / 4 hours).</dd>
-<dt>Thursday 09/29/2016 to Thursday 10/13/2016</dt><dd>Sprint (8 days / 16 hours).</dd>
-<dt>Monday 10/17/2016</dt><dd>Demo (1 day / 2 hours).</dd>
-<dt>Tuesday 10/18/2016</dt><dd>Retrospective (1 day / 2 hours).</dd>
+<dt>Wednesday 09/27/2017</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Thursday 09/28/2017 to Friday 10/13/2016</dt><dd>Sprint (8 days / 16 hours).</dd>
+<dt>Monday 10/16/2017</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Wednesday 10/18/2017</dt><dd>Retrospective (1 day / 2 hours).</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">4</span> Product Backlog</h2>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">4</span> Product Backlog</h2>
 <div class="outline-text-2" id="text-4">
 </div><div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: Don't Make Me Think</h3>
+<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: Unit 1 Theory</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-Each team must <b>read and prepare a summary</b> of some chapters of the book <i>Don't Make Me Think, Revisited</i>, by Steven Krug. Each team will pick one of these options (each team MUST choose a different option):
-</p>
-
-<ul class="org-ul">
-<li>Chapter 1, 2 &amp; 3</li>
-<li>Chapter 4, 5 &amp; 6</li>
-<li>Chapters 7, 8 &amp; 9</li>
-<li>Chapters 10, 11 &amp; 12</li>
-</ul>
-
-<p>
-Teams can divide the pages to read among the team members. Team members can then explain what they have read to the rest of the team in order to practice their oral English skills.
-</p>
-
-<p>
-Teams must pick up <b>20 key words</b> and look for its definition. They will create a glossary entry for each of them in the DIW Moodle course. <b>Key words must be different from the other teams' key words</b>.
-</p>
-
-<p>
-Teams will <b>read their summary</b> in the demo class. <b>Every member of the team must read aloud a piece</b> of the summary. Remember you will have 20 minutes for the whole demo, not only the reading.
+Each team member must <b>read</b> <a href="../unidades/01-planificacion/index.html">unit 1 theory</a>. 
 </p>
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>You have read and understood the text. Team members have shared the information they have read. The team has prepared the summary. The team has created 20 key words in the glossary.</dd>
+<dt>Definition of Done</dt><dd>You have read and understood the text.</dd>
 </dl>
 </div>
 </div>
+
 <div id="outline-container-orgheadline5" class="outline-3">
 <h3 id="orgheadline5"><span class="section-number-3">4.2</span> Website analysis</h3>
 <div class="outline-text-3" id="text-4-2">
@@ -176,32 +147,69 @@ Teams will browse through the site and they will try to answer the following que
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.3</span> Prototyping</h3>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Videos: Rapid Prototyping</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
-Teams will choose a <b>free theme</b> for a website (restaurant, school, store,&#x2026;). They will prepare a <b>mockup</b> of the website using <b>Pencil</b>, available <a href="http://pencil.evolus.vn/">here</a>. Alternate options are <a href="http://webdemo.balsamiq.com/">balsamiq</a> and <a href="https://wireframe.cc/">wireframe.cc</a>.
+Each team member must <b>watch and try to understand</b> these three videos:
 </p>
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=JMjozqJS44M">Rapid Prototyping 1 of 3: Sketching &amp; Paper Prototyping</a></li>
+<li><a href="https://www.youtube.com/watch?v=KWGBGTGryFk&amp;t=246s">Rapid Prototyping 2 of 3: Digital Prototyping</a></li>
+<li><a href="https://www.youtube.com/watch?v=lusOgox4xMI">Rapid Prototyping 3 of 3: Native Prototyping</a></li>
+</ul>
 
 <p>
-Teams must try to follow the guidelines of <i>Don't Make Me Think</i>.
+Each video has a <b>list of words</b> and <b>grammar constructs</b> associated. For each video you will have to complete the following tasks:
 </p>
+<ul class="org-ul">
+<li>Read the list of words / expressions and <b>mark</b> the ones you don't know.</li>
+<li>Watch the video. You can use closed captioning (cc) in English.</li>
+<li>Pause the video when you find one of those words / expressions and try to guess the meaning.</li>
+<li>Look for the meaning in a dictionary.</li>
+<li>Add the word / expression and its meaning to your personal dictionary.</li>
+<li>When you have finished with the list, watch the video one more time. Pay attention to the pronunciation of the words / expressions.</li>
+<li><b>Write a short summary</b> of the video.</li>
+<li><b>Discuss</b> with your teammates all the summaries you have prepared and make a <b>group summary</b>. Try to be concise and remark the main ideas.</li>
+</ul>
 
-<p>
-Each site must have <b>2 navigation levels</b> (categories). 
-</p>
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>The team has designed all the pages of the website. Each page only shows the appropriate elements of the list.</dd>
+<dt>Definition of Done</dt><dd>Every team member has watched and understood the three videos. Every team member has added the words and expressions he/she did not know to his/her personal dictionary. Every team member has prepared a summary of each video. The team has created a common summary of each video.</dd>
 </dl>
 </div>
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">4.3.1</span> Pages to design</h4>
-<div class="outline-text-4" id="text-4-3-1">
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.4</span> Prototyping</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Teams will choose a <b>free theme</b> for a website (restaurant, school, store,&#x2026;). They will prepare <b>two mockups</b> of the website: one in <b>paper</b> and the other one <b>digital</b>, using <a href="https://moqups.com/">Moqups</a>. Teams must try to follow the guidelines of the book <i>Don't Make Me Think</i> (from <a href="file:///home/pericon/CloudStation/instituto/diw/apuntes/unidades/01-planificacion/01-01-Planificacion.html">unit 1 theory</a>) and the <i>Rapid Prototyping</i> <a href="https://www.youtube.com/watch?v=JMjozqJS44M">video series</a> analyzed previously.
+</p>
+
+<p>
+The mockups must show:
+</p>
+<ul class="org-ul">
+<li>Sketches</li>
+<li>Wireframes</li>
+<li>Purposeful use of color (source: <a href="https://material.io/guidelines/style/color.html">Material Design color guidelines</a>)</li>
+<li>User flows</li>
+<li>Key user interactions</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The team has designed all the pages of the website. Each page only shows the appropriate elements of the list. All the team members are satisfied with the results.</dd>
+</dl>
+</div>
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">4.4.1</span> Minimum set of pages to design</h4>
+<div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Home page</li>
-<li>First level page</li>
-<li>Second level page</li>
+<li>Product / service list page</li>
+<li>Product / service detail page</li>
 <li>Sign-up / sign-in form page</li>
 <li>Location &amp; contact information page</li>
 <li>Contact form page</li>
@@ -209,16 +217,15 @@ Each site must have <b>2 navigation levels</b> (categories).
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">4.3.2</span> Elements to display (depending on the page)</h4>
-<div class="outline-text-4" id="text-4-3-2">
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8"><span class="section-number-4">4.4.2</span> Minimum set of elements to display (depending on the page)</h4>
+<div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Logo</li>
 <li>Site name (company name, service name,&#x2026;)</li>
 <li>Page title</li>
 <li>General search form</li>
-<li>Main navigation menu</li>
-<li>Secondary navigation menu</li>
+<li>Navigation menus</li>
 <li>Location map</li>
 <li>Telephone and address info</li>
 <li>Home link</li>
@@ -229,49 +236,10 @@ Each site must have <b>2 navigation levels</b> (categories).
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">4.4</span> HTML Layout with PUG</h3>
-<div class="outline-text-3" id="text-4-4">
-<p>
-Teams will create an <b>HTML template</b> using <b>PUG</b> for the site designed previously.
-</p>
-
-<dl class="org-dl">
-<dt>Definition of Done</dt><dd>Each team member has installed and read the documentation about PUG. The team has created the HTML templates using PUG. The whole website is deployed in the team repository and it is available in GitHub Pages.</dd>
-</dl>
-</div>
-<div id="outline-container-orgheadline9" class="outline-4">
-<h4 id="orgheadline9"><span class="section-number-4">4.4.1</span> Install PUG</h4>
-<div class="outline-text-4" id="text-4-4-1">
-<ul class="org-ul">
-<li>Download node: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></li>
-<li>Install PUG <a href="https://pugjs.org/api/getting-started.html#installation">https://pugjs.org/api/getting-started.html#installation</a></li>
-<li>Read some of the documentation
-<ul class="org-ul">
-<li><a href="https://pugjs.org/language/doctype.html">https://pugjs.org/language/doctype.html</a></li>
-<li><a href="https://pugjs.org/language/tags.html">https://pugjs.org/language/tags.html</a></li>
-<li><a href="https://pugjs.org/language/attributes.html">https://pugjs.org/language/attributes.html</a></li>
-</ul></li>
-</ul>
-</div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">4.4.2</span> Template creation</h4>
-<div class="outline-text-4" id="text-4-4-2">
-<ul class="org-ul">
-<li>Create a layout for each page you have defined in the prototype. Do not include the CSS yet. It will be done during the next sprint. Only HTML markup. Prepare some example content (Lorem ipsum dolor&#x2026;): <a href="http://es.lipsum.com/">http://es.lipsum.com/</a></li>
-<li>Deploy it in your Github team repository.</li>
-<li>Preview it in github.io.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">5</span> Grading criteria</h2>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">5</span> Grading criteria</h2>
 <div class="outline-text-2" id="text-5">
 <dl class="org-dl">
 <dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
