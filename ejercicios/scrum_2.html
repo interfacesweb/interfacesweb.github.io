@@ -36,18 +36,27 @@
 <li><a href="#orgheadline1">1. Introduction</a></li>
 <li><a href="#orgheadline2">2. Learning goals</a></li>
 <li><a href="#orgheadline3">3. Agenda</a></li>
-<li><a href="#orgheadline10">4. Product Backlog</a>
+<li><a href="#orgheadline16">4. Product Backlog</a>
 <ul>
 <li><a href="#orgheadline4">4.1. Reading: GIT workflow for teams</a></li>
-<li><a href="#orgheadline5">4.2. Video: FlexBox</a></li>
-<li><a href="#orgheadline6">4.3. CSS Layout</a></li>
-<li><a href="#orgheadline7">4.4. CSS styling</a></li>
-<li><a href="#orgheadline8">4.5. Forms design</a></li>
-<li><a href="#orgheadline9">4.6. Multimedia content</a></li>
+<li><a href="#orgheadline5">4.2. Reading: Jekyll fundamentals</a></li>
+<li><a href="#orgheadline8">4.3. CSS Layout</a>
+<ul>
+<li><a href="#orgheadline6">4.3.1. Layout components</a></li>
+<li><a href="#orgheadline7">4.3.2. Layout features</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline11">5. Guidelines</a></li>
-<li><a href="#orgheadline12">6. Grading criteria</a></li>
+<li><a href="#orgheadline9">4.4. CSS styling</a></li>
+<li><a href="#orgheadline10">4.5. Home page</a></li>
+<li><a href="#orgheadline11">4.6. Menu page</a></li>
+<li><a href="#orgheadline12">4.7. Reservation form page</a></li>
+<li><a href="#orgheadline13">4.8. Location &amp; contact information page</a></li>
+<li><a href="#orgheadline14">4.9. Image gallery page</a></li>
+<li><a href="#orgheadline15">4.10. About us page</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline17">5. Guidelines</a></li>
+<li><a href="#orgheadline18">6. Grading criteria</a></li>
 </ul>
 </div>
 </div>
@@ -56,7 +65,15 @@
 <h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-We are going to create the visual design for the websites developed in Scrum 1. We will use CSS3 to create the layout and visual appearance. We will use Media Queries to make the site responsive for tablets and mobile devices. We will use CSS3 to design form layouts. And finally, we will prepare multimedia content (images, audio and video) and add it to the website.
+We are going to create the visual design for a website. We will use CSS3 to create the layout and visual appearance. We will use Media Queries to make the site responsive for tablets and mobile devices. We will use CSS3 to design form layouts. And finally, we will prepare multimedia content (images, audio and video) and add it to the website.
+</p>
+
+<p>
+We will use <b>Jekyll</b>, a static CMS that will allow us to work with <b>template layouts</b> and <b>includes</b>.
+</p>
+
+<p>
+Each team will have a GIT repository for working and deploying their sites. The main branch of the repository will be <code>gh-pages</code> so that the site can be available at <code>github.io</code>.
 </p>
 </div>
 </div>
@@ -65,10 +82,10 @@ We are going to create the visual design for the websites developed in Scrum 1. 
 <h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
-<li>Create cascade style sheets.</li>
-<li>Test the CSS style sheets.</li>
-<li>Validate CSS style sheets.</li>
+<li>Create, test and validate cascade style sheets.</li>
 <li>Create responsive web pages.</li>
+<li>Learn some basic static CMS (Jekyll) features.</li>
+<li>Design web interfaces that follow the <b>Mobile First</b> approach.</li>
 <li>Know the different licenses available for multimedia content.</li>
 <li>Prepare multimedia content (image, audio and video) for its use in web pages.</li>
 <li>Include multimedia content in web pages.</li>
@@ -80,27 +97,27 @@ We are going to create the visual design for the websites developed in Scrum 1. 
 <h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
-<dt>Thursday 10/27/2016</dt><dd>Planning meeting (1 day / 2 hours).</dd>
-<dt>Wednesday 11/02/2016 to Monday 11/21/2016</dt><dd>Sprint (11 days / 22 hours).</dd>
-<dt>Tuesday 11/22/2016</dt><dd>Demo (1 day / 2 hours).</dd>
-<dt>Wednesday 11/23/2016</dt><dd>Retrospective (1 day / 2 hours).</dd>
+<dt>Monday 11/06/2017</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Wednesday 11/08/2017 to Thursday 11/23/2017</dt><dd>Sprint (10 days / 20 hours).</dd>
+<dt>Friday 11/24/2017</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Monday 11/27/2017</dt><dd>Retrospective (1 day / 2 hours).</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10"><span class="section-number-2">4</span> Product Backlog</h2>
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">4</span> Product Backlog</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Teams will use the <b>websites designed in Scrum 1</b>. Remember that the minimum number of pages the site should include are:
+Teams will have to design a web site for a <b>restaurant</b>. Each site will have the following pages:
 </p>
 
 <ul class="org-ul">
 <li>Home page</li>
-<li>First level page</li>
-<li>Second level page</li>
-<li>Sign-up / sign-in form page</li>
+<li>Menu page</li>
+<li>Reservation form page</li>
 <li>Location &amp; contact information page</li>
-<li>Contact form page</li>
+<li>Image gallery page</li>
+<li>About us page</li>
 </ul>
 </div>
 
@@ -117,28 +134,51 @@ Every member of the team must read the documentation about GIT available <a href
 </div>
 </div>
 <div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Video: FlexBox</h3>
+<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Reading: Jekyll fundamentals</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
-Every member of the team must view this <a href="https://www.youtube.com/watch?v=rSt_RTo8Gqs">video about FlexBox</a>.
+Every member of the team must read the documentation about Jekyll available here.
 </p>
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>You have watched the video. You have understood FlexBox fundamentals.</dd>
+<dt>Definition of Done</dt><dd>You have read and understood the documentation.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">4.3</span> CSS Layout</h3>
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.3</span> CSS Layout</h3>
 <div class="outline-text-3" id="text-4-3">
+<p>
+Teams will design a layout for the site. We will use <b>Jekyll</b>, a static Content Management System, that will allow us to split the layout files among various HTML files. This feature will allow team members to work in individual layout components (header, footer, nav, content) without having to work in the same files at the same time. In addition to this, team members will not have to copy the same HTML in all the site pages.
+</p>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">4.3.1</span> Layout components</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+All pages will have the following components:
+</p>
+<ul class="org-ul">
+<li>Header.</li>
+<li>Footer.</li>
+<li>Navigation.</li>
+<li>Aside (deals, advertisements,&#x2026;). <b>Not to be done bye the team formed by 3 people</b>.</li>
+<li>Main Content.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">4.3.2</span> Layout features</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Teams will design a layout for the website. Common layers (header, navigation, footer) must appear in the same place in all pages.</li>
+<li>The layout must follow the <b>Mobile First</b> paradigm.</li>
 <li>You must use <b>external style sheets</b>.</li>
-
 <li>You must use one of the <b>layout techniques</b> explained in the documentation (floats, flexbox, etc.).</li>
 <li>Navigation must be <b>consistent</b> and it must show where the user is in any level of the hierarchy. You can use whatever technique you want: menus, breadcrumbs,&#x2026;</li>
 <li>You must use <b>relative units</b> for the layout.</li>
-<li>You can change the HTML (Jade) structure from Scrum 1 if you need it. Some layout techniques use more layers (<code>divs</code>) than others.</li>
 <li>All pages must be <b>responsive</b>. You can use <b>media queries</b> for that. Pages must be displayed differently for <b>three kinds of devices</b>:
 <ul class="org-ul">
 <li>Mobile devices</li>
@@ -149,18 +189,21 @@ Every member of the team must view this <a href="https://www.youtube.com/watch?v
 
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>Each page is displayed correctly with its layout. Each page is available in GitHub Pages. Each page has been tested for the three kinds of devices.</dd>
+<dt>Definition of Done</dt><dd>The layout meets the requirements. It is designed following a Mobile First approach. It has been tested for the three kinds of devices. The layout is available in GitHub Pages.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> CSS styling</h3>
+</div>
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.4</span> CSS styling</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li>Teams will design the visual appearance of the website using <b>CSS3</b>.</li>
 <li>Visual design must be <b>homogeneous</b> (all the pages in the website must have the same "look and feel") and <b>personalized</b>. Teams are encouraged to design their own <b>logos</b> and choose <b>colors</b>, <b>font faces</b> and <b>icons</b>.</li>
 <li>You must use <b>external style sheets</b>.</li>
 <li>Use of <b>CSS classes</b> is encouraged.</li>
+<li>In order to avoid conflicts, each team member should work in a different CSS file.</li>
+<li>You can follow some CSS naming conventions to minimize conflicts: i.e., <a href="http://getbem.com/naming/">BEM</a>.</li>
 </ul>
 
 
@@ -169,12 +212,50 @@ Every member of the team must view this <a href="https://www.youtube.com/watch?v
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Forms design</h3>
+
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">4.5</span> Home page</h3>
 <div class="outline-text-3" id="text-4-5">
 <ul class="org-ul">
-<li>Teams will design the visual appearance of the web forms present in the website (sign-up, sign-in and contact forms).</li>
-<li>You have to include a minimum of <b>15 input fields</b> (buttons do not count) among the three forms.</li>
+<li>It must show the <b>name, logo and main info</b> of the site.</li>
+<li>It must include <b>three videos</b> that will be displayed through <a href="http://www.w3schools.com/html/html5_video.asp">HTML5</a>. 
+<ul class="org-ul">
+<li>Chosen videos must be related to the website theme.</li>
+<li>You will have to check the <b>compatible formats</b> supported for all browsers. If you have to make <b>conversions</b>, you can use:
+<ul class="org-ul">
+<li><a href="http://www.mirovideoconverter.com/">Miro Video Converter</a></li>
+<li><a href="https://handbrake.fr/">HandBrake</a></li>
+</ul></li>
+<li>Teams will have to look for videos with the <b>appropriate license</b> in order to use them.</li>
+<li>Teams are free to choose the place to show the videos.</li>
+</ul></li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices. You can play the videos in all the available browsers (Internet Explorer, Firefox, Chrome, Safari, Opera).</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">4.6</span> Menu page</h3>
+<div class="outline-text-3" id="text-4-6">
+<ul class="org-ul">
+<li>It must show info related with the menus that are served in the restaurant.</li>
+<li>Teams can choose among menus, food, dishes, specials,&#x2026;</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><span class="section-number-3">4.7</span> Reservation form page</h3>
+<div class="outline-text-3" id="text-4-7">
+<ul class="org-ul">
 <li>You must use <b>different types of fields</b> (the more, the better): <code>select</code>, <code>radio</code>, <code>checkbox</code>, <code>textarea</code>,&#x2026;</li>
 <li>Additionally, you can use <a href="http://www.w3schools.com/html/html_form_input_types.asp">HTML5 input fields</a>: <code>date</code>, <code>email</code>, <code>number</code>,&#x2026;</li>
 <li>Form fields must be <b>aligned</b>.</li>
@@ -186,7 +267,7 @@ Every member of the team must view this <a href="https://www.youtube.com/watch?v
 </ul></li>
 <li>You can use whatever technique you want (<code>display: table</code>, <code>float</code>, <code>flexbox</code>,&#x2026;) to align forms and labels, although it is recommended the use of <code>display: inline-block</code>. <b>You cannot use HTML tables</b>.</li>
 <li>You should honor the semantic structure of HTML: e.g., you must not put <code>labels</code> and <code>inputs</code> in different layers.</li>
-<li>Forms must be <b>responsive</b>:
+<li>The form must be <b>responsive</b>:
 <ul class="org-ul">
 <li><b>Mobile devices</b>
 <ul class="org-ul">
@@ -212,55 +293,77 @@ Every member of the team must view this <a href="https://www.youtube.com/watch?v
 
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>Forms meet the design requirements. Labels and controls are aligned. All team members are satisfied with the design. The design looks professional.</dd>
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The reservation form meets the design requirements. Labels and controls are aligned. All team members are satisfied with the design. The design looks professional.</dd>
 </dl>
 </div>
 </div>
-
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.6</span> Multimedia content</h3>
-<div class="outline-text-3" id="text-4-6">
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">4.8</span> Location &amp; contact information page</h3>
+<div class="outline-text-3" id="text-4-8">
 <ul class="org-ul">
-<li>The website must include a <b>photo gallery</b>. It will have a grid of <b>thumbnails</b>. When an image is clicked, it will be shown in full resolution. Optional: show the image in a pop-up layer (it requires JavaScript).
+<li>This page must show information about the restaurant location and contact information (address, telephone number,&#x2026;).</li>
+<li>It should provide a map.</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">4.9</span> Image gallery page</h3>
+<div class="outline-text-3" id="text-4-9">
+<ul class="org-ul">
+<li>It will have a grid of <b>thumbnails</b>. When an image is clicked, it will be shown in full resolution.</li>
+<li>Optional: show the image in a pop-up layer (such as lightbox; it requires JavaScript).
 <ul class="org-ul">
 <li>Chosen images must be related to the website theme.</li>
 <li>You will have to check the <b>compatible formats</b> supported for all browsers.</li>
 <li>Teams will have to look for images with the <b>appropriate license</b> in order to use them.</li>
 <li>Teams are free to choose the place to show the photo gallery.</li>
 </ul></li>
-<li>The website must include <b>three videos</b> that will be displayed through <a href="http://www.w3schools.com/html/html5_video.asp">HTML5</a>. 
-<ul class="org-ul">
-<li>Chosen videos must be related to the website theme.</li>
-<li>You will have to check the <b>compatible formats</b> supported for all browsers. If you have to make <b>conversions</b>, you can use:
-<ul class="org-ul">
-<li><a href="http://www.mirovideoconverter.com/">Miro Video Converter</a></li>
-<li><a href="https://handbrake.fr/">HandBrake</a></li>
-</ul></li>
-<li>Teams will have to look for videos with the <b>appropriate license</b> in order to use them.</li>
-<li>Teams are free to choose the place to show the videos.</li>
-</ul></li>
 </ul>
 
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>The proposed multimedia content has been included in the website. All multimedia content meets the requirements. You can display the photos and play the videos in the available browsers (Internet Explorer, Firefox, Chrome, Safari, Opera).</dd>
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. You can display the photos in all the available browsers (Internet Explorer, Firefox, Chrome, Safari, Opera). The images meet the license requirements.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">4.10</span> About us page</h3>
+<div class="outline-text-3" id="text-4-10">
+<ul class="org-ul">
+<li>This page must show information about the team members (the restaurant managers).</li>
+<li>Every team member must appear with his/her name, photo and text description.</li>
+</ul>
+
+
+<dl class="org-dl">
+<dt>Definition of Done</dt><dd>The page is deployed in GitHub pages. The page meets the proposed requirements. All members are satisfied with the result. The page is displayed correctly on the three kinds of devices.</dd>
 </dl>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-2">
-<h2 id="orgheadline11"><span class="section-number-2">5</span> Guidelines</h2>
+<div id="outline-container-orgheadline17" class="outline-2">
+<h2 id="orgheadline17"><span class="section-number-2">5</span> Guidelines</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
+<li>Ideas:
+<ul class="org-ul">
+<li><a href="http://bashooka.com/template/best-html-website-templates-for-cafe-bar-restaurant/">25 Best HTML Website Templates For Cafe Bar &amp; Restaurant</a></li>
+<li><a href="https://www.freshdesignweb.com/free-restaurant-coffee-website-templates/">97+ Best Restaurant Cafe Website Templates Free &amp; Premium</a></li>
+</ul></li>
 <li>Teams must create tasks that generate <b>valid product updates</b> (e.g., a task should generate a complete web page available in the web server).</li>
 <li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files.</li>
 <li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">6</span> Grading criteria</h2>
+<div id="outline-container-orgheadline18" class="outline-2">
+<h2 id="orgheadline18"><span class="section-number-2">6</span> Grading criteria</h2>
 <div class="outline-text-2" id="text-6">
 <dl class="org-dl">
 <dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
