@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidad 2.6 - Fundamentos del CMS Jekyll</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Pedro Prieto Alarcón">
+<meta  name="description" content="Unidad 2.6 - Fundamentos de Jekyll"
+>
+<meta  name="keywords" content="jekyll cms static">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
+
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script> 
+
+<script type="text/javascript" src="/scripts/script.js"></script> 
+
+<script type="text/javascript" src="/scripts/code-highlight.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./"> UP </a>
+ |
+ <a accesskey="H" href="http://interfacesweb.github.io/"> HOME </a>
+</div><div id="preamble" class="status">
+<h1>Diseño de Interfaces Web</h1>
+</div>
+<div id="content">
+<h1 class="title">Unidad 2.6 - Fundamentos del CMS Jekyll</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introducción</a></li>
+<li><a href="#orgheadline2">2. Instalación</a></li>
+<li><a href="#orgheadline3">3. Uso básico</a></li>
+<li><a href="#orgheadline4">4. Organización de archivos</a></li>
+<li><a href="#orgheadline5">5. Front matter</a></li>
+<li><a href="#orgheadline6">6. Integración con GitHub Pages</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://jekyllrb.com">Jekyll</a> es un gestor de contenido de tipo estático (<i>static site generator</i>). No depende de ninguna base de datos ni de ningún lenguaje de servidor. Utiliza ficheros de texto para almacenar los contenidos y los datos. Estos pueden dividirse en las siguientes categorías:
+</p>
+
+<dl class="org-dl">
+<dt>Ficheros de configuración</dt><dd>Almacenan la configuración general del sitio y las opciones de personalización.</dd>
+<dt>Ficheros de contenido</dt><dd>Almacenan los contenidos de las páginas del sitio.</dd>
+<dt>Ficheros de datos</dt><dd>Permiten crear estructuras de datos que pueden ser mostrados en las distintas páginas del sitio o utilizarse para generar estructuras, menús de navegación, listas,&#x2026;</dd>
+<dt>Ficheros de plantillas</dt><dd>Se utilizan para crear la estructura de las páginas que componen el sitio web.</dd>
+</dl>
+
+<p>
+Jekyll utiliza un sistema de plantillas denominado <i>Liquid</i> para combinar los distintos tipos de ficheros y crear el resultado final: un sitio web totalmente estático que utiliza únicamente HTML, CSS y JavaScript.
+</p>
+
+<p>
+La documentación de Jekyll puede consultarse <a href="https://jekyllrb.com/docs/">en este enlace</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Instalación</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Las instrucciones de instalación de Jekyll pueden consultarse <a href="https://jekyllrb.com/docs/installation/">aquí</a>. Jekyll no da soporte oficial para Windows, pero en las instrucciones se detalla cómo hacerlo.
+</p>
+
+<p>
+Afortunadamente existe también la posibilidad de hacer una instalación de tipo <i>portable</i>, disponible en <a href="https://github.com/madhur/PortableJekyll">GitHub</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Uso básico</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Jekyll se ejecuta desde la linea de comandos. Su uso básico permite:
+</p>
+
+<ul class="org-ul">
+<li>Crear un nuevo sitio Jekyll mediante <code>jekyll new NOMBRE_PROYECTO</code>. Este comando crea un nuevo proyecto Jekyll en la carpeta <code>./NOMBRE_PROYECTO</code>. Todas las acciones que se indican a continuación se deben ejecutar dentro de dicha carpeta.</li>
+<li>Generar el sitio web en la carpeta <code>./_site</code> mediante <code>jekyll build</code>.</li>
+<li>Lanzar un servidor web para visualizar el proyecto en el navegador mediante <code>bundle exec jekyll serve</code>. Una vez lanzado se puede acceder al sitio web a través del navegador en <code>http://localhost:4000</code>.</li>
+</ul>
+
+<p>
+Fuente: <a href="https://jekyllrb.com/docs/quickstart/">https://jekyllrb.com/docs/quickstart/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> Organización de archivos</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+La organización de archivos y carpetas en un proyecto Jekyll se puede consultar en <a href="https://jekyllrb.com/docs/structure/">https://jekyllrb.com/docs/structure/</a>. A continuación se detallan las que utilizaremos en las prácticas:
+</p>
+
+<dl class="org-dl">
+<dt><code>_config.yml</code></dt><dd>Fichero <i>YAML</i> de configuración. En él se detallan las opciones de configuración del proyecto.</dd>
+<dt><code>_layouts</code></dt><dd>Carpeta que incluye los ficheros de <b>plantilla</b>. Cada fichero es un fichero HTML que se utiliza para englobar el contenido de las distintas páginas que componen el sitio. El nombre del fichero es el nombre de la plantilla. La etiqueta <code>{{content}}</code> se utiliza para incluir el contenido de la página que está usando la plantilla. Más información en <a href="https://jekyllrb.com/docs/themes/">https://jekyllrb.com/docs/themes/</a>.</dd>
+<dt><code>_includes</code></dt><dd>Carpeta que incluye los ficheros HTML que se utilizan como <i>parciales</i> para ser incluidos en plantillas u otras páginas del sitio. La etiqueta <code>{% include ARCHIVO.html%}</code> se utilizará para incluir el contenido del fichero <code>_includes/ARCHIVO.html</code>. Más información en <a href="https://jekyllrb.com/docs/includes/">https://jekyllrb.com/docs/includes/</a>.</dd>
+<dt>Carpeta principal</dt><dd>Los ficheros HTML (o MarkDown) que aparezcan en la carpeta principal del proyecto formarán las páginas estáticas del sitio. Cada página tendrá definido un <i>front matter</i> donde se indicará, entre otras cosas, qué plantilla utilizará dicha página.</dd>
+<dt><code>_site</code></dt><dd>Carpeta que contiene el sitio web generado por Jekyll una vez realizadas todas las tareas de procesado (inyección del contenido de los archivos parciales, aplicación de plantillas, procesado de datos, etc.). El contenido de esta carpeta puede ser publicado en cualquier servidor HTTP.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">5</span> Front matter</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+El <i>front matter</i> es el contenido de texto que aparece al comienzo de cualquier archivo que deba ser procesado por Jekyll. Si Jekyll encuentra un archivo que no tenga definido un <i>front matter</i>, no lo procesa y lo copia a la misma localización del directorio <code>_site</code>. El <i>front matter</i> está delimitado entre dos líneas formadas por un <b>tres guiones</b>. Su aspecto es parecido al siguiente:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-txt">---
+layout: mi_layout
+permalink: /url/estatica/de/la/pagina
+title: Título de la página
+---
+</pre>
+</div>
+
+<p>
+En el <i>front matter</i> se pueden definir datos en forma <code>variable: valor</code> que luego podrán ser utilizados por el sistema Liquid de plantillas. Su uso más básico permite definir las siguientes características de la página:
+</p>
+
+<dl class="org-dl">
+<dt><code>layout</code></dt><dd>Indica el archivo de plantilla que se utilizará para mostrar la página. El nombre definido en esta variable hace referencia al archivo del mismo nombre sin la extensión presente en la carpeta <code>_layouts</code>.</dd>
+<dt><code>permalink</code></dt><dd>Indica la URL estática que tendrá la página web en caso de querer que se muestre alguna distinta al nombre del archivo.</dd>
+<dt><code>title</code></dt><dd>El título de la página.</dd>
+</dl>
+
+<p>
+Normalmente todos los ficheros que necesiten acceder al sistema de plantillas de Jekyll tendrán definido un <i>front matter</i>. Aquellos otros que no lo necesiten (por lo general, archivos CSS, JS, imágenes y demás) no tendrán definido un <i>front matter</i> (es posible que algunos de ellos, dependiendo del tipo de aplicación, sí que lo necesiten).
+</p>
+
+<p>
+Fuente: <a href="https://jekyllrb.com/docs/frontmatter/">https://jekyllrb.com/docs/frontmatter/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">6</span> Integración con GitHub Pages</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Jekyll está integrado en el servicio de GitHub Pages. Si se sube un repositorio a la rama de GitHub Pages (<code>gh-pages</code>) se compilará automáticamente y será visible en Internet. Por tanto, no es necesario compilarlo antes de subirlo ni subir la carpeta <code>_site</code>.
+</p>
+
+<p>
+Fuente: <a href="https://pages.github.com/">GitHub Pages</a>, <a href="https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/">Jekyll y GitHub Pages</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Diseño de Interfaces Web</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pedro Prieto</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+</div>
+</body>
+</html>
