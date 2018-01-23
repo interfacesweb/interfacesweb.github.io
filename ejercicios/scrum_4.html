@@ -3,12 +3,12 @@
 <head>
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
-<title>Scrum 4 - Web Design with Angular JS and Hypermedia</title>
+<title>Scrum 4 - Web Design with VueJS and Hypermedia</title>
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Web Design with Angular JS and Hypermedia"
+<meta  name="description" content="Web Design with VueJS and Hypermedia"
 >
-<meta  name="keywords" content="angular angularjs hypermedia rest">
+<meta  name="keywords" content="vue vuejs hypermedia rest">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -28,7 +28,7 @@
 <h1>Diseño de Interfaces Web</h1>
 </div>
 <div id="content">
-<h1 class="title">Scrum 4 - Web Design with Angular JS and Hypermedia</h1>
+<h1 class="title">Scrum 4 - Web Design with VueJS and Hypermedia</h1>
 <div id="table-of-contents">
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
@@ -36,12 +36,12 @@
 <li><a href="#orgheadline1">1. Introduction</a></li>
 <li><a href="#orgheadline2">2. Learning goals</a></li>
 <li><a href="#orgheadline3">3. Agenda</a></li>
-<li><a href="#orgheadline21">4. Product Backlog</a>
+<li><a href="#orgheadline20">4. Product Backlog</a>
 <ul>
 <li><a href="#orgheadline4">4.1. Reading: documentation</a></li>
 <li><a href="#orgheadline5">4.2. Setting up the development environment</a></li>
 <li><a href="#orgheadline6">4.3. Understanding Travis CI</a></li>
-<li><a href="#orgheadline7">4.4. OpenShift</a></li>
+<li><a href="#orgheadline7">4.4. Heroku</a></li>
 <li><a href="#orgheadline8">4.5. Read and inspect the provided server code</a></li>
 <li><a href="#orgheadline9">4.6. Read and inspect the provided client code</a></li>
 <li><a href="#orgheadline11">4.7. Create the server code (already done!!)</a>
@@ -49,22 +49,20 @@
 <li><a href="#orgheadline10">4.7.1. How to process data sent with POST or PUT</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline20">4.8. Create the client code</a>
+<li><a href="#orgheadline19">4.8. Create the client code</a>
 <ul>
-<li><a href="#orgheadline12">4.8.1. Include Angular lib and Bootstrap CSS</a></li>
-<li><a href="#orgheadline13">4.8.2. Implement the AJAX functions</a></li>
-<li><a href="#orgheadline14">4.8.3. Implement a function to create the editTemplate object</a></li>
-<li><a href="#orgheadline15">4.8.4. Implement a directive to display the collection links</a></li>
-<li><a href="#orgheadline16">4.8.5. Implement a directive to display the collection items</a></li>
-<li><a href="#orgheadline17">4.8.6. Implement a directive for the "create item" form</a></li>
-<li><a href="#orgheadline18">4.8.7. Implement a directive for the "edit item" form</a></li>
-<li><a href="#orgheadline19">4.8.8. Improvements (optional)</a></li>
+<li><a href="#orgheadline12">4.8.1. Include the Bootstrap CSS library</a></li>
+<li><a href="#orgheadline13">4.8.2. Understand the AJAX functions</a></li>
+<li><a href="#orgheadline14">4.8.3. Implement the Vue component to display the collection links</a></li>
+<li><a href="#orgheadline16">4.8.4. Implement a component to display the collection items</a></li>
+<li><a href="#orgheadline17">4.8.5. Implement a component to display the collection template ("create item" form)</a></li>
+<li><a href="#orgheadline18">4.8.6. Improvements (optional)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline22">5. Hints</a></li>
-<li><a href="#orgheadline23">6. Grading criteria</a></li>
+<li><a href="#orgheadline21">5. Hints</a></li>
+<li><a href="#orgheadline22">6. Grading criteria</a></li>
 </ul>
 </div>
 </div>
@@ -85,7 +83,7 @@ The <b>server logic</b> will be an <b>API</b> based on a <b>REST</b> architectur
 </p>
 
 <p>
-The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Angular JS</b> and <b>Bootstrap</b>. The client will use <b>AJAX</b> to send and receive data in the <i>Collection + JSON</i> format to the server. Again, the teacher will provide the skeleton of the application and the team will have to develop the main functionality and design its visual appearance.
+The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>VueJS</b> and <b>Bootstrap</b>. The client will use <b>AJAX</b> to send and receive data in the <i>Collection + JSON</i> format to the server. Again, the teacher will provide the skeleton of the application and the team will have to develop the main functionality and design its visual appearance.
 </p>
 
 <p>
@@ -103,7 +101,7 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 <li>Learn the fundamentals of Hypermedia (HATEOAS).</li>
 <li>Learn the fundamentals of PHP language and PHP frameworks to design web applications.</li>
 <li>Learn how to use JSON based hypermedia types to send and receive data between client and server.</li>
-<li>Learn how to create basic Single Page Applications using Angular JS.</li>
+<li>Learn how to create basic Single Page Applications using Vue JS.</li>
 <li>Learn how to use AJAX to send and receive data between client and server.</li>
 <li>Learn how to use continous integration to automatically test and deploy web applications.</li>
 <li>Learn how to work in teams using a version control system.</li>
@@ -114,15 +112,15 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 <h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
-<dt>Wednesday 01/25/2017 and Thursday 01/26/2017</dt><dd>Planning meeting (2 days / 3 hours).</dd>
-<dt>Thursday 01/26/2017 to Wednesday 02/22/2017</dt><dd>Sprint (16 days / 31 hours).</dd>
-<dt>Thursday 02/23/2017</dt><dd>Demo (1 day / 2 hours).</dd>
-<dt>Monday 02/27/2017</dt><dd>Retrospective (1 day / 2 hours).</dd>
+<dt>Wednesday 01/24/2018</dt><dd>Planning meeting (1 day / 2 hours).</dd>
+<dt>Thursday 01/25/2018 to Wednesday 02/21/2018</dt><dd>Sprint (15 days / 30 hours).</dd>
+<dt>Thursday 02/22/2018</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Friday 02/23/2018</dt><dd>Retrospective (1 day / 2 hours).</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline21" class="outline-2">
-<h2 id="orgheadline21"><span class="section-number-2">4</span> Product Backlog</h2>
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20"><span class="section-number-2">4</span> Product Backlog</h2>
 <div class="outline-text-2" id="text-4">
 </div><div id="outline-container-orgheadline4" class="outline-3">
 <h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: documentation</h3>
@@ -153,16 +151,22 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </p>
 
 <ol class="org-ol">
-<li>Install a portable XAMPP (Apache web server, PHP and MySQL) environment: <a href="http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/5.5.30/xampp-portable-win32-5.5.30-6-VC11.7z/download">link</a>.</li>
+<li>Install a portable XAMPP (Apache web server, PHP and MySQL) environment: <a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.1/xampp-portable-win32-7.2.1-0-VC15.7z/download">link</a>.</li>
 <li>Read the following article about <b>Composer</b>, a dependency manager for PHP: <a href="http://www.desarrolloweb.com/articulos/composer-gestor-dependencias-para-php.html">link</a>.</li>
 <li>Install Composer using the XAMPP console: <a href="https://getcomposer.org/doc/00-intro.md#manual-installation">https://getcomposer.org/doc/00-intro.md#manual-installation</a></li>
 <li>Clone the team's GIT repository <b>inside</b> the <code>htdocs</code> folder of the XAMPP installation.</li>
 <li>Run Composer to automatically download all project dependencies:<a href="https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies">https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies</a></li>
+<li>Start XAMPP control panel and start the Apache and MySQL servers.</li>
 <li>Import the database file included in the project into the MySQL server provided by XAMPP: <a href="http://kb.webhostface.com/cpanel-faq/phpmyadmin/import-database-through-phpmyadmin">link</a>.</li>
-<li>Test the app in the local XAMPP environment (change <code>PROJECTDIR</code> for the actual name of your project folder):
+<li>Test the server app in the local XAMPP environment (change <code>PROJECTDIR</code> for the actual name of your project folder):
 <ul class="org-ul">
-<li>Client: <a href="http://localhost/PROJECTDIR/cliente">http://localhost/PROJECTDIR/cliente</a></li>
 <li>Server: <a href="http://localhost/PROJECTDIR/api">http://localhost/PROJECTDIR/api</a></li>
+</ul></li>
+<li>Run <code>npm install</code> from the command line to install the client dependencies.</li>
+<li>Run the development server to run the Vue JS client app: <code>npm run dev</code></li>
+<li>Test the client app in the web browser:
+<ul class="org-ul">
+<li>Client: <a href="http://localhost:8080">http://localhost:8080</a></li>
 </ul></li>
 </ol>
 
@@ -193,26 +197,14 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 
 <div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> OpenShift</h3>
+<h3 id="orgheadline7"><span class="section-number-3">4.4</span> Heroku</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
-<b>All teams</b> will do this task <b>at the same time</b>. The teacher will guide the teams in this task.
+<b>All teams</b> will do this task <b>at the same time</b>. The teacher will explain how to set up Heroku to host the project app.
 </p>
 
-<ol class="org-ol">
-<li>Quick introduction to OpenShift.</li>
-<li>Create an OpenShift account for the team.</li>
-<li>Create an application in your OpenShift account. The application will consist on a <code>Gear</code> with <b>PHP 5.4</b> and two cartridges: <b>MySQL</b> and <b>PHPMyAdmin</b>.</li>
-<li>Load the application database in your OpenShift application using PHPMyAdmin.</li>
-<li>Explain the file <code>api/database.php</code> of the project. Explain how to use <a href="https://developers.openshift.com/en/managing-environment-variables.html#database-variables">environment variables</a> to hide account credentials and not to store them in source files.</li>
-<li>Modify the <code>.travis.yml</code> file to use the OpenShift account. More information <a href="http://docs.travis-ci.com/user/deployment/openshift/">here</a> and <a href="http://docs.travis-ci.com/user/deployment/openshift/#Application-to-deploy">here</a>.</li>
-<li>Encrypt the OpenShift password that will be stored in the <code>.travis.yml</code> file. We will use <a href="http://rkh.github.io/travis-encrypt/public/index.html">this service</a>. Additionally, you can use <a href="http://docs.travis-ci.com/user/encryption-keys/">this method</a>.</li>
-<li>Test the app in OpenShift.</li>
-</ol>
-
-
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>You have understood how to deploy web applications to a cloud service like OpenShift. Every team has its application available in its OpenShift account.</dd>
+<dt>Definition of Done</dt><dd>You have understood how to deploy web applications to a cloud service like Heroku. Every team has its application available in Heroku.</dd>
 </dl>
 </div>
 </div>
@@ -340,7 +332,7 @@ To do <b>tasks</b>:
 
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>You have tested the proper operation of the server API. You can make CRUD operations to each of the four categories provided by the API. The server code is correctly deployed in OpenShift.</dd>
+<dt>Definition of Done</dt><dd>You have tested the proper operation of the server API. You can make CRUD operations to each of the four categories provided by the API. The server code is correctly deployed in Heroku.</dd>
 </dl>
 </div>
 
@@ -360,11 +352,11 @@ The <b>Collection + JSON</b> format is based on JSON. For that reason, the serve
 </div>
 </div>
 
-<div id="outline-container-orgheadline20" class="outline-3">
-<h3 id="orgheadline20"><span class="section-number-3">4.8</span> Create the client code</h3>
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">4.8</span> Create the client code</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
-The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Angular JS</b> and <b>Bootstrap</b>. The client will use <a href="https://en.wikipedia.org/wiki/AJAX">AJAX</a> to send and receive data in the <i>Collection + JSON</i> format to the server. 
+The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Vue JS</b> and <b>Bootstrap</b>. The client will use <a href="https://en.wikipedia.org/wiki/AJAX">AJAX</a> to send and receive data in the <i>Collection + JSON</i> format to the server. 
 </p>
 
 <p>
@@ -372,12 +364,12 @@ The provided <b>source code</b> includes sections marked with the <b>TODO</b> ta
 </p>
 
 <dl class="org-dl">
-<dt>Definition of Done</dt><dd>The client can interact with the server API. Each of the four categories are displayed correctly. The client is deployed in OpenShift.</dd>
+<dt>Definition of Done</dt><dd>The client can interact with the server API. Each of the four categories are displayed correctly. The client is deployed in Heroku.</dd>
 </dl>
 </div>
 
 <div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">4.8.1</span> Include Angular lib and Bootstrap CSS</h4>
+<h4 id="orgheadline12"><span class="section-number-4">4.8.1</span> Include the Bootstrap CSS library</h4>
 <div class="outline-text-4" id="text-4-8-1">
 <p>
 Load both libraries in the <code>index.html</code> file.
@@ -386,7 +378,7 @@ Load both libraries in the <code>index.html</code> file.
 </div>
 
 <div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">4.8.2</span> Implement the AJAX functions</h4>
+<h4 id="orgheadline13"><span class="section-number-4">4.8.2</span> Understand the AJAX functions</h4>
 <div class="outline-text-4" id="text-4-8-2">
 <p>
 The <b>Collection + JSON</b> format allows <b>four types</b> of interacion (we will not use the <code>queries</code> functionality for simplicity):
@@ -402,32 +394,19 @@ The <b>Collection + JSON</b> format allows <b>four types</b> of interacion (we w
 For that reason, the client will have to implement 4 functions:
 </p>
 <ul class="org-ul">
-<li><code>readCollection</code> (already created).</li>
-<li><code>createItem</code>.</li>
-<li><code>editItem</code>.</li>
-<li><code>deleteItem</code>.</li>
+<li><code>readCollection</code></li>
+<li><code>createItem</code></li>
+<li><code>editItem</code></li>
+<li><code>deleteItem</code></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-orgheadline14" class="outline-4">
-<h4 id="orgheadline14"><span class="section-number-4">4.8.3</span> Implement a function to create the editTemplate object</h4>
+<h4 id="orgheadline14"><span class="section-number-4">4.8.3</span> Implement the Vue component to display the collection links</h4>
 <div class="outline-text-4" id="text-4-8-3">
 <p>
-The <b>Collection + JSON</b> format provides an object called <code>template</code> to create and update items. This object will be available for each collection and the client will use it to interact with the <b>create item form</b>, and <b>not for editing items</b>.
-</p>
-
-<p>
-For editing items, the function <code>buildEditForm</code> will be used. It will create a new object called <code>editTemplate</code> using the <code>template</code> object and the <b>item data</b>. This new object will be then linked to the <b>edit form</b>.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline15" class="outline-4">
-<h4 id="orgheadline15"><span class="section-number-4">4.8.4</span> Implement a directive to display the collection links</h4>
-<div class="outline-text-4" id="text-4-8-4">
-<p>
-This directive will display the list of links stored in the <code>collection</code> object. You can use Bootstrap classes for the UI.
+This component will display the list of links stored in the <code>collection.links</code> object. You can use Bootstrap classes for the UI.
 </p>
 
 <p>
@@ -437,14 +416,18 @@ When the user clicks on a link, the application must call the <code>readCollecti
 </div>
 
 <div id="outline-container-orgheadline16" class="outline-4">
-<h4 id="orgheadline16"><span class="section-number-4">4.8.5</span> Implement a directive to display the collection items</h4>
-<div class="outline-text-4" id="text-4-8-5">
+<h4 id="orgheadline16"><span class="section-number-4">4.8.4</span> Implement a component to display the collection items</h4>
+<div class="outline-text-4" id="text-4-8-4">
 <p>
-This directive must <b>call 4 different directives</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> along with the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directive to display the appropriate one.
+This component must <b>call 4 different components</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> along with the <a href="https://vuejs.org/v2/guide/conditional.html#v-if">v-if</a> or <a href="https://vuejs.org/v2/guide/conditional.html#v-show">v-show</a> directives to display the appropriate one.
 </p>
 
 <p>
-Each these category directives must <b>display the item data according to its category</b>: for example, a <b>movie</b> must show an embedded YouTube player that plays the trailer available in its <code>embedUrl</code> property.
+Each these category components must <b>display the item data according to its category</b>: for example, a <b>movie</b> must show an embedded YouTube player that plays the trailer available in its <code>embedUrl</code> property.
+</p>
+
+<p>
+When the item component is created, the function <code>buildEditTemplate</code> will be called. This function will create a data object (<code>editTemplate</code>) inside the item component with the <code>collection.template</code> object provided in the <b>Collection + JSON</b> format and the <b>item data</b>. This data object will be used to render the item <b>edit form</b> and send it to the server to update the item information.
 </p>
 
 <p>
@@ -452,17 +435,14 @@ Each item must have <b>three links/buttons</b>:
 </p>
 <ul class="org-ul">
 <li>A <b>link</b> to the URL of the item (<code>item.href</code>). When the user clicks on it, the function <code>readCollection</code> will be called and the client will connect to the item URL and get its representation in Collection + JSON format.</li>
-<li>A link/button for building and displaying the edit template. When the user clicks on the <b>edit</b> button, the function <code>buildEditForm</code> will be called to create the edit template, fill it with the item data and store it in <code>c.collection.editTemplate</code>.  When the user submits this form, the function <code>editItem</code> will be called.</li>
-<li>A link/button for deleting the item. When the user clicks on the <b>delete</b> button, the function <code>deleteItem</code> will be called.</li>
+<li>A link/button for displaying the "edit item" component. When the user clicks on the <b>edit</b> button, the component will show the "edit item" component.</li>
+<li>A link/button for deleting the item. When the user clicks on the <b>delete</b> button, the function <code>deleteItem</code> will be called.. it will send the <b>edit template</b> object to the URL stored in the <code>item.href</code>.</li>
 </ul>
 </div>
-</div>
 
-<div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a directive for the "create item" form</h4>
-<div class="outline-text-4" id="text-4-8-6">
+<ol class="org-ol"><li><a id="orgheadline15"></a>Implement a component for the "edit item" form<br ><div class="outline-text-5" id="text-4-8-4-1">
 <p>
-This directive must <b>build a form</b> binded to the <code>collection.template</code> object.
+This component must <b>build a form</b> bound to to the <code>item.editTemplate</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
 </p>
 
 <p>
@@ -470,11 +450,36 @@ Form fields and labels can be formatted with <b>Bootstrap</b> classes.
 </p>
 
 <p>
-<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). Again, you can use the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directives for that.
+<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). You can use <a href="https://vuejs.org/v2/guide/conditional.html#v-if">v-if</a> or <a href="https://vuejs.org/v2/guide/conditional.html#v-show">v-show</a> directives for that.
 </p>
 
 <p>
 The form must be <b>validated</b> before its submission.
+</p>
+
+<p>
+When the user submits the form, the function <code>editItem</code> will be called. It will send the <code>item.editTemplate</code> object to the URL stored in the <code>item.href</code> property.
+</p>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17"><span class="section-number-4">4.8.5</span> Implement a component to display the collection template ("create item" form)</h4>
+<div class="outline-text-4" id="text-4-8-5">
+<p>
+This component must <b>build a form</b> bound to the <code>collection.template</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
+</p>
+
+<p>
+Form fields and labels can be formatted with <b>Bootstrap</b> classes.
+</p>
+
+<p>
+<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). Again, you can use <a href="https://vuejs.org/v2/guide/conditional.html#v-if">v-if</a> or <a href="https://vuejs.org/v2/guide/conditional.html#v-show">v-show</a> directives for that.
+</p>
+
+<p>
+The form must be <b>validated</b> before its submission (all fields are required).
 </p>
 
 <p>
@@ -484,57 +489,32 @@ When the user submits the form, the function <code>createItem</code> will be cal
 </div>
 
 <div id="outline-container-orgheadline18" class="outline-4">
-<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Implement a directive for the "edit item" form</h4>
-<div class="outline-text-4" id="text-4-8-7">
-<p>
-This directive must <b>build a form</b> binded to the <code>collection.editTemplate</code> object.
-</p>
-
-<p>
-Form fields and labels can be formatted with <b>Bootstrap</b> classes.
-</p>
-
-<p>
-<b>Form fields types</b> must correspond to the field types: e.g., <code>date</code> (<code>input type=date</code>) or <code>description</code> (<code>textarea</code>). Again, you can use the <a href="https://docs.angularjs.org/api/ng/directive/ngIf">ngIf</a> or <a href="https://docs.angularjs.org/api/ng/directive/ngSwitch">ngSwitch</a> directives for that.
-</p>
-
-<p>
-The form must be <b>validated</b> before its submission.
-</p>
-
-<p>
-When the user submits the form, the function <code>editItem</code> will be called. It will send the <code>collection.editTemplate</code> object to the URL stored in the <b>item</b> <code>href</code> property.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline19" class="outline-4">
-<h4 id="orgheadline19"><span class="section-number-4">4.8.8</span> Improvements (optional)</h4>
-<div class="outline-text-4" id="text-4-8-8">
+<h4 id="orgheadline18"><span class="section-number-4">4.8.6</span> Improvements (optional)</h4>
+<div class="outline-text-4" id="text-4-8-6">
 <ul class="org-ul">
-<li>Improve visual appearance (Bootstrap).</li>
+<li>Use the same template component to create and edit items. Both forms are generated from the <code>collection.template</code> object. The only difference is that one form is empty (create form) and the other one is pre-filled with the item data (edit form).</li>
 <li>Show the create and edit forms when the user clicks a button instead of always showing them.</li>
-<li>Use <a href="https://docs.angularjs.org/guide/animations">animations</a>.</li>
+<li>Use <a href="https://vuejs.org/v2/guide/transitions.html">transitions</a>.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline22" class="outline-2">
-<h2 id="orgheadline22"><span class="section-number-2">5</span> Hints</h2>
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">5</span> Hints</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
 <li>Every team member <b>must</b> work both with <b>client</b> and <b>server</b> code. Each member <b>must choose</b> a certain item type (movies, books, music albums or videogames) and work both with <b>client and server</b>.</li>
-<li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files. Use Angular <b>directives</b> to work on different files.</li>
+<li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files.</li>
 <li>Teams must create tasks that generate <b>valid product updates</b>.</li>
 <li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline23" class="outline-2">
-<h2 id="orgheadline23"><span class="section-number-2">6</span> Grading criteria</h2>
+<div id="outline-container-orgheadline22" class="outline-2">
+<h2 id="orgheadline22"><span class="section-number-2">6</span> Grading criteria</h2>
 <div class="outline-text-2" id="text-6">
 <dl class="org-dl">
 <dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>
