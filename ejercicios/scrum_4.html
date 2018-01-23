@@ -54,9 +54,10 @@
 <li><a href="#orgheadline12">4.8.1. Include the Bootstrap CSS library</a></li>
 <li><a href="#orgheadline13">4.8.2. Understand the AJAX functions</a></li>
 <li><a href="#orgheadline14">4.8.3. Implement the Vue component to display the collection links</a></li>
-<li><a href="#orgheadline16">4.8.4. Implement a component to display the collection items</a></li>
-<li><a href="#orgheadline17">4.8.5. Implement a component to display the collection template ("create item" form)</a></li>
-<li><a href="#orgheadline18">4.8.6. Improvements (optional)</a></li>
+<li><a href="#orgheadline15">4.8.4. Implement a component to display the collection items</a></li>
+<li><a href="#orgheadline16">4.8.5. Implement a component for the "edit item" form</a></li>
+<li><a href="#orgheadline17">4.8.6. Implement a component to display the collection template ("create item" form)</a></li>
+<li><a href="#orgheadline18">4.8.7. Improvements (optional)</a></li>
 </ul>
 </li>
 </ul>
@@ -415,8 +416,8 @@ When the user clicks on a link, the application must call the <code>readCollecti
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-4">
-<h4 id="orgheadline16"><span class="section-number-4">4.8.4</span> Implement a component to display the collection items</h4>
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15"><span class="section-number-4">4.8.4</span> Implement a component to display the collection items</h4>
 <div class="outline-text-4" id="text-4-8-4">
 <p>
 This component must <b>call 4 different components</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> along with the <a href="https://vuejs.org/v2/guide/conditional.html#v-if">v-if</a> or <a href="https://vuejs.org/v2/guide/conditional.html#v-show">v-show</a> directives to display the appropriate one.
@@ -439,8 +440,11 @@ Each item must have <b>three links/buttons</b>:
 <li>A link/button for deleting the item. When the user clicks on the <b>delete</b> button, the function <code>deleteItem</code> will be called.. it will send the <b>edit template</b> object to the URL stored in the <code>item.href</code>.</li>
 </ul>
 </div>
+</div>
 
-<ol class="org-ol"><li><a id="orgheadline15"></a>Implement a component for the "edit item" form<br ><div class="outline-text-5" id="text-4-8-4-1">
+<div id="outline-container-orgheadline16" class="outline-4">
+<h4 id="orgheadline16"><span class="section-number-4">4.8.5</span> Implement a component for the "edit item" form</h4>
+<div class="outline-text-4" id="text-4-8-5">
 <p>
 This component must <b>build a form</b> bound to to the <code>item.editTemplate</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
 </p>
@@ -460,12 +464,12 @@ The form must be <b>validated</b> before its submission.
 <p>
 When the user submits the form, the function <code>editItem</code> will be called. It will send the <code>item.editTemplate</code> object to the URL stored in the <code>item.href</code> property.
 </p>
-</div></li></ol>
+</div>
 </div>
 
 <div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><span class="section-number-4">4.8.5</span> Implement a component to display the collection template ("create item" form)</h4>
-<div class="outline-text-4" id="text-4-8-5">
+<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a component to display the collection template ("create item" form)</h4>
+<div class="outline-text-4" id="text-4-8-6">
 <p>
 This component must <b>build a form</b> bound to the <code>collection.template</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
 </p>
@@ -489,8 +493,8 @@ When the user submits the form, the function <code>createItem</code> will be cal
 </div>
 
 <div id="outline-container-orgheadline18" class="outline-4">
-<h4 id="orgheadline18"><span class="section-number-4">4.8.6</span> Improvements (optional)</h4>
-<div class="outline-text-4" id="text-4-8-6">
+<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Improvements (optional)</h4>
+<div class="outline-text-4" id="text-4-8-7">
 <ul class="org-ul">
 <li>Use the same template component to create and edit items. Both forms are generated from the <code>collection.template</code> object. The only difference is that one form is empty (create form) and the other one is pre-filled with the item data (edit form).</li>
 <li>Show the create and edit forms when the user clicks a button instead of always showing them.</li>
