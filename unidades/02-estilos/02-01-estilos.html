@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unidad 2.1 - Hojas de estilo</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Unidad 2.1 - Hojas de estilo"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Unidad 2.1 - Hojas de estilo"
 >
-<meta  name="keywords" content="CSS stylesheet estilos">
+<meta name="keywords" content="CSS stylesheet estilos">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -33,39 +33,39 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introducción</a></li>
-<li><a href="#orgheadline2">2. Referencia de CSS</a></li>
-<li><a href="#orgheadline3">3. Tipos de hojas de estilo</a></li>
-<li><a href="#orgheadline4">4. Cascada y herencia</a></li>
-<li><a href="#orgheadline5">5. Hojas de estilo alternativas</a></li>
-<li><a href="#orgheadline6">6. Compatibilidad entre navegadores</a></li>
-<li><a href="#orgheadline9">7. Modelo de cajas: algunas notas</a>
+<li><a href="#org2da2b50">1. Introducción</a></li>
+<li><a href="#orge226db5">2. Referencia de CSS</a></li>
+<li><a href="#orgd13365e">3. Tipos de hojas de estilo</a></li>
+<li><a href="#orgfdc6aa6">4. Cascada y herencia</a></li>
+<li><a href="#org2f581a4">5. Hojas de estilo alternativas</a></li>
+<li><a href="#org77f8a82">6. Compatibilidad entre navegadores</a></li>
+<li><a href="#orgdda4fd6">7. Modelo de cajas: algunas notas</a>
 <ul>
-<li><a href="#orgheadline7">7.1. Box-sizing</a></li>
-<li><a href="#orgheadline8">7.2. Altura y anchura</a></li>
+<li><a href="#org43cd5c3">7.1. Box-sizing</a></li>
+<li><a href="#org3dcf406">7.2. Altura y anchura</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline16">8. Unidades de medida</a>
+<li><a href="#org9bc29c6">8. Unidades de medida</a>
 <ul>
-<li><a href="#orgheadline10">8.1. Unidades absolutas</a></li>
-<li><a href="#orgheadline15">8.2. Unidades relativas</a>
+<li><a href="#orgc045616">8.1. Unidades absolutas</a></li>
+<li><a href="#orgc4bf8af">8.2. Unidades relativas</a>
 <ul>
-<li><a href="#orgheadline11">8.2.1. Unidad 'em'</a></li>
-<li><a href="#orgheadline12">8.2.2. Unidad 'rem'</a></li>
-<li><a href="#orgheadline13">8.2.3. Porcentaje</a></li>
-<li><a href="#orgheadline14">8.2.4. Unidades 'vw', 'vh', 'vmin' y 'vmax'</a></li>
+<li><a href="#org89a9489">8.2.1. Unidad 'em'</a></li>
+<li><a href="#org74f946f">8.2.2. Unidad 'rem'</a></li>
+<li><a href="#org5b385ea">8.2.3. Porcentaje</a></li>
+<li><a href="#org7434fb4">8.2.4. Unidades 'vw', 'vh', 'vmin' y 'vmax'</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline17">9. Creación de clases centralizadas</a></li>
-<li><a href="#orgheadline18">10. Minimización de hojas de estilo</a></li>
+<li><a href="#orgc836ad7">9. Creación de clases centralizadas</a></li>
+<li><a href="#org4338c8f">10. Minimización de hojas de estilo</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-org2da2b50" class="outline-2">
+<h2 id="org2da2b50"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Las hojas de estilo en cascada <b>CSS</b> - <i>Cascade Style Sheet</i> en inglés - se utilizan para <b>diseñar y dar formato</b> a las páginas web escritas con HTML. Las razones de su aparición son las siguientes:
@@ -91,8 +91,8 @@ En esta unidad repasaremos y ampliaremos algunos de los conceptos de CSS que se 
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Referencia de CSS</h2>
+<div id="outline-container-orge226db5" class="outline-2">
+<h2 id="orge226db5"><span class="section-number-2">2</span> Referencia de CSS</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="http://librosweb.es/css/">http://librosweb.es/css/</a></li>
@@ -103,8 +103,8 @@ En esta unidad repasaremos y ampliaremos algunos de los conceptos de CSS que se 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Tipos de hojas de estilo</h2>
+<div id="outline-container-orgd13365e" class="outline-2">
+<h2 id="orgd13365e"><span class="section-number-2">3</span> Tipos de hojas de estilo</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Una hoja de estilos contiene datos de formato relativos a los elementos definidos en la página HTML. Por lo tanto, ambos (documento HTML y hoja de estilo) deben estar relacionados de alguna manera. Existen tres maneras de utilizar hojas de estilo:
@@ -115,7 +115,6 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 </ul>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">p</span> <span style="color: #7590db;">style</span>=<span style="color: #2d9574;">"c&#243;digo_css"</span>&gt;HOLA&lt;/<span style="color: #bc6ec5; font-weight: bold;">p</span>&gt;
 </pre>
 </div>
@@ -125,7 +124,6 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 </ul>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">style</span> <span style="color: #7590db;">type</span>=<span style="color: #2d9574;">"text/css"</span>&gt;
   ...c&#243;digo_css...
 &lt;/<span style="color: #bc6ec5; font-weight: bold;">style</span>&gt;
@@ -137,15 +135,14 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 </ul>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> <span style="color: #7590db;">type</span>=<span style="color: #2d9574;">"text/css"</span> <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"nombre_archivo_css.css"</span>&gt;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">4</span> Cascada y herencia</h2>
+<div id="outline-container-orgfdc6aa6" class="outline-2">
+<h2 id="orgfdc6aa6"><span class="section-number-2">4</span> Cascada y herencia</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 CSS permite definir estilos en varios sitios, tal como hemos visto en el punto anterior. Además, es posible que un elemento reciba estilos de varios orígenes distintos. Algunos ejemplos de ello son:
@@ -181,7 +178,6 @@ Para determinar qué estilo se aplica en caso de conflicto se mira el resultado:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-html"> *             {}  /* a=0 b=0 c=0 d=0 -&gt; especificidad = 0,0,0,0 */
  li            {}  /* a=0 b=0 c=0 d=1 -&gt; especificidad = 0,0,0,1 */
  li:first-line {}  /* a=0 b=0 c=0 d=2 -&gt; especificidad = 0,0,0,2 */
@@ -211,8 +207,8 @@ En el ejemplo, el párrafo tendrá color verde, ya que el valor de su peso "a" e
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-2">
-<h2 id="orgheadline5"><span class="section-number-2">5</span> Hojas de estilo alternativas</h2>
+<div id="outline-container-org2f581a4" class="outline-2">
+<h2 id="org2f581a4"><span class="section-number-2">5</span> Hojas de estilo alternativas</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Es posible incluir más de una hoja de estilo en un sitio web y ofrecer al usuario la posibilidad de usar una u otra mediante el uso de <b>hojas de estilo alternativas</b>.
@@ -227,7 +223,6 @@ Para incluir hojas de estilo alternativas se debe utilizar la etiqueta <code>&lt
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> 
       <span style="color: #7590db;">title</span>=<span style="color: #2d9574;">"Estilo principal"</span>
       <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"./css/estilos.css"</span>&gt;
@@ -244,8 +239,8 @@ Para incluir hojas de estilo alternativas se debe utilizar la etiqueta <code>&lt
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">6</span> Compatibilidad entre navegadores</h2>
+<div id="outline-container-org77f8a82" class="outline-2">
+<h2 id="org77f8a82"><span class="section-number-2">6</span> Compatibilidad entre navegadores</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><a href="http://www.w3schools.com/cssref/css3_browsersupport.asp">Tabla de compatibilidad de propiedades CSS con los principales navegadores</a></li>
@@ -254,11 +249,12 @@ Para incluir hojas de estilo alternativas se debe utilizar la etiqueta <code>&lt
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><span class="section-number-2">7</span> Modelo de cajas: algunas notas</h2>
+<div id="outline-container-orgdda4fd6" class="outline-2">
+<h2 id="orgdda4fd6"><span class="section-number-2">7</span> Modelo de cajas: algunas notas</h2>
 <div class="outline-text-2" id="text-7">
-</div><div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">7.1</span> Box-sizing</h3>
+</div>
+<div id="outline-container-org43cd5c3" class="outline-3">
+<h3 id="org43cd5c3"><span class="section-number-3">7.1</span> Box-sizing</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Existe una propiedad en CSS3 denominada <code>box-sizing</code> que permite cambiar la definición de anchura para ésta que incluya el <b>contenido, relleno (padding) y bordes</b> (no se incluye el margen). En este <a href="http://www.w3schools.com/cssref/css3_pr_box-sizing.asp">enlace</a> puedes consultar su funcionamiento.
@@ -269,8 +265,8 @@ De esta manera, al utilizar el código <code>box-sizing: border-box;</code>, no 
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">7.2</span> Altura y anchura</h3>
+<div id="outline-container-org3dcf406" class="outline-3">
+<h3 id="org3dcf406"><span class="section-number-3">7.2</span> Altura y anchura</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 La utilización de porcentajes en la definición de anchuras y alturas tiene algunas diferencias:
@@ -295,8 +291,8 @@ A continuación se muestra un ejemplo de cómo especificar altura de capas: <a h
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-2">
-<h2 id="orgheadline16"><span class="section-number-2">8</span> Unidades de medida</h2>
+<div id="outline-container-org9bc29c6" class="outline-2">
+<h2 id="org9bc29c6"><span class="section-number-2">8</span> Unidades de medida</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 CSS define distintas unidades para representar medidas. Dichas unidades se pueden consultar en el siguiente enlace: <a href="http://www.w3schools.com/cssref/css_units.asp">unidades CSS 2.1</a>.
@@ -352,8 +348,8 @@ A continuación veremos un pequeño resumen de las características de las unida
 </p>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">8.1</span> Unidades absolutas</h3>
+<div id="outline-container-orgc045616" class="outline-3">
+<h3 id="orgc045616"><span class="section-number-3">8.1</span> Unidades absolutas</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 Las unidades absolutas se pueden consultar en este enlace: <a href="http://www.w3.org/TR/css3-values/#absolute-lengths">unidades absolutas</a>.
@@ -424,8 +420,8 @@ El inconveniente de estas unidades es que <b>no se adaptan bien a tipos de panta
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">8.2</span> Unidades relativas</h3>
+<div id="outline-container-orgc4bf8af" class="outline-3">
+<h3 id="orgc4bf8af"><span class="section-number-3">8.2</span> Unidades relativas</h3>
 <div class="outline-text-3" id="text-8-2">
 <p>
 Las unidades relativas se pueden consultar en este enlace: <a href="http://www.w3.org/TR/css3-values/#relative-lengths">unidades relativas</a>. Las unidades relativas expresan tamaños en función de otros.
@@ -501,26 +497,25 @@ A continuación estudiaremos las características de las unidades más utilizada
 </p>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11"><span class="section-number-4">8.2.1</span> Unidad 'em'</h4>
+<div id="outline-container-org89a9489" class="outline-4">
+<h4 id="org89a9489"><span class="section-number-4">8.2.1</span> Unidad 'em'</h4>
 <div class="outline-text-4" id="text-8-2-1">
 <p>
 Esta unidad hace referencia al <b>tamaño de letra calculado heredado por el elemento</b>. Por tanto, para calcular el valor real aplicado habrá que determinar los <b>valores que se van heredando</b> de los elementos <b>contenedores</b>. A continuación se muestra un ejemplo:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html </span><span style="color: #4f97d7;">{</span>
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">12px</span>;
-  <span style="color: #7590db;">text-indent</span>: <span style="color: #a45bad;">1em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">12px</span>;
+  <span style="color: #4f97d7; font-weight: bold;">text-indent</span>: <span style="color: #a45bad;">1em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">p </span><span style="color: #4f97d7;">{</span>                 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 1em = 12px; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">0.5em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">p span </span><span style="color: #4f97d7;">{</span>            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 1em = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 3px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">0.5em</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 3px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -528,26 +523,25 @@ Esta unidad hace referencia al <b>tamaño de letra calculado heredado por el ele
 </div>
 
 
-<div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">8.2.2</span> Unidad 'rem'</h4>
+<div id="outline-container-org74f946f" class="outline-4">
+<h4 id="org74f946f"><span class="section-number-4">8.2.2</span> Unidad 'rem'</h4>
 <div class="outline-text-4" id="text-8-2-2">
 <p>
 Esta unidad tiene una <b>referencia fija</b>, que es el <b>tamaño de letra definido en el elemento raíz</b>. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html </span><span style="color: #4f97d7;">{</span>
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">12px</span>;
-  <span style="color: #7590db;">text-indent</span>: <span style="color: #a45bad;">1rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">12px</span>;
+  <span style="color: #4f97d7; font-weight: bold;">text-indent</span>: <span style="color: #a45bad;">1rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1em = 12px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">p </span><span style="color: #4f97d7;">{</span>                 
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">0.5rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">p span </span><span style="color: #4f97d7;">{</span>            
-  <span style="color: #7590db;">font-size</span>: <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">font-size</span>: <span style="color: #a45bad;">0.5rem</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Tama&#241;o = 6px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -558,25 +552,24 @@ Estas unidades simplifican los cálculos al tener una referencia fija (no hay qu
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">8.2.3</span> Porcentaje</h4>
+<div id="outline-container-org5b385ea" class="outline-4">
+<h4 id="org5b385ea"><span class="section-number-4">8.2.3</span> Porcentaje</h4>
 <div class="outline-text-4" id="text-8-2-3">
 <p>
 El porcentaje suele tomarse como una unidad relativa más. Un porcentaje de un 100% hace referencia al tamaño calculado del elemento contenedor (un tamaño de un 100% en un tipo de letra hace referencia al tamaño del tipo de letra aplicado en el elemento contenedor). Por tanto, para calcular el valor real aplicado habrá que determinar los <b>valores que se van heredando</b> de los elementos <b>contenedores</b>. A continuación se muestra un ejemplo:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">body </span><span style="color: #4f97d7;">{</span>
-  <span style="color: #7590db;">width</span>: <span style="color: #a45bad;">1024px</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">100% = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">width</span>: <span style="color: #a45bad;">1024px</span>; <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">100% = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">div </span><span style="color: #4f97d7;">{</span>            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 100% = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">width</span>: <span style="color: #a45bad;">50%</span>;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">width</span>: <span style="color: #a45bad;">50</span>%;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">div div </span><span style="color: #4f97d7;">{</span>        <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Hereda 100% = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">width</span>: <span style="color: #a45bad;">50%</span>;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 256px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">width</span>: <span style="color: #a45bad;">50</span>%;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 256px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -585,8 +578,8 @@ El porcentaje suele tomarse como una unidad relativa más. Un porcentaje de un 1
 
 
 
-<div id="outline-container-orgheadline14" class="outline-4">
-<h4 id="orgheadline14"><span class="section-number-4">8.2.4</span> Unidades 'vw', 'vh', 'vmin' y 'vmax'</h4>
+<div id="outline-container-org7434fb4" class="outline-4">
+<h4 id="org7434fb4"><span class="section-number-4">8.2.4</span> Unidades 'vw', 'vh', 'vmin' y 'vmax'</h4>
 <div class="outline-text-4" id="text-8-2-4">
 <p>
 Estas unidades hacen referencia al tamaño del <b>viewport</b>. CSS define el <i>viewport</i> como el <b>tamaño del área que se utiliza para representar la página web</b>. Coincide con el <code>&lt;body&gt;</code> incluyendo los márgenes. Es importante indicar que en los <b>navegadores móviles</b> el <i>viewport</i> tiene un <b>tamaño superior al tamaño real</b> de la pantalla: es por ello que las páginas web se muestran completas como vistas desde un zoom de alejamiento (este tema será tratado con más detalle más adelante).
@@ -597,17 +590,16 @@ Estas unidades tienen una <b>referencia fija</b>, que es el ancho ('vw'), alto (
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Suponemos que el ancho de la pantalla</span>
 <span style="color: #2aa1ae; background-color: #292e34;">del dispositivo es de 1024px, por lo que</span>
 <span style="color: #2aa1ae; background-color: #292e34;">100vw = 1024px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">div </span><span style="color: #4f97d7;">{</span>            <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1vw = 1024/100 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">width</span>: <span style="color: #a45bad;">50vw</span>;   <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">width</span>: <span style="color: #a45bad;">50vw</span>;   <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #bc6ec5; font-weight: bold;">div div </span><span style="color: #4f97d7;">{</span>         <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">1vw = 1024/100 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #7590db;">width</span>: <span style="color: #a45bad;">50vw</span>;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #4f97d7; font-weight: bold;">width</span>: <span style="color: #a45bad;">50vw</span>;    <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Anchura = 512px </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -620,8 +612,8 @@ Como ocurre con las unidades 'rem', las unidades relativas al <i>viewport</i> si
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-2">
-<h2 id="orgheadline17"><span class="section-number-2">9</span> Creación de clases centralizadas</h2>
+<div id="outline-container-orgc836ad7" class="outline-2">
+<h2 id="orgc836ad7"><span class="section-number-2">9</span> Creación de clases centralizadas</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 En el diseño de interfaces es recomendable definir <b>clases de estilos</b> para aplicar a determinadas secciones, elementos destacados, etc. De esta manera se conseguirá un código altamente <b>modular</b> que permitirá realizar cambios tanto de apariencia como de estructura con relativa facilidad.
@@ -633,8 +625,8 @@ Por tanto, se intentará <b>priorizar el uso de clases</b> por encima del uso de
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-2">
-<h2 id="orgheadline18"><span class="section-number-2">10</span> Minimización de hojas de estilo</h2>
+<div id="outline-container-org4338c8f" class="outline-2">
+<h2 id="org4338c8f"><span class="section-number-2">10</span> Minimización de hojas de estilo</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 La minimización de código tiene como objetivo <b>reducir el tamaño del archivo eliminando caracteres innecesarios</b>. Se utiliza en diseño web para reducir el tamaño de los archivos CSS y JavaScript y así reducir el tiempo de carga del sitio web.

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Práctica 3.2 (Scrum) - Diseño de interfaces móviles con JQuery Mobile y PhoneGap</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Práctica 3.2 (Scrum) - Diseño de interfaces móviles con JQuery Mobile y Phonegap"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Práctica 3.2 (Scrum) - Diseño de interfaces móviles con JQuery Mobile y Phonegap"
 >
-<meta  name="keywords" content="scrum jquery mobile web interface phonegap cordova">
+<meta name="keywords" content="scrum jquery mobile web interface phonegap cordova">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -33,27 +33,27 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introducción</a></li>
-<li><a href="#orgheadline2">2. Objetivos de aprendizaje</a></li>
-<li><a href="#orgheadline3">3. Agenda de trabajo</a></li>
-<li><a href="#orgheadline9">4. Lista de requerimientos (<i>Product Backlog</i>)</a>
+<li><a href="#orgb74eaf8">1. Introducción</a></li>
+<li><a href="#orgcc409b3">2. Objetivos de aprendizaje</a></li>
+<li><a href="#org980c3c3">3. Agenda de trabajo</a></li>
+<li><a href="#org935cc66">4. Lista de requerimientos (<i>Product Backlog</i>)</a>
 <ul>
-<li><a href="#orgheadline4">4.1. Instalación de PhoneGap y creación de la aplicación</a></li>
-<li><a href="#orgheadline5">4.2. Introducción a JQuery Mobile</a></li>
-<li><a href="#orgheadline6">4.3. Diseño de la aplicación</a></li>
-<li><a href="#orgheadline7">4.4. Personalización (opcional)</a></li>
-<li><a href="#orgheadline8">4.5. Creación de la aplicación en formato APK (opcional)</a></li>
+<li><a href="#org9dbcf56">4.1. Instalación de PhoneGap y creación de la aplicación</a></li>
+<li><a href="#orgde7fb06">4.2. Introducción a JQuery Mobile</a></li>
+<li><a href="#org40c2f01">4.3. Diseño de la aplicación</a></li>
+<li><a href="#org2d55aa6">4.4. Personalización (opcional)</a></li>
+<li><a href="#orgb8eba5b">4.5. Creación de la aplicación en formato APK (opcional)</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline10">5. Consejos</a></li>
-<li><a href="#orgheadline11">6. Criterios de calificación</a></li>
-<li><a href="#orgheadline12">7. Otros recursos</a></li>
+<li><a href="#org325a5c2">5. Consejos</a></li>
+<li><a href="#org547f45b">6. Criterios de calificación</a></li>
+<li><a href="#org1c5c2ef">7. Otros recursos</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-orgb74eaf8" class="outline-2">
+<h2 id="orgb74eaf8"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En esta práctica se pretende crear una aplicación para <b>dispositivos móviles</b> basada en <b>tecnologías web</b> que sea compatible con la API diseñada en la <a href="practica-03-01.html">práctica anterior</a>.
@@ -72,8 +72,8 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Objetivos de aprendizaje</h2>
+<div id="outline-container-orgcc409b3" class="outline-2">
+<h2 id="orgcc409b3"><span class="section-number-2">2</span> Objetivos de aprendizaje</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Utilizar la librería JQuery para crear clientes web interactivos.</li>
@@ -88,8 +88,8 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda de trabajo</h2>
+<div id="outline-container-org980c3c3" class="outline-2">
+<h2 id="org980c3c3"><span class="section-number-2">3</span> Agenda de trabajo</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>Martes 10/02/2015</dt><dd>Reunión de planificación (2 horas de clase).</dd>
@@ -99,11 +99,12 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><span class="section-number-2">4</span> Lista de requerimientos (<i>Product Backlog</i>)</h2>
+<div id="outline-container-org935cc66" class="outline-2">
+<h2 id="org935cc66"><span class="section-number-2">4</span> Lista de requerimientos (<i>Product Backlog</i>)</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Instalación de PhoneGap y creación de la aplicación</h3>
+</div>
+<div id="outline-container-org9dbcf56" class="outline-3">
+<h3 id="org9dbcf56"><span class="section-number-3">4.1</span> Instalación de PhoneGap y creación de la aplicación</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Las siguientes tareas ser realizadas por <b>todos los miembros del equipo</b>:
@@ -147,8 +148,8 @@ A partir de este momento se puede seguir el <a href="https://github.com/interfac
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Introducción a JQuery Mobile</h3>
+<div id="outline-container-orgde7fb06" class="outline-3">
+<h3 id="orgde7fb06"><span class="section-number-3">4.2</span> Introducción a JQuery Mobile</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 PhoneGap proporciona la tecnología para <i>emular</i> una aplicación web como si se tratara de una aplicación nativa. Sin embargo, si no se utiliza alguna librería adicional, la aplicación tendría el aspecto de una página <b>web convencional</b>. Por tanto, es necesario utilizar alguna otra tecnología que <b>adapte la apariencia visual</b> de dicha página para que tenga el aspecto de una aplicación móvil <b>nativa</b>.
@@ -177,8 +178,8 @@ Existen varias opciones para realizar esta tarea. Algunas de ellas son muy inter
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Diseño de la aplicación</h3>
+<div id="outline-container-org40c2f01" class="outline-3">
+<h3 id="org40c2f01"><span class="section-number-3">4.3</span> Diseño de la aplicación</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Se debe modificar el cliente web para <b>personalizar el interfaz</b> y que éste se asemeje lo más posible a una aplicación nativa. Para ello se deberá consultar la <a href="http://api.jquerymobile.com/">API</a> y posiblemente las <a href="http://demos.jquerymobile.com/1.4.5/">demos</a> de JQuery Mobile. Se proponen los siguientes pasos:
@@ -203,8 +204,8 @@ Se debe modificar el cliente web para <b>personalizar el interfaz</b> y que ést
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> Personalización (opcional)</h3>
+<div id="outline-container-org2d55aa6" class="outline-3">
+<h3 id="org2d55aa6"><span class="section-number-3">4.4</span> Personalización (opcional)</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 Una vez completados los apartados anteriores se pueden realizar las siguientes mejoras en la aplicación:
@@ -225,8 +226,8 @@ Una vez completados los apartados anteriores se pueden realizar las siguientes m
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Creación de la aplicación en formato APK (opcional)</h3>
+<div id="outline-container-orgb8eba5b" class="outline-3">
+<h3 id="orgb8eba5b"><span class="section-number-3">4.5</span> Creación de la aplicación en formato APK (opcional)</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 En este último punto se generará la aplicación en formato APK para poder ser instalada de manera nativa en el dispositivo. Para ello hay que instalar el <a href="http://developer.android.com/sdk/index.html#Other">SDK de Android</a> (sólo es necesario el SDK, no es necesario el paquete <i>Android Studio</i> a no ser que se vaya a editar el código Java generado). En este <a href="http://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide">enlace</a> se explican los pasos a seguir.
@@ -248,8 +249,8 @@ Para instalar la aplicación hay que copiarla al dispositivo vía USB (o descarg
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10"><span class="section-number-2">5</span> Consejos</h2>
+<div id="outline-container-org325a5c2" class="outline-2">
+<h2 id="org325a5c2"><span class="section-number-2">5</span> Consejos</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Es recomendable que cada miembro del equipo trabaje en un archivo JavaScript de cliente diferente. La página de la aplicación cargará cada uno de dichos archivos para que el cliente genérico llame a las funciones de dichos archivos.</li>
@@ -258,8 +259,8 @@ Para instalar la aplicación hay que copiarla al dispositivo vía USB (o descarg
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline11" class="outline-2">
-<h2 id="orgheadline11"><span class="section-number-2">6</span> Criterios de calificación</h2>
+<div id="outline-container-org547f45b" class="outline-2">
+<h2 id="org547f45b"><span class="section-number-2">6</span> Criterios de calificación</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b>Hoja de seguimiento (20%)</b>: actualización y supervisión diaria, actualización de la estimación de las tareas, dibujo de la gráfica de Burn Down, celebración de reuniones diarias,&#x2026;</li>
@@ -277,8 +278,8 @@ Para instalar la aplicación hay que copiarla al dispositivo vía USB (o descarg
 
 
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">7</span> Otros recursos</h2>
+<div id="outline-container-org1c5c2ef" class="outline-2">
+<h2 id="org1c5c2ef"><span class="section-number-2">7</span> Otros recursos</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>AngularJS

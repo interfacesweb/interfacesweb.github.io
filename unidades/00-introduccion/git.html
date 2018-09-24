@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Introducción a GIT</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Introducción a GIT"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Introducción a GIT"
 >
-<meta  name="keywords" content="git control version">
+<meta name="keywords" content="git control version">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -33,38 +33,39 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline12">1. Tutorial básico de GIT</a>
+<li><a href="#orgc65464b">1. Tutorial básico de GIT</a>
 <ul>
 <li>
 <ul>
-<li><a href="#orgheadline1">1.0.1. Descarga</a></li>
-<li><a href="#orgheadline2">1.0.2. Ejecución de GIT</a></li>
-<li><a href="#orgheadline3">1.0.3. Configuración inicial</a></li>
-<li><a href="#orgheadline4">1.0.4. Descarga e instalación de Meld (resolución de conflictos)</a></li>
-<li><a href="#orgheadline5">1.0.5. Clonado de un repositorio</a></li>
-<li><a href="#orgheadline6">1.0.6. Actualización de cambios generados en el repositorio</a></li>
-<li><a href="#orgheadline7">1.0.7. Modificación de archivos locales</a></li>
-<li><a href="#orgheadline8">1.0.8. Comprobación del estado</a></li>
-<li><a href="#orgheadline9">1.0.9. Grabación de los cambios (add y commit)</a></li>
-<li><a href="#orgheadline10">1.0.10. Guardado de los cambios en el repositorio remoto (push)</a></li>
-<li><a href="#orgheadline11">1.0.11. Guía completa</a></li>
+<li><a href="#org37cdd56">1.0.1. Descarga</a></li>
+<li><a href="#org882f0ab">1.0.2. Ejecución de GIT</a></li>
+<li><a href="#orgfdc0c91">1.0.3. Configuración inicial</a></li>
+<li><a href="#orgca60852">1.0.4. Descarga e instalación de Meld (resolución de conflictos)</a></li>
+<li><a href="#orgacba936">1.0.5. Clonado de un repositorio</a></li>
+<li><a href="#org4ae32c9">1.0.6. Actualización de cambios generados en el repositorio</a></li>
+<li><a href="#orgc93ee8a">1.0.7. Modificación de archivos locales</a></li>
+<li><a href="#orge006c54">1.0.8. Comprobación del estado</a></li>
+<li><a href="#org69d3bdc">1.0.9. Grabación de los cambios (add y commit)</a></li>
+<li><a href="#org9f2f265">1.0.10. Guardado de los cambios en el repositorio remoto (push)</a></li>
+<li><a href="#orgf5ccf11">1.0.11. Guía completa</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline13">2. Curso de introducción a Git</a></li>
-<li><a href="#orgheadline14">3. Flujo de trabajo GIT para Scrum</a></li>
-<li><a href="#orgheadline15">4. Links</a></li>
+<li><a href="#orge22d2eb">2. Curso de introducción a Git</a></li>
+<li><a href="#org6470928">3. Flujo de trabajo GIT para Scrum</a></li>
+<li><a href="#orgea3b5b5">4. Links</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">1</span> Tutorial básico de GIT</h2>
+<div id="outline-container-orgc65464b" class="outline-2">
+<h2 id="orgc65464b"><span class="section-number-2">1</span> Tutorial básico de GIT</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgheadline1" class="outline-4">
-<h4 id="orgheadline1"><span class="section-number-4">1.0.1</span> Descarga</h4>
+</div>
+<div id="outline-container-org37cdd56" class="outline-4">
+<h4 id="org37cdd56"><span class="section-number-4">1.0.1</span> Descarga</h4>
 <div class="outline-text-4" id="text-1-0-1">
 <p>
 Puedes descargar el cliente de GIT <code>msysgit</code> de <a href="https://github.com/msysgit/msysgit/releases">https://github.com/msysgit/msysgit/releases</a>. Debes seleccionar el archivo <code>PortableGIT</code>.
@@ -75,8 +76,8 @@ Una vez descargado, descomprímelo a una carpeta y sitúa la carpeta en el direc
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline2" class="outline-4">
-<h4 id="orgheadline2"><span class="section-number-4">1.0.2</span> Ejecución de GIT</h4>
+<div id="outline-container-org882f0ab" class="outline-4">
+<h4 id="org882f0ab"><span class="section-number-4">1.0.2</span> Ejecución de GIT</h4>
 <div class="outline-text-4" id="text-1-0-2">
 <p>
 Para ejecutar GIT tienes dos opciones:
@@ -94,14 +95,13 @@ Ejecutando cualquiera de las dos opciones se abrirá una consola de comandos. De
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline3" class="outline-4">
-<h4 id="orgheadline3"><span class="section-number-4">1.0.3</span> Configuración inicial</h4>
+<div id="outline-container-orgfdc0c91" class="outline-4">
+<h4 id="orgfdc0c91"><span class="section-number-4">1.0.3</span> Configuración inicial</h4>
 <div class="outline-text-4" id="text-1-0-3">
 <p>
 Para configurar GIT con nuestro usuario y correo electrónico hay que ejecutar:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh"><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Opciones obligatorias (nombre y correo)</span>
 git config --global user.name <span style="color: #2d9574;">"Nombre y apellido"</span>
 git config --global user.email CORREO@ELECTRONICO
@@ -124,8 +124,8 @@ git config --global credential.helper wincred <span style="color: #2aa1ae; backg
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-4">
-<h4 id="orgheadline4"><span class="section-number-4">1.0.4</span> Descarga e instalación de Meld (resolución de conflictos)</h4>
+<div id="outline-container-orgca60852" class="outline-4">
+<h4 id="orgca60852"><span class="section-number-4">1.0.4</span> Descarga e instalación de Meld (resolución de conflictos)</h4>
 <div class="outline-text-4" id="text-1-0-4">
 <p>
 <b>Meld</b> es un programa para resolver conflictos en archivos al realizar una operación de mezclado o <i>merge</i>. Puedes descargarlo de <a href="http://meldmerge.org/">http://meldmerge.org/</a> y seleccionar la versión para Windows (en Linux se instala con el gestor de paquetes de la distribución).
@@ -136,14 +136,13 @@ Una vez instalado, y habiendo realizado la configuración correspondiente indica
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5"><span class="section-number-4">1.0.5</span> Clonado de un repositorio</h4>
+<div id="outline-container-orgacba936" class="outline-4">
+<h4 id="orgacba936"><span class="section-number-4">1.0.5</span> Clonado de un repositorio</h4>
 <div class="outline-text-4" id="text-1-0-5">
 <p>
 Para obtener una copia local de un repositorio remoto hay que ejecutar el comando:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git clone RUTA_AL_REPOSITORIO
 </pre>
 </div>
@@ -152,53 +151,49 @@ La <code>RUTA_AL_REPOSITORIO</code> se obtiene de la página de GitHub del repos
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">1.0.6</span> Actualización de cambios generados en el repositorio</h4>
+<div id="outline-container-org4ae32c9" class="outline-4">
+<h4 id="org4ae32c9"><span class="section-number-4">1.0.6</span> Actualización de cambios generados en el repositorio</h4>
 <div class="outline-text-4" id="text-1-0-6">
 <p>
 Si el repositorio original se modifica después de realizar el clonado inicial puede realizarse la actualización ejecutando:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git pull
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">1.0.7</span> Modificación de archivos locales</h4>
+<div id="outline-container-orgc93ee8a" class="outline-4">
+<h4 id="orgc93ee8a"><span class="section-number-4">1.0.7</span> Modificación de archivos locales</h4>
 <div class="outline-text-4" id="text-1-0-7">
 <p>
 Después de realizar cambios en los archivos es posible visualizarlos mediante el comando:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git diff
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-4">
-<h4 id="orgheadline8"><span class="section-number-4">1.0.8</span> Comprobación del estado</h4>
+<div id="outline-container-orge006c54" class="outline-4">
+<h4 id="orge006c54"><span class="section-number-4">1.0.8</span> Comprobación del estado</h4>
 <div class="outline-text-4" id="text-1-0-8">
 <p>
 Para comprobar el estado del repositorio puede ejecutarse:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git status
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-4">
-<h4 id="orgheadline9"><span class="section-number-4">1.0.9</span> Grabación de los cambios (add y commit)</h4>
+<div id="outline-container-org69d3bdc" class="outline-4">
+<h4 id="org69d3bdc"><span class="section-number-4">1.0.9</span> Grabación de los cambios (add y commit)</h4>
 <div class="outline-text-4" id="text-1-0-9">
 <p>
 Después de realizar cambios en el repositorio local se deben añadir con el siguiente comando:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git add -A
 </pre>
 </div>
@@ -210,7 +205,6 @@ De esta manera se añadirán los cambios realizados en los archivos y los archiv
 Por último, para guardar los cambios se debe ejecutar el comando:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git commit -m <span style="color: #2d9574;">"Mensaje informativo"</span>
 </pre>
 </div>
@@ -219,14 +213,13 @@ De esta manera se guardarán los cambios realizados.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">1.0.10</span> Guardado de los cambios en el repositorio remoto (push)</h4>
+<div id="outline-container-org9f2f265" class="outline-4">
+<h4 id="org9f2f265"><span class="section-number-4">1.0.10</span> Guardado de los cambios en el repositorio remoto (push)</h4>
 <div class="outline-text-4" id="text-1-0-10">
 <p>
 Para actualizar los cambios en el repositorio remoto (GitHub) se debe ejecutar)
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh">git push
 </pre>
 </div>
@@ -235,8 +228,8 @@ De esta manera se guardarán los cambios en el repositorio remoto de GitHub.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11"><span class="section-number-4">1.0.11</span> Guía completa</h4>
+<div id="outline-container-orgf5ccf11" class="outline-4">
+<h4 id="orgf5ccf11"><span class="section-number-4">1.0.11</span> Guía completa</h4>
 <div class="outline-text-4" id="text-1-0-11">
 <p>
 Para conocer Git en profundidad puedes consultar el libro publicado en este <a href="http://git-scm.com/book/en/v2">enlace</a>.
@@ -244,17 +237,16 @@ Para conocer Git en profundidad puedes consultar el libro publicado en este <a h
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">2</span> Curso de introducción a Git</h2>
+<div id="outline-container-orge22d2eb" class="outline-2">
+<h2 id="orge22d2eb"><span class="section-number-2">2</span> Curso de introducción a Git</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 En el siguiente enlace está disponible un curso básico de introducción a Git: <a href="https://try.github.io">https://try.github.io</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">3</span> Flujo de trabajo GIT para Scrum</h2>
+<div id="outline-container-org6470928" class="outline-2">
+<h2 id="org6470928"><span class="section-number-2">3</span> Flujo de trabajo GIT para Scrum</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A continuación se muestra un ejemplo de flujo de trabajo de Git para grupos. Existen muchas otras posibilidades, pero considero que ésta es de las que menos problemas pueden presentar. No obstante, si el equipo de desarrollo considera más adecuado utilizar otro método podrá hacerlo sin ningún problema.
@@ -284,8 +276,8 @@ Para evitar la aparición de conflictos, cada usuario realizará sus cambios en 
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">4</span> Links</h2>
+<div id="outline-container-orgea3b5b5" class="outline-2">
+<h2 id="orgea3b5b5"><span class="section-number-2">4</span> Links</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=DVDLoe_2MBc&amp;list=PL9KVIdeJ2K8MEMoZH5wzrHa4prGvrhHJA&amp;index=7">Tools for Entrepeneurs (GitHub)</a></li>

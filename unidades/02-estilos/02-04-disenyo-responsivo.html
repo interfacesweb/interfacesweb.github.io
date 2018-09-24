@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unidad 2.4 - Diseño web adaptativo</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Unidad 2.4 - Diseño web adaptativo"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Unidad 2.4 - Diseño web adaptativo"
 >
-<meta  name="keywords" content="responsive design diseño responsivo adaptativo">
+<meta name="keywords" content="responsive design diseño responsivo adaptativo">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -33,42 +33,42 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introducción</a></li>
-<li><a href="#orgheadline2">2. Mobile First</a></li>
-<li><a href="#orgheadline6">3. Dispositivos</a>
+<li><a href="#org6593140">1. Introducción</a></li>
+<li><a href="#org349ff23">2. Mobile First</a></li>
+<li><a href="#org89a2da7">3. Dispositivos</a>
 <ul>
-<li><a href="#orgheadline3">3.1. Resolución CSS (device-width)</a></li>
-<li><a href="#orgheadline4">3.2. <i>ViewPort</i></a></li>
-<li><a href="#orgheadline5">3.3. Etiqueta &lt;meta name="viewport"&gt;</a></li>
+<li><a href="#org65407e3">3.1. Resolución CSS (device-width)</a></li>
+<li><a href="#org68a6009">3.2. <i>ViewPort</i></a></li>
+<li><a href="#orgc02fb1d">3.3. Etiqueta &lt;meta name="viewport"&gt;</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline7">4. Diseño de rejilla (Grid)</a></li>
-<li><a href="#orgheadline12">5. Media queries</a>
+<li><a href="#org9cff96c">4. Diseño de rejilla (Grid)</a></li>
+<li><a href="#org5a09833">5. Media queries</a>
 <ul>
-<li><a href="#orgheadline8">5.1. Tipos de medio (media types)</a></li>
-<li><a href="#orgheadline9">5.2. Características del medio (media features)</a></li>
-<li><a href="#orgheadline10">5.3. Sintaxis</a></li>
-<li><a href="#orgheadline11">5.4. Ejemplos</a></li>
+<li><a href="#org6135279">5.1. Tipos de medio (media types)</a></li>
+<li><a href="#orgcc3be62">5.2. Características del medio (media features)</a></li>
+<li><a href="#org82e02e0">5.3. Sintaxis</a></li>
+<li><a href="#org0dd4c90">5.4. Ejemplos</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline13">6. Font boosting (Chrome mobile)</a></li>
-<li><a href="#orgheadline14">7. Testeo de acceso móvil</a></li>
-<li><a href="#orgheadline15">8. Evolución futura</a></li>
-<li><a href="#orgheadline16">9. Referencias</a></li>
+<li><a href="#orgc066eaa">6. Font boosting (Chrome mobile)</a></li>
+<li><a href="#orgc6e53ba">7. Testeo de acceso móvil</a></li>
+<li><a href="#orgaebcd07">8. Evolución futura</a></li>
+<li><a href="#orgdef4d5c">9. Referencias</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-org6593140" class="outline-2">
+<h2 id="org6593140"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este tema trataremos los fundamentos del diseño adaptable o adaptativo (<i>Responsive Web Design</i> en inglés). 
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Mobile First</h2>
+<div id="outline-container-org349ff23" class="outline-2">
+<h2 id="org349ff23"><span class="section-number-2">2</span> Mobile First</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La tendencia actual consiste en diseñar siguiendo la teoría de <b>Mobile First</b>, o Móvil primero. Esta teoría aboga por realizar el diseño pensando en dispositivos móviles y a continuación añadir o modificar características para adaptar el diseño a otro tipo de dispositivos. 
@@ -79,16 +79,16 @@ En <a href="http://zurb.com/word/mobile-first">este enlace</a> puedes consultar 
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">3</span> Dispositivos</h2>
+<div id="outline-container-org89a2da7" class="outline-2">
+<h2 id="org89a2da7"><span class="section-number-2">3</span> Dispositivos</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Cada dispositivo (móvil, tablet, monitor, televisión,&#x2026;) tiene una <b>resolución nativa</b> (también llamada <b>física</b>) indicada en sus especificaciones. Esta resolución se expresa en el formato <code>anchura x altura</code> (por ejemplo, 1024 x 768 píxeles).
 </p>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Resolución CSS (device-width)</h3>
+<div id="outline-container-org65407e3" class="outline-3">
+<h3 id="org65407e3"><span class="section-number-3">3.1</span> Resolución CSS (device-width)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Sin embargo, la <b>resolución nativa no se suele utilizar como referencia en CSS</b> en dispositivos que no sean monitores o pantallas convencionales. Esto es debido a que determinados <b>dispositivos</b>, como teléfonos móviles o tablets, tienen un <b>tamaño de pantalla muy pequeño</b>. Por hacernos una idea, el tamaño de letra por defecto en los navegadores es de 16px. Este tamaño de letra puede ser aceptable en un monitor con una resolución 1440x900 con un tamaño de pantalla de 22 pulgadas, pero resultaría muy pequeño en un teléfono de resolución 1920x1024 de 5 pulgadas.
@@ -104,8 +104,8 @@ En <a href="http://mydevice.io/devices/">http://mydevice.io/devices/</a> puedes 
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">3.2</span> <i>ViewPort</i></h3>
+<div id="outline-container-org68a6009" class="outline-3">
+<h3 id="org68a6009"><span class="section-number-3">3.2</span> <i>ViewPort</i></h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Por último, existe un tercer valor de resolución utilizado en el diseño web, que es la resolución del <i>ViewPort</i>. El <i>ViewPort</i> se corresponde con el <b>ancho de la pantalla del navegador web</b>.
@@ -119,7 +119,7 @@ Este concepto fue desarrollado por Apple en el iPhone y tenía como objetivo sol
 <div class="figure">
 <p><a href="../../images/02_04_viewport.png" alt="Viewport"><img src="../../images/02_04_viewport.png" alt="Viewport"></a>
 </p>
-<p><span class="figure-number">Figura 1:</span> Viewport</p>
+<p><span class="figure-number">Figura 1: </span>Viewport</p>
 </div>
 
 <p>
@@ -128,15 +128,14 @@ Es importante dejar claro que la resolución del <i>ViewPort</i> es <b>distinta 
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Etiqueta &lt;meta name="viewport"&gt;</h3>
+<div id="outline-container-orgc02fb1d" class="outline-3">
+<h3 id="orgc02fb1d"><span class="section-number-3">3.3</span> Etiqueta &lt;meta name="viewport"&gt;</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta <a href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag">&lt;meta name="viewport"&gt;</a>. Esta etiqueta sirve para <b>indicar al navegador</b> qué <b>tamaño</b> debe definir para su <i>ViewPort</i>. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">meta</span> <span style="color: #7590db;">name</span>=<span style="color: #2d9574;">"viewport"</span> <span style="color: #7590db;">content</span>=<span style="color: #2d9574;">"width=device-width; initial-scale=1.0;"</span>&gt;
 </pre>
 </div>
@@ -151,8 +150,8 @@ Este código indica al navegador que debe utilizar la <b>anchura CSS</b> (<code>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-2">
-<h2 id="orgheadline7"><span class="section-number-2">4</span> Diseño de rejilla (Grid)</h2>
+<div id="outline-container-org9cff96c" class="outline-2">
+<h2 id="org9cff96c"><span class="section-number-2">4</span> Diseño de rejilla (Grid)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Muchos diseños actuales se basan en el <b>modelo de rejilla</b>. Básicamente consiste en dividir la página en un número de columnas (usualmente 12) y disponer las capas de manera que ocupen un número de columnas determinado. Este tipo de diseños se suele combinar con <i>media queries</i> para realizar diseños responsivos.
@@ -164,8 +163,8 @@ En este <a href="http://www.w3schools.com/css/css_rwd_grid.asp">enlace</a> se mu
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">5</span> Media queries</h2>
+<div id="outline-container-org5a09833" class="outline-2">
+<h2 id="org5a09833"><span class="section-number-2">5</span> Media queries</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Las <i>media queries</i> son expresiones que se utilizan en CSS3 para <b>identificar el dispositivo</b> al que va dirigido un determinado <b>conjunto de reglas de estilo CSS</b>.
@@ -180,8 +179,8 @@ Cada expresión <i>media query</i> está formada por un <b>tipo de medio</b> (<i
 </p>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">5.1</span> Tipos de medio (media types)</h3>
+<div id="outline-container-org6135279" class="outline-3">
+<h3 id="org6135279"><span class="section-number-3">5.1</span> Tipos de medio (media types)</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Un <i>media type</i> define un tipo de dispositivo. Los tipos de medio más utilizados son:
@@ -199,8 +198,8 @@ Se puede consultar el resto de opciones en este <a href="http://www.w3schools.co
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">5.2</span> Características del medio (media features)</h3>
+<div id="outline-container-orgcc3be62" class="outline-3">
+<h3 id="orgcc3be62"><span class="section-number-3">5.2</span> Características del medio (media features)</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Se pueden utilizar expresiones adicionales al <i>media type</i> para determinar de manera más concreta las características del dispositivo. Algunas de las características más utilizadas son:
@@ -221,15 +220,14 @@ Se puede consultar el resto de características en este <a href="http://www.w3sc
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">5.3</span> Sintaxis</h3>
+<div id="outline-container-org82e02e0" class="outline-3">
+<h3 id="org82e02e0"><span class="section-number-3">5.3</span> Sintaxis</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Para definir una <i>media query</i> se sigue la siguiente sintaxis en CSS:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #4f97d7;">@media</span> mediatype and|not|only <span style="color: #4f97d7;">(</span>media_feature<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
    C&#243;digo CSS;
 <span style="color: #4f97d7;">}</span>
@@ -241,59 +239,58 @@ También es posible definir que una determinada hoja de estilos se aplique para 
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">link</span> <span style="color: #7590db;">rel</span>=<span style="color: #2d9574;">"stylesheet"</span> <span style="color: #7590db;">media</span>=<span style="color: #2d9574;">"mediatype and|not|only (media_feature)"</span> <span style="color: #7590db;">href</span>=<span style="color: #2d9574;">"estilos.css"</span>&gt;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">5.4</span> Ejemplos</h3>
+<div id="outline-container-org0dd4c90" class="outline-3">
+<h3 id="org0dd4c90"><span class="section-number-3">5.4</span> Ejemplos</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 A continuación se muestran algunos ejemplos de <i>media queries</i>:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS m&#225;xima 300px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">@media</span> screen and <span style="color: #4f97d7;">(</span>max-width: <span style="color: #a45bad;">300px</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
     <span style="color: #bc6ec5; font-weight: bold;">body </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">background-color</span>: lightblue;
+        <span style="color: #4f97d7; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #add8e6;">lightblue</span>;
     <span style="color: #bc6ec5;">}</span>
     <span style="color: #bc6ec5; font-weight: bold;">p </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">color</span>: black;
+        <span style="color: #4f97d7; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span>;
     <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS entre 301 y 700 px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">@media</span> screen and <span style="color: #4f97d7;">(</span>min-width: <span style="color: #a45bad;">301px</span><span style="color: #4f97d7;">)</span> and <span style="color: #4f97d7;">(</span>max-width: <span style="color: #a45bad;">700px</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
     <span style="color: #bc6ec5; font-weight: bold;">body </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">background-color</span>: green;
+        <span style="color: #4f97d7; font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
     <span style="color: #bc6ec5;">}</span>
     <span style="color: #bc6ec5; font-weight: bold;">p </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">color</span>: white;
+        <span style="color: #4f97d7; font-weight: bold;">color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
     <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">Estilos para pantallas de anchura CSS de m&#225;s de 700px</span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">@media</span> screen and <span style="color: #4f97d7;">(</span>min-width:<span style="color: #a45bad;">701px</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
     <span style="color: #bc6ec5; font-weight: bold;">body </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">background-color</span>: red;
+        <span style="color: #4f97d7; font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
     <span style="color: #bc6ec5;">}</span>
     <span style="color: #bc6ec5; font-weight: bold;">p </span><span style="color: #bc6ec5;">{</span>
-        <span style="color: #7590db;">color</span>: white;
+        <span style="color: #4f97d7; font-weight: bold;">color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
     <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
+
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">6</span> Font boosting (Chrome mobile)</h2>
+<div id="outline-container-orgc066eaa" class="outline-2">
+<h2 id="orgc066eaa"><span class="section-number-2">6</span> Font boosting (Chrome mobile)</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 El navegador <i>Chrome Mobile</i> <b>cambia el tamaño de la letra</b> de algunos <b>elementos de bloque</b> en función de la <b>altura</b> de los mismos para favorecer su legibilidad. Esta característica hace que los estilos que se muestran no coincidan en ocasiones con los estilos establecidos en las hojas de estilo.
@@ -304,13 +301,12 @@ Para <b>desactivar</b> esta característica basta con <b>especificar una altura<
 </p>
 
 <p>
-Para desactivarlo de manera global basta con establecer una altura máxima con un <a href="#coderef-alt-max"class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-alt-max');" onmouseout="CodeHighlightOff(this, 'coderef-alt-max');">valor muy grande</a> a nivel global.
+Para desactivarlo de manera global basta con establecer una altura máxima con un <a href="#coderef-alt-max" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-alt-max');" onmouseout="CodeHighlightOff(this, 'coderef-alt-max');">valor muy grande</a> a nivel global.
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">html * </span><span style="color: #4f97d7;">{</span>
-<span id="coderef-alt-max" class="coderef-off">    <span style="color: #7590db;">max-height</span>:<span style="color: #a45bad;">1000000px</span>;</span>
+<span id="coderef-alt-max" class="coderef-off">    <span style="color: #4f97d7; font-weight: bold;">max-height</span>:<span style="color: #a45bad;">1000000px</span>;</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -325,8 +321,8 @@ Para más información puedes consultar los siguientes artículos de <i>Stack Ov
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">7</span> Testeo de acceso móvil</h2>
+<div id="outline-container-orgc6e53ba" class="outline-2">
+<h2 id="orgc6e53ba"><span class="section-number-2">7</span> Testeo de acceso móvil</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Existen multitud de páginas que proporcionan herramientas para comprobar el aspecto visual de una web en distintos tipos de dispositivos. A continuación se indican algunas de ellas:
@@ -338,8 +334,8 @@ Existen multitud de páginas que proporcionan herramientas para comprobar el asp
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">8</span> Evolución futura</h2>
+<div id="outline-container-orgaebcd07" class="outline-2">
+<h2 id="orgaebcd07"><span class="section-number-2">8</span> Evolución futura</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Las tendencias actuales en el campo del diseño adaptativo van enfocadas a <b>personalizar el código que proporciona el servidor</b> en función del tipo de cliente que hace la petición.
@@ -354,8 +350,8 @@ De esta manera se reduce el tamaño de los archivos y se aumenta la velocidad de
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline16" class="outline-2">
-<h2 id="orgheadline16"><span class="section-number-2">9</span> Referencias</h2>
+<div id="outline-container-orgdef4d5c" class="outline-2">
+<h2 id="orgdef4d5c"><span class="section-number-2">9</span> Referencias</h2>
 <div class="outline-text-2" id="text-9">
 <ul class="org-ul">
 <li><a href="http://www.w3schools.com/css/css_rwd_intro.asp">Guía de RWD en W3Schools</a></li>

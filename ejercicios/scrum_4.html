@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
-<title>Scrum 4 - Web Design with VueJS and Hypermedia</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Web Design with VueJS and Hypermedia"
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrum 3 - Web Design with VueJS and Hypermedia</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Web Design with VueJS and Hypermedia"
 >
-<meta  name="keywords" content="vue vuejs hypermedia rest">
+<meta name="keywords" content="vue vuejs hypermedia rest">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -28,48 +28,48 @@
 <h1>Diseño de Interfaces Web</h1>
 </div>
 <div id="content">
-<h1 class="title">Scrum 4 - Web Design with VueJS and Hypermedia</h1>
+<h1 class="title">Scrum 3 - Web Design with VueJS and Hypermedia</h1>
 <div id="table-of-contents">
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introduction</a></li>
-<li><a href="#orgheadline2">2. Learning goals</a></li>
-<li><a href="#orgheadline3">3. Agenda</a></li>
-<li><a href="#orgheadline20">4. Product Backlog</a>
+<li><a href="#org9e8a416">1. Introduction</a></li>
+<li><a href="#org6ebcbad">2. Learning goals</a></li>
+<li><a href="#org0fba4ec">3. Agenda</a></li>
+<li><a href="#org54cd256">4. Product Backlog</a>
 <ul>
-<li><a href="#orgheadline4">4.1. Reading: documentation</a></li>
-<li><a href="#orgheadline5">4.2. Setting up the development environment</a></li>
-<li><a href="#orgheadline6">4.3. Understanding Travis CI</a></li>
-<li><a href="#orgheadline7">4.4. Heroku</a></li>
-<li><a href="#orgheadline8">4.5. Read and inspect the provided server code</a></li>
-<li><a href="#orgheadline9">4.6. Read and inspect the provided client code</a></li>
-<li><a href="#orgheadline11">4.7. Create the server code (already done!!)</a>
+<li><a href="#org6ea8479">4.1. Reading: documentation</a></li>
+<li><a href="#org616cf90">4.2. Setting up the development environment</a></li>
+<li><a href="#org376ecbd">4.3. Understanding Travis CI</a></li>
+<li><a href="#orgd4167ee">4.4. Heroku</a></li>
+<li><a href="#org0cf174a">4.5. Read and inspect the provided server code</a></li>
+<li><a href="#orgfbe6a37">4.6. Read and inspect the provided client code</a></li>
+<li><a href="#orgf9b1248">4.7. Create the server code (already done!!)</a>
 <ul>
-<li><a href="#orgheadline10">4.7.1. How to process data sent with POST or PUT</a></li>
+<li><a href="#orgb283117">4.7.1. How to process data sent with POST or PUT</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline19">4.8. Create the client code</a>
+<li><a href="#org54bee5f">4.8. Create the client code</a>
 <ul>
-<li><a href="#orgheadline12">4.8.1. Include the Bootstrap CSS library</a></li>
-<li><a href="#orgheadline13">4.8.2. Understand the AJAX functions</a></li>
-<li><a href="#orgheadline14">4.8.3. Implement the Vue component to display the collection links</a></li>
-<li><a href="#orgheadline15">4.8.4. Implement a component to display the collection items</a></li>
-<li><a href="#orgheadline16">4.8.5. Implement a component for the "edit item" form</a></li>
-<li><a href="#orgheadline17">4.8.6. Implement a component to display the collection template ("create item" form)</a></li>
-<li><a href="#orgheadline18">4.8.7. Improvements (optional)</a></li>
+<li><a href="#org43afdc7">4.8.1. Include the Bootstrap CSS library</a></li>
+<li><a href="#org152b528">4.8.2. Understand the AJAX functions</a></li>
+<li><a href="#org2ed4517">4.8.3. Implement the Vue component to display the collection links</a></li>
+<li><a href="#orga7dcf63">4.8.4. Implement a component to display the collection items</a></li>
+<li><a href="#org0a67cf5">4.8.5. Implement a component for the "edit item" form</a></li>
+<li><a href="#orgdb8abe3">4.8.6. Implement a component to display the collection template ("create item" form)</a></li>
+<li><a href="#orgd3c76e8">4.8.7. Improvements (optional)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline21">5. Hints</a></li>
-<li><a href="#orgheadline22">6. Grading criteria</a></li>
+<li><a href="#org1c6b24d">5. Hints</a></li>
+<li><a href="#orgad97ec4">6. Grading criteria</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-org9e8a416" class="outline-2">
+<h2 id="org9e8a416"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We are going to create a web application to manage an <b>online multimedia database</b>. It will store <b>books, music albums, movies and videogames</b>.
@@ -93,8 +93,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Learning goals</h2>
+<div id="outline-container-org6ebcbad" class="outline-2">
+<h2 id="org6ebcbad"><span class="section-number-2">2</span> Learning goals</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Learn how to use development frameworks to create web sites.</li>
@@ -111,8 +111,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda</h2>
+<div id="outline-container-org0fba4ec" class="outline-2">
+<h2 id="org0fba4ec"><span class="section-number-2">3</span> Agenda</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>Wednesday 01/24/2018</dt><dd>Planning meeting (1 day / 2 hours).</dd>
@@ -122,11 +122,12 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">4</span> Product Backlog</h2>
+<div id="outline-container-org54cd256" class="outline-2">
+<h2 id="org54cd256"><span class="section-number-2">4</span> Product Backlog</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Reading: documentation</h3>
+</div>
+<div id="outline-container-org6ea8479" class="outline-3">
+<h3 id="org6ea8479"><span class="section-number-3">4.1</span> Reading: documentation</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 <b>Every team member</b> must read the following articles:
@@ -146,8 +147,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Setting up the development environment</h3>
+<div id="outline-container-org616cf90" class="outline-3">
+<h3 id="org616cf90"><span class="section-number-3">4.2</span> Setting up the development environment</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 <b>Every team member</b> must do the following tasks:
@@ -180,8 +181,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Understanding Travis CI</h3>
+<div id="outline-container-org376ecbd" class="outline-3">
+<h3 id="org376ecbd"><span class="section-number-3">4.3</span> Understanding Travis CI</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 <b>Every team member</b> must do the following tasks:
@@ -199,12 +200,13 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> Heroku</h3>
+<div id="outline-container-orgd4167ee" class="outline-3">
+<h3 id="orgd4167ee"><span class="section-number-3">4.4</span> Heroku</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 <b>All teams</b> will do this task <b>at the same time</b>. The teacher will explain how to set up Heroku to host the project app.
 </p>
+
 
 <dl class="org-dl">
 <dt>Definition of Done</dt><dd>You have understood how to deploy web applications to a cloud service like Heroku. Every team has its application available in Heroku.</dd>
@@ -212,8 +214,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Read and inspect the provided server code</h3>
+<div id="outline-container-org0cf174a" class="outline-3">
+<h3 id="org0cf174a"><span class="section-number-3">4.5</span> Read and inspect the provided server code</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 <b>Every team member</b> must do the following tasks:
@@ -240,8 +242,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.6</span> Read and inspect the provided client code</h3>
+<div id="outline-container-orgfbe6a37" class="outline-3">
+<h3 id="orgfbe6a37"><span class="section-number-3">4.6</span> Read and inspect the provided client code</h3>
 <div class="outline-text-3" id="text-4-6">
 <p>
 <b>Every team member</b> must do the following tasks:
@@ -260,8 +262,8 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">4.7</span> Create the server code (already done!!)</h3>
+<div id="outline-container-orgf9b1248" class="outline-3">
+<h3 id="orgf9b1248"><span class="section-number-3">4.7</span> Create the server code (already done!!)</h3>
 <div class="outline-text-3" id="text-4-7">
 <p>
 The server is available in the <code>/api</code> route. It is an API that works with the <b>Collection + JSON</b> format.
@@ -339,8 +341,8 @@ To do <b>tasks</b>:
 </dl>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">4.7.1</span> How to process data sent with POST or PUT</h4>
+<div id="outline-container-orgb283117" class="outline-4">
+<h4 id="orgb283117"><span class="section-number-4">4.7.1</span> How to process data sent with POST or PUT</h4>
 <div class="outline-text-4" id="text-4-7-1">
 <p>
 The <b>Collection + JSON</b> format is based on JSON. For that reason, the server must <b>convert</b> JSON to PHP objects. You can read the following articles to know how to do it:
@@ -355,8 +357,8 @@ The <b>Collection + JSON</b> format is based on JSON. For that reason, the serve
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">4.8</span> Create the client code</h3>
+<div id="outline-container-org54bee5f" class="outline-3">
+<h3 id="org54bee5f"><span class="section-number-3">4.8</span> Create the client code</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
 The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b>Vue JS</b> and <b>Bootstrap</b>. The client will use <a href="https://en.wikipedia.org/wiki/AJAX">AJAX</a> to send and receive data in the <i>Collection + JSON</i> format to the server. 
@@ -371,8 +373,8 @@ The provided <b>source code</b> includes sections marked with the <b>TODO</b> ta
 </dl>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">4.8.1</span> Include the Bootstrap CSS library</h4>
+<div id="outline-container-org43afdc7" class="outline-4">
+<h4 id="org43afdc7"><span class="section-number-4">4.8.1</span> Include the Bootstrap CSS library</h4>
 <div class="outline-text-4" id="text-4-8-1">
 <p>
 Load both libraries in the <code>index.html</code> file.
@@ -380,8 +382,8 @@ Load both libraries in the <code>index.html</code> file.
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">4.8.2</span> Understand the AJAX functions</h4>
+<div id="outline-container-org152b528" class="outline-4">
+<h4 id="org152b528"><span class="section-number-4">4.8.2</span> Understand the AJAX functions</h4>
 <div class="outline-text-4" id="text-4-8-2">
 <p>
 The <b>Collection + JSON</b> format allows <b>four types</b> of interacion (we will not use the <code>queries</code> functionality for simplicity):
@@ -405,8 +407,8 @@ For that reason, the client will have to implement 4 functions:
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-4">
-<h4 id="orgheadline14"><span class="section-number-4">4.8.3</span> Implement the Vue component to display the collection links</h4>
+<div id="outline-container-org2ed4517" class="outline-4">
+<h4 id="org2ed4517"><span class="section-number-4">4.8.3</span> Implement the Vue component to display the collection links</h4>
 <div class="outline-text-4" id="text-4-8-3">
 <p>
 This component will display the list of links stored in the <code>collection.links</code> object. You can use Bootstrap classes for the UI.
@@ -418,8 +420,8 @@ When the user clicks on a link, the application must call the <code>readCollecti
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-4">
-<h4 id="orgheadline15"><span class="section-number-4">4.8.4</span> Implement a component to display the collection items</h4>
+<div id="outline-container-orga7dcf63" class="outline-4">
+<h4 id="orga7dcf63"><span class="section-number-4">4.8.4</span> Implement a component to display the collection items</h4>
 <div class="outline-text-4" id="text-4-8-4">
 <p>
 This component must <b>call 4 different components</b>, one for each of the 4 categories provided by the server. You can use the <code>collection.type</code> along with the <a href="https://vuejs.org/v2/guide/conditional.html#v-if">v-if</a> or <a href="https://vuejs.org/v2/guide/conditional.html#v-show">v-show</a> directives to display the appropriate one.
@@ -444,8 +446,8 @@ Each item must have <b>three links/buttons</b>:
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-4">
-<h4 id="orgheadline16"><span class="section-number-4">4.8.5</span> Implement a component for the "edit item" form</h4>
+<div id="outline-container-org0a67cf5" class="outline-4">
+<h4 id="org0a67cf5"><span class="section-number-4">4.8.5</span> Implement a component for the "edit item" form</h4>
 <div class="outline-text-4" id="text-4-8-5">
 <p>
 This component must <b>build a form</b> bound to to the <code>item.editTemplate</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
@@ -469,8 +471,8 @@ When the user submits the form, the function <code>editItem</code> will be calle
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><span class="section-number-4">4.8.6</span> Implement a component to display the collection template ("create item" form)</h4>
+<div id="outline-container-orgdb8abe3" class="outline-4">
+<h4 id="orgdb8abe3"><span class="section-number-4">4.8.6</span> Implement a component to display the collection template ("create item" form)</h4>
 <div class="outline-text-4" id="text-4-8-6">
 <p>
 This component must <b>build a form</b> bound to the <code>collection.template</code> object. You will have to use <a href="https://vuejs.org/v2/guide/forms.html">v-model</a>.
@@ -494,8 +496,8 @@ When the user submits the form, the function <code>createItem</code> will be cal
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-4">
-<h4 id="orgheadline18"><span class="section-number-4">4.8.7</span> Improvements (optional)</h4>
+<div id="outline-container-orgd3c76e8" class="outline-4">
+<h4 id="orgd3c76e8"><span class="section-number-4">4.8.7</span> Improvements (optional)</h4>
 <div class="outline-text-4" id="text-4-8-7">
 <ul class="org-ul">
 <li>Use the same template component to create and edit items. Both forms are generated from the <code>collection.template</code> object. The only difference is that one form is empty (create form) and the other one is pre-filled with the item data (edit form).</li>
@@ -507,8 +509,8 @@ When the user submits the form, the function <code>createItem</code> will be cal
 </div>
 </div>
 
-<div id="outline-container-orgheadline21" class="outline-2">
-<h2 id="orgheadline21"><span class="section-number-2">5</span> Hints</h2>
+<div id="outline-container-org1c6b24d" class="outline-2">
+<h2 id="org1c6b24d"><span class="section-number-2">5</span> Hints</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
@@ -519,8 +521,8 @@ When the user submits the form, the function <code>createItem</code> will be cal
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline22" class="outline-2">
-<h2 id="orgheadline22"><span class="section-number-2">6</span> Grading criteria</h2>
+<div id="outline-container-orgad97ec4" class="outline-2">
+<h2 id="orgad97ec4"><span class="section-number-2">6</span> Grading criteria</h2>
 <div class="outline-text-2" id="text-6">
 <dl class="org-dl">
 <dt>Scrum board (Flip) (20%)</dt><dd>Daily update, tasks estimation updates, Burn Down chart, daily scrums.</dd>

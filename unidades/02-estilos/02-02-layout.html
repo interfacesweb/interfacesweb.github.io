@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unidad 2.2 - Diseño de layouts</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Unidad 2.2 - Diseño de layouts"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Unidad 2.2 - Diseño de layouts"
 >
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
@@ -32,41 +32,41 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introducción</a></li>
-<li><a href="#orgheadline2">2. Santo Grial</a></li>
-<li><a href="#orgheadline6">3. Métodos antiguos</a>
+<li><a href="#org09de748">1. Introducción</a></li>
+<li><a href="#orgcb02221">2. Santo Grial</a></li>
+<li><a href="#orge57bf38">3. Métodos antiguos</a>
 <ul>
-<li><a href="#orgheadline3">3.1. Tablas</a></li>
-<li><a href="#orgheadline4">3.2. Posicionamiento absoluto</a></li>
-<li><a href="#orgheadline5">3.3. Anchura fija</a></li>
+<li><a href="#orga960af4">3.1. Tablas</a></li>
+<li><a href="#org445b023">3.2. Posicionamiento absoluto</a></li>
+<li><a href="#org7db9096">3.3. Anchura fija</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline12">4. Métodos actuales</a>
+<li><a href="#org31dd18d">4. Métodos actuales</a>
 <ul>
-<li><a href="#orgheadline7">4.1. Layout fluido (líquido)</a></li>
-<li><a href="#orgheadline8">4.2. Elástico</a></li>
-<li><a href="#orgheadline9">4.3. Adaptativo</a></li>
-<li><a href="#orgheadline10">4.4. Responsivo</a></li>
-<li><a href="#orgheadline11">4.5. Conclusiones</a></li>
+<li><a href="#org0274da1">4.1. Layout fluido (líquido)</a></li>
+<li><a href="#orgeb7cd29">4.2. Elástico</a></li>
+<li><a href="#orgfa72260">4.3. Adaptativo</a></li>
+<li><a href="#org7ffda54">4.4. Responsivo</a></li>
+<li><a href="#orgd82aea7">4.5. Conclusiones</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline18">5. Técnicas para crear layouts</a>
+<li><a href="#orgdc2a504">5. Técnicas para crear layouts</a>
 <ul>
-<li><a href="#orgheadline13">5.1. Float</a></li>
-<li><a href="#orgheadline14">5.2. Inline-block</a></li>
-<li><a href="#orgheadline15">5.3. Display table</a></li>
-<li><a href="#orgheadline16">5.4. Cajas Flexibles (FlexBox)</a></li>
-<li><a href="#orgheadline17">5.5. Grid layout (en borrador)</a></li>
+<li><a href="#org253e95e">5.1. Float</a></li>
+<li><a href="#org7b065c6">5.2. Inline-block</a></li>
+<li><a href="#orga2e8d49">5.3. Display table</a></li>
+<li><a href="#org02fe852">5.4. Cajas Flexibles (FlexBox)</a></li>
+<li><a href="#orgfb04fe9">5.5. Grid layout (en borrador)</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline19">6. Algunos consejos de diseño</a></li>
-<li><a href="#orgheadline20">7. Referencias</a></li>
+<li><a href="#orgbffdf61">6. Algunos consejos de diseño</a></li>
+<li><a href="#orgf5223d7">7. Referencias</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-org09de748" class="outline-2">
+<h2 id="org09de748"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 El <i>layout</i> o <b>estructura</b> de un interfaz web es la manera de organizar o disponer los elementos visuales en la página. El diseño del layout determina la posición de cada uno de los elementos que componen el interfaz web (cabecera, menús, banners, contenido, etc.).
@@ -85,8 +85,8 @@ Además, el diseño del layout comprende también una serie de decisiones que af
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Santo Grial</h2>
+<div id="outline-container-orgcb02221" class="outline-2">
+<h2 id="orgcb02221"><span class="section-number-2">2</span> Santo Grial</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Uno de los patrones de diseño más utilizados es un diseño formado por varias (normalmente tres) columnas, con el contenido principal ocupando una de ellas (normalmente en el centro) y el resto de elementos (menús, banners,&#x2026;) en las otras columnas. Las columnas idealmente deben tener la misma altura independientemente de su contenido y opcionalmente pueden tener bordes o colores de fondo diferenciados.
@@ -96,7 +96,7 @@ Uno de los patrones de diseño más utilizados es un diseño formado por varias 
 <div class="figure">
 <p><a href="../../images/02_02_holy_grial.png" alt="Diseño de Santo Grial"><img src="../../images/02_02_holy_grial.png" alt="Diseño de Santo Grial"></a>
 </p>
-<p><span class="figure-number">Figura 1:</span> Diseño de Santo Grial</p>
+<p><span class="figure-number">Figura 1: </span>Diseño de Santo Grial</p>
 </div>
 
 
@@ -114,11 +114,12 @@ Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este 
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">3</span> Métodos antiguos</h2>
+<div id="outline-container-orge57bf38" class="outline-2">
+<h2 id="orge57bf38"><span class="section-number-2">3</span> Métodos antiguos</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Tablas</h3>
+</div>
+<div id="outline-container-orga960af4" class="outline-3">
+<h3 id="orga960af4"><span class="section-number-3">3.1</span> Tablas</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Problemas semánticos.</li>
@@ -132,13 +133,13 @@ Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este 
 <div class="figure">
 <p><a href="../../images/02_02_tables.png" alt="Diseño basado en tablas"><img src="../../images/02_02_tables.png" alt="Diseño basado en tablas"></a>
 </p>
-<p><span class="figure-number">Figura 2:</span> Diseño basado en tablas</p>
+<p><span class="figure-number">Figura 2: </span>Diseño basado en tablas</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">3.2</span> Posicionamiento absoluto</h3>
+<div id="outline-container-org445b023" class="outline-3">
+<h3 id="org445b023"><span class="section-number-3">3.2</span> Posicionamiento absoluto</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Rígido e inflexible.</li>
@@ -148,8 +149,8 @@ Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este 
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Anchura fija</h3>
+<div id="outline-container-org7db9096" class="outline-3">
+<h3 id="org7db9096"><span class="section-number-3">3.3</span> Anchura fija</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>Muy popular.</li>
@@ -189,8 +190,8 @@ Ejemplos:
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">4</span> Métodos actuales</h2>
+<div id="outline-container-org31dd18d" class="outline-2">
+<h2 id="org31dd18d"><span class="section-number-2">4</span> Métodos actuales</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Los métodos actuales de diseño de layouts suelen tener las siguientes características:
@@ -205,8 +206,8 @@ Los métodos actuales de diseño de layouts suelen tener las siguientes caracter
 </div>
 
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.1</span> Layout fluido (líquido)</h3>
+<div id="outline-container-org0274da1" class="outline-3">
+<h3 id="org0274da1"><span class="section-number-3">4.1</span> Layout fluido (líquido)</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Utilizan unidades de medida basadas en porcentajes. El tamaño de los elementos está basado en el tamaño de los contenedores.</li>
@@ -240,8 +241,8 @@ Ejemplos:
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.2</span> Elástico</h3>
+<div id="outline-container-orgeb7cd29" class="outline-3">
+<h3 id="orgeb7cd29"><span class="section-number-3">4.2</span> Elástico</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>Utiliza la unidad de medida "em".</li>
@@ -270,8 +271,8 @@ Desventajas:
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.3</span> Adaptativo</h3>
+<div id="outline-container-orgfa72260" class="outline-3">
+<h3 id="orgfa72260"><span class="section-number-3">4.3</span> Adaptativo</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li>Optimizado para resoluciones de pantalla específicas (las más habituales: teléfonos, tablets, tablets apaisadas, pantallas y pantallas grandes).</li>
@@ -282,8 +283,8 @@ Desventajas:
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">4.4</span> Responsivo</h3>
+<div id="outline-container-org7ffda54" class="outline-3">
+<h3 id="org7ffda54"><span class="section-number-3">4.4</span> Responsivo</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li>Va un paso más allá del layout adaptativo.</li>
@@ -321,8 +322,8 @@ Ejemplos:
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">4.5</span> Conclusiones</h3>
+<div id="outline-container-orgd82aea7" class="outline-3">
+<h3 id="orgd82aea7"><span class="section-number-3">4.5</span> Conclusiones</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Independientemente del modelo de layout elegido, el objetivo que se persigue es:
@@ -336,8 +337,8 @@ Independientemente del modelo de layout elegido, el objetivo que se persigue es:
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-2">
-<h2 id="orgheadline18"><span class="section-number-2">5</span> Técnicas para crear layouts</h2>
+<div id="outline-container-orgdc2a504" class="outline-2">
+<h2 id="orgdc2a504"><span class="section-number-2">5</span> Técnicas para crear layouts</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 En la actualidad existen muchas maneras de crear layouts utilizando CSS. A las técnicas tradicionales (<code>float</code>, <code>inline-block</code>) se suman otras nuevas aportadas por CSS3 (como <code>flexbox</code>) o el futuro modelo de rejilla.
@@ -352,8 +353,8 @@ En el este <a href="http://blog.karenmenezes.com/2014/apr/13/floats-inline-block
 </p>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-3">
-<h3 id="orgheadline13"><span class="section-number-3">5.1</span> Float</h3>
+<div id="outline-container-org253e95e" class="outline-3">
+<h3 id="org253e95e"><span class="section-number-3">5.1</span> Float</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Se utilizan para layouts que no necesitan centrado vertical ni alturas de capas iguales.
@@ -379,8 +380,8 @@ Desventajas:
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-3">
-<h3 id="orgheadline14"><span class="section-number-3">5.2</span> Inline-block</h3>
+<div id="outline-container-org7b065c6" class="outline-3">
+<h3 id="org7b065c6"><span class="section-number-3">5.2</span> Inline-block</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Se utilizan cuando se necesitan layouts con las siguientes características:
@@ -415,8 +416,8 @@ Ejemplo de galería con <code>inline-block</code>: <a href="http://karenmenezes.
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">5.3</span> Display table</h3>
+<div id="outline-container-orga2e8d49" class="outline-3">
+<h3 id="orga2e8d49"><span class="section-number-3">5.3</span> Display table</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 La propiedad <code>display: table</code> automáticamente transforma la apariencia de una capa en la de una tabla. De esta manera se consigue un diseño basado en columnas de manera muy sencilla sin tener que utilizar tablas reales (que, recordemos, no son recomendables).
@@ -427,7 +428,6 @@ Sin embargo, para tener un control total es necesario replicar la estructura de 
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>=<span style="color: #2d9574;">"tableWrap"</span>&gt;    
   &lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>=<span style="color: #2d9574;">"tableBlock"</span>&gt;    
 
@@ -444,7 +444,8 @@ Sin embargo, para tener un control total es necesario replicar la estructura de 
     &lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt;
 
   &lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt;
-&lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt;
+&lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt; 
+
 </pre>
 </div>
 
@@ -470,8 +471,8 @@ Desventajas:
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">5.4</span> Cajas Flexibles (FlexBox)</h3>
+<div id="outline-container-org02fe852" class="outline-3">
+<h3 id="org02fe852"><span class="section-number-3">5.4</span> Cajas Flexibles (FlexBox)</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 <b>FlexBox</b> ofrece un mecanismo muy completo para realizar layouts. Tiene una gran variedad de opciones y es muy versátil.
@@ -510,8 +511,8 @@ Desventajas:
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">5.5</span> Grid layout (en borrador)</h3>
+<div id="outline-container-orgfb04fe9" class="outline-3">
+<h3 id="orgfb04fe9"><span class="section-number-3">5.5</span> Grid layout (en borrador)</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 El modelo de <i>Grid Layout</i> (rejilla) es un modelo que está actualmente en desarrollo. Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente. El borrador de la especificación está disponible en <a href="http://www.w3.org/TR/css3-grid-layout/">http://www.w3.org/TR/css3-grid-layout/</a>.
@@ -534,7 +535,7 @@ Todavía no ha sido implementado de manera estándar por los navegadores. Sólo 
 <div class="figure">
 <p><img src="../../images/02_02_chrome_grid.png" alt="Activación de CSS Grid Layout en Chrome">
 </p>
-<p><span class="figure-number">Figura 3:</span> Activación de CSS Grid Layout en Chrome</p>
+<p><span class="figure-number">Figura 3: </span>Activación de CSS Grid Layout en Chrome</p>
 </div>
 
 <p>
@@ -548,8 +549,8 @@ Además, se puede utilizar esta técnica a través de este <a href="https://en.w
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-2">
-<h2 id="orgheadline19"><span class="section-number-2">6</span> Algunos consejos de diseño</h2>
+<div id="outline-container-orgbffdf61" class="outline-2">
+<h2 id="orgbffdf61"><span class="section-number-2">6</span> Algunos consejos de diseño</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Los bloques que aparecen uno <b>debajo del otro no presentan problemas</b>: se muestran correctamente si son <code>display: block</code> (recordemos que estos elementos introducen saltos de línea, por lo que se muestran uno a continuación del otro).</li>
@@ -567,7 +568,7 @@ Además, se puede utilizar esta técnica a través de este <a href="https://en.w
 <div class="figure">
 <p><a href="../../images/02_02_disenyo.png" alt="Agrupación por filas y columnas"><img src="../../images/02_02_disenyo.png" alt="Agrupación por filas y columnas"></a>
 </p>
-<p><span class="figure-number">Figura 4:</span> Agrupación por filas y columnas</p>
+<p><span class="figure-number">Figura 4: </span>Agrupación por filas y columnas</p>
 </div>
 
 
@@ -579,8 +580,8 @@ Por último, es recomendable pensar en el layout más adecuado para <b>dispositi
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">7</span> Referencias</h2>
+<div id="outline-container-orgf5223d7" class="outline-2">
+<h2 id="orgf5223d7"><span class="section-number-2">7</span> Referencias</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><a href="http://es.slideshare.net/HarshalPatil4/css-layout-techniques">http://es.slideshare.net/HarshalPatil4/css-layout-techniques</a></li>

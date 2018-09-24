@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Práctica 3.1 (Scrum) - Diseño de interfaces con JQuery y Ajax</title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Pedro Prieto Alarcón">
-<meta  name="description" content="Práctica 3.1 (Scrum) - Diseño de interfaces con JQuery y Ajax"
+<meta name="generator" content="Org mode">
+<meta name="author" content="Pedro Prieto Alarcón">
+<meta name="description" content="Práctica 3.1 (Scrum) - Diseño de interfaces con JQuery y Ajax"
 >
-<meta  name="keywords" content="ajax jquery web interface rest">
+<meta name="keywords" content="ajax jquery web interface rest">
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
 <link rel="stylesheet" type="text/css" href="/css/estilos.css" > 
@@ -33,33 +33,33 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Introducción</a></li>
-<li><a href="#orgheadline2">2. Objetivos de aprendizaje</a></li>
-<li><a href="#orgheadline3">3. Agenda de trabajo</a></li>
-<li><a href="#orgheadline13">4. Lista de requerimientos (<i>Product Backlog</i>)</a>
+<li><a href="#org6f21476">1. Introducción</a></li>
+<li><a href="#orgc35ae1b">2. Objetivos de aprendizaje</a></li>
+<li><a href="#org99bfca1">3. Agenda de trabajo</a></li>
+<li><a href="#org65d2aac">4. Lista de requerimientos (<i>Product Backlog</i>)</a>
 <ul>
-<li><a href="#orgheadline4">4.1. Lecturas sobre REST</a></li>
-<li><a href="#orgheadline5">4.2. Preparación del entorno de desarrollo</a></li>
-<li><a href="#orgheadline6">4.3. Familiarización con Travis CI</a></li>
-<li><a href="#orgheadline7">4.4. OpenShift</a></li>
-<li><a href="#orgheadline8">4.5. Familiarización con el código de servidor</a></li>
-<li><a href="#orgheadline9">4.6. Familiarización con el código de cliente</a></li>
-<li><a href="#orgheadline11">4.7. Modificación del código de servidor</a>
+<li><a href="#orge84d5b1">4.1. Lecturas sobre REST</a></li>
+<li><a href="#org7d9656a">4.2. Preparación del entorno de desarrollo</a></li>
+<li><a href="#org1d48546">4.3. Familiarización con Travis CI</a></li>
+<li><a href="#orgbc25ee5">4.4. OpenShift</a></li>
+<li><a href="#org8b1988e">4.5. Familiarización con el código de servidor</a></li>
+<li><a href="#org9c02bb5">4.6. Familiarización con el código de cliente</a></li>
+<li><a href="#org559c9d8">4.7. Modificación del código de servidor</a>
 <ul>
-<li><a href="#orgheadline10">4.7.1. Recogida de datos enviados con POST o PUT</a></li>
+<li><a href="#org01c6901">4.7.1. Recogida de datos enviados con POST o PUT</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline12">4.8. Modificación del código de cliente</a></li>
+<li><a href="#orgff949e0">4.8. Modificación del código de cliente</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline14">5. Consejos</a></li>
-<li><a href="#orgheadline15">6. Criterios de calificación</a></li>
+<li><a href="#org3e890b3">5. Consejos</a></li>
+<li><a href="#org18fdf22">6. Criterios de calificación</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-org6f21476" class="outline-2">
+<h2 id="org6f21476"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Se pretende crear una aplicación web para gestionar una <b>biblioteca sencilla de recursos multimedia</b>. Los tipos de elementos que gestionará la biblioteca son: <b>películas, discos de música, libros y videojuegos</b>. El diseño de la aplicación abarcará tanto la parte de <b>cliente</b> como la parte de <b>servidor</b>, utilizando un modelo de datos ya establecido.
@@ -86,8 +86,8 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Objetivos de aprendizaje</h2>
+<div id="outline-container-orgc35ae1b" class="outline-2">
+<h2 id="orgc35ae1b"><span class="section-number-2">2</span> Objetivos de aprendizaje</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Conocer la arquitectura REST para la creación de aplicaciones web.</li>
@@ -104,8 +104,8 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Agenda de trabajo</h2>
+<div id="outline-container-org99bfca1" class="outline-2">
+<h2 id="org99bfca1"><span class="section-number-2">3</span> Agenda de trabajo</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>Martes 13/01/2015 a miércoles 14/01/2015</dt><dd>Reunión de planificación (3 horas de clase).</dd>
@@ -115,11 +115,12 @@ Cada equipo tendrá asignado un repositorio en GitHub dentro de <a href="https:/
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">4</span> Lista de requerimientos (<i>Product Backlog</i>)</h2>
+<div id="outline-container-org65d2aac" class="outline-2">
+<h2 id="org65d2aac"><span class="section-number-2">4</span> Lista de requerimientos (<i>Product Backlog</i>)</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">4.1</span> Lecturas sobre REST</h3>
+</div>
+<div id="outline-container-orge84d5b1" class="outline-3">
+<h3 id="orge84d5b1"><span class="section-number-3">4.1</span> Lecturas sobre REST</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo</b>.
@@ -140,8 +141,8 @@ Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo<
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">4.2</span> Preparación del entorno de desarrollo</h3>
+<div id="outline-container-org7d9656a" class="outline-3">
+<h3 id="org7d9656a"><span class="section-number-3">4.2</span> Preparación del entorno de desarrollo</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo</b>.
@@ -164,8 +165,8 @@ Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo<
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">4.3</span> Familiarización con Travis CI</h3>
+<div id="outline-container-org1d48546" class="outline-3">
+<h3 id="org1d48546"><span class="section-number-3">4.3</span> Familiarización con Travis CI</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo</b>.
@@ -183,8 +184,8 @@ Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo<
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> OpenShift</h3>
+<div id="outline-container-orgbc25ee5" class="outline-3">
+<h3 id="orgbc25ee5"><span class="section-number-3">4.4</span> OpenShift</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 Esta tarea será realizada <b>por todos los grupos a la vez</b>.
@@ -206,8 +207,8 @@ Esta tarea será realizada <b>por todos los grupos a la vez</b>.
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.5</span> Familiarización con el código de servidor</h3>
+<div id="outline-container-org8b1988e" class="outline-3">
+<h3 id="org8b1988e"><span class="section-number-3">4.5</span> Familiarización con el código de servidor</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo</b>.
@@ -234,8 +235,8 @@ Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo<
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.6</span> Familiarización con el código de cliente</h3>
+<div id="outline-container-org9c02bb5" class="outline-3">
+<h3 id="org9c02bb5"><span class="section-number-3">4.6</span> Familiarización con el código de cliente</h3>
 <div class="outline-text-3" id="text-4-6">
 <p>
 Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo</b>.
@@ -253,8 +254,8 @@ Todas estas tareas deberán ser realizadas por <b>todos los miembros del equipo<
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">4.7</span> Modificación del código de servidor</h3>
+<div id="outline-container-org559c9d8" class="outline-3">
+<h3 id="org559c9d8"><span class="section-number-3">4.7</span> Modificación del código de servidor</h3>
 <div class="outline-text-3" id="text-4-7">
 <p>
 El servidor está alojado en la ruta <code>/api</code>. Es una aplicación basada en el formato <b>Collection + JSON</b> y por tanto es compatible con el cliente genérico proporcionado. Por ello, si se trabaja correctamente, el cliente funcionará sin problemas y servirá para hacer pruebas de funcionalidad.
@@ -344,8 +345,8 @@ Las <b>tareas</b> que hay que realizar son:
 </dl>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">4.7.1</span> Recogida de datos enviados con POST o PUT</h4>
+<div id="outline-container-org01c6901" class="outline-4">
+<h4 id="org01c6901"><span class="section-number-4">4.7.1</span> Recogida de datos enviados con POST o PUT</h4>
 <div class="outline-text-4" id="text-4-7-1">
 <p>
 El formato Collection + JSON envía datos en formato JSON al servidor siguiendo la especificación. Por tanto, el servidor debe recoger los datos en dicho formato y traducirlos a objetos (o vectores) tipo PHP. Para saber más sobre el tema se pueden consultar los siguientes enlaces:
@@ -360,8 +361,8 @@ El formato Collection + JSON envía datos en formato JSON al servidor siguiendo 
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-3">
-<h3 id="orgheadline12"><span class="section-number-3">4.8</span> Modificación del código de cliente</h3>
+<div id="outline-container-orgff949e0" class="outline-3">
+<h3 id="orgff949e0"><span class="section-number-3">4.8</span> Modificación del código de cliente</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
 Se proporciona un cliente genérico del formato de datos <b>Collection + JSON</b>. Dicho cliente está disponible en <a href="https://github.com/collection-json/cjlib">https://github.com/collection-json/cjlib</a>.
@@ -399,8 +400,8 @@ Por último, se dará <b>formato</b> a la página de la aplicación. Para ello s
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">5</span> Consejos</h2>
+<div id="outline-container-org3e890b3" class="outline-2">
+<h2 id="org3e890b3"><span class="section-number-2">5</span> Consejos</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Los equipos deben ponerse de acuerdo para dedicar una sesión de clase a las tareas relacionadas con <b>OpenShift</b>.</li>
@@ -412,8 +413,8 @@ Por último, se dará <b>formato</b> a la página de la aplicación. Para ello s
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">6</span> Criterios de calificación</h2>
+<div id="outline-container-org18fdf22" class="outline-2">
+<h2 id="org18fdf22"><span class="section-number-2">6</span> Criterios de calificación</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b>Hoja de seguimiento (20%)</b>: actualización y supervisión diaria, actualización de la estimación de las tareas, dibujo de la gráfica de Burn Down, celebración de reuniones diarias,&#x2026;</li>
