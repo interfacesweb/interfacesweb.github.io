@@ -84,7 +84,7 @@ The <b>server logic</b> will be an <b>API</b> based on a <b>REST</b> architectur
 </p>
 
 <p>
-The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b><a href="https://vuejs.org/v2/guide/">VueJS</a></b> and <b><a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap</a></b>. The client will use <b>AJAX</b> to send and receive data in the <i>Collection + JSON</i> format to the server. Again, the teacher will provide the skeleton of the application and the team will have to develop the main functionality and design its visual appearance.
+The <b>client logic</b> will consist on a <b>Single Page Application</b> (SPA) built with <b><a href="https://vuejs.org/v2/guide/">VueJS</a></b> and <b><a href="https://getbootstrap.com/docs/4.2/getting-started/introduction/">Bootstrap</a></b>. The client will use <b>AJAX</b> to send and receive data in the <i>Collection + JSON</i> format to the server. Again, the teacher will provide the skeleton of the application and the team will have to develop the main functionality and design its visual appearance.
 </p>
 
 <p>
@@ -115,10 +115,10 @@ Each team will have a <b>GIT repository</b> to work with the code. We will also 
 <h2 id="org0fba4ec"><span class="section-number-2">3</span> Agenda</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
-<dt>Wednesday 01/24/2018</dt><dd>Planning meeting (1 day / 2 hours).</dd>
-<dt>Thursday 01/25/2018 to Wednesday 02/21/2018</dt><dd>Sprint (15 days / 30 hours).</dd>
-<dt>Thursday 02/22/2018</dt><dd>Demo (1 day / 2 hours).</dd>
-<dt>Friday 02/23/2018</dt><dd>Retrospective (1 day / 2 hours).</dd>
+<dt>Tuesday 01/22/2019 to Wednesday 01/23/2019</dt><dd>Planning meeting (2 days / 3 hours).</dd>
+<dt>Thursday 01/24/2019 to Friday 02/22/2019</dt><dd>Sprint (22 days / 33 hours).</dd>
+<dt>Monday 02/25/2019</dt><dd>Demo (1 day / 2 hours).</dd>
+<dt>Tuesday 02/26/2019</dt><dd>Retrospective (1 day / 2 hours).</dd>
 </dl>
 </div>
 </div>
@@ -270,7 +270,7 @@ The server is available in the <code>/api</code> route. It is an API that works 
 </p>
 
 <p>
-The main entry point to the API returns a <code>collection</code> object with links to each of the types of multimedia in the database: movies, disc albums, books and videogames. If you access to any of these links URL, the server will send another <code>collection</code> object with the corresponding <b>list</b> of items <b>and</b>:
+The main entry point to the API returns a <code>collection</code> object with links to each of the types of multimedia in the database: movies, TV series, disc albums, books and videogames. If you access to any of these links URL, the server will send another <code>collection</code> object with the corresponding <b>list</b> of items <b>and</b>:
 </p>
 <ul class="org-ul">
 <li>Links to access a specific item.</li>
@@ -288,6 +288,16 @@ The data model for each type of item is based on the standarized data types publ
 <li><code>description</code> - Description of the movie (text)</li>
 <li><code>director</code> - Director of the movie (text)</li>
 <li><code>datePublished</code> - Release date (date)</li>
+<li><code>embedUrl</code> - URL of the YouTube trailer (text)</li>
+</ul></li>
+<li><code>TVSeries</code>
+<ul class="org-ul">
+<li><code>name</code> - Name of the TV series (text)</li>
+<li><code>description</code> - Description of the TV series (text)</li>
+<li><code>director</code> - Director of the TV series (text)</li>
+<li><code>datePublished</code> - Release date (date)</li>
+<li><code>numberOfSeasons</code> - Number of seasons (number)</li>
+<li><code>numberOfEpisodes</code> - Number of episodes (number)</li>
 <li><code>embedUrl</code> - URL of the YouTube trailer (text)</li>
 </ul></li>
 <li><code>MusicAlbum</code>
@@ -322,7 +332,7 @@ The data model for each type of item is based on the standarized data types publ
 To do <b>tasks</b>:
 </p>
 <ul class="org-ul">
-<li>Create the appropriate <b>routes</b> to access each of the <b>resources</b> provided by the API (both <b>lists</b> and <b>individual items</b>): movie list, movie item, music album list, music album item, book list, book item, videogame list and videogame item.</li>
+<li>Create the appropriate <b>routes</b> to access each of the <b>resources</b> provided by the API (both <b>lists</b> and <b>individual items</b>): movie list, movie item, TV series list, TV series item, music album list, music album item, book list, book item, videogame list and videogame item.</li>
 <li>For each of the <b>four</b> categories, create the server logic to implement the <b>four actions</b> of the <a href="https://en.wikipedia.org/wiki/CRUD">CRUD</a> model: Create, Read, Update and Delete.
 <ul class="org-ul">
 <li>Get a list of elements.</li>
@@ -514,7 +524,7 @@ When the user submits the form, the function <code>createItem</code> will be cal
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Remember to use the <a href="../unidades/00-introduccion/git.html">GIT workflow</a> proposed for teams.</li>
-<li>Every team member <b>must</b> work both with <b>client</b> and <b>server</b> code. Each member <b>must choose</b> a certain item type (movies, books, music albums or videogames) and work both with <b>client and server</b>.</li>
+<li>Every team member <b>must</b> work both with <b>client</b> and <b>server</b> code. Each member <b>must choose</b> a certain item type (movies, TV series, books, music albums or videogames) and work both with <b>client and server</b>.</li>
 <li>It is advisable <b>not to work more than one person in the same file</b> to minimize conflicts. Tasks <b>should</b> affect different files.</li>
 <li>Teams must create tasks that generate <b>valid product updates</b>.</li>
 <li>You should do one <code>commit</code> and one <code>push</code> at least <b>once</b> in every class.</li>
